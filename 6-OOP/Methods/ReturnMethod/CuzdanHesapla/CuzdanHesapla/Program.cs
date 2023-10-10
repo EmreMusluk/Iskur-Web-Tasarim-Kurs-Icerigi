@@ -1,0 +1,10 @@
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\bin\Debug\net6.0\Kahve.exe
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\bin\Debug\net6.0\Kahve.deps.json
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\bin\Debug\net6.0\Kahve.runtimeconfig.json
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\bin\Debug\net6.0\Kahve.dll
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\bin\Debug\net6.0\Kahve.pdb
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\obj\Debug\net6.0\Kahve.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\obj\Debug\net6.0\Kahve.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\obj\Debug\net6.0\Kahve.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\obj\Debug\net6.0\Kahve.AssemblyInfo.cs
+C:\ERP301AKŞAM\3- Karar Yapıları\Kahve\Kahve\obj\Debug\net6.0\Kahve.csproj.CoreCompileInputs.cac

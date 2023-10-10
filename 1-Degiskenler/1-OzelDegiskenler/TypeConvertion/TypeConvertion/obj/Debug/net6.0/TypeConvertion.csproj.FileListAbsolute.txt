@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\bin\Debug\net6.0\TypeConvertion.exe
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\bin\Debug\net6.0\TypeConvertion.deps.json
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\bin\Debug\net6.0\TypeConvertion.runtimeconfig.json
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\bin\Debug\net6.0\TypeConvertion.dll
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\bin\Debug\net6.0\TypeConvertion.pdb
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.AssemblyInfo.cs
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.dll
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\refint\TypeConvertion.dll
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.pdb
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\TypeConvertion.genruntimeconfig.cache
+C:\ERP301AKŞAM\1-Degiskenler\1-OzelDegiskenler\TypeConvertion\TypeConvertion\obj\Debug\net6.0\ref\TypeConvertion.dll

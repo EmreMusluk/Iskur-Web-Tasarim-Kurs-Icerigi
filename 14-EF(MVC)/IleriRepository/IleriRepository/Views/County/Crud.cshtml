@@ -1,0 +1,46 @@
+﻿@model IleriRepository.Models.CountyModel
+
+@{
+    ViewData["Title"] = "Crud";
+}
+
+<h1>@Model.Head</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="County.Id" class="form-control" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="County.CountyName" class="control-label"></label>
+                <input asp-for="County.CountyName" class="form-control" />
+                <span asp-validation-for="County.CountyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Cities</label>
+@*                //asp-for="County.CityId" .NET CORE projelerde bu kodu eklediğinde if- else yapmaya gerek yok direkt seçtiğin ilçenin ilini seçili getirir.
+*@                <select asp-for="County.CityId" class="form-control">
+                    @foreach (var item in Model.Cities)
+                    {
+                        <option value="@item.Id">@item.CityName</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="@Model.Text" class="@Model.Cls" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

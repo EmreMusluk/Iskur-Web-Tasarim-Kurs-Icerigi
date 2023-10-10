@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\bin\Debug\net6.0\PolimorfizmOrnek.exe
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\bin\Debug\net6.0\PolimorfizmOrnek.deps.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\bin\Debug\net6.0\PolimorfizmOrnek.runtimeconfig.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\bin\Debug\net6.0\PolimorfizmOrnek.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\bin\Debug\net6.0\PolimorfizmOrnek.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.AssemblyInfo.cs
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\refint\PolimorfizmOrnek.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\PolimorfizmOrnek.genruntimeconfig.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\PolimorfizmOrnek\PolimorfizmOrnek\obj\Debug\net6.0\ref\PolimorfizmOrnek.dll

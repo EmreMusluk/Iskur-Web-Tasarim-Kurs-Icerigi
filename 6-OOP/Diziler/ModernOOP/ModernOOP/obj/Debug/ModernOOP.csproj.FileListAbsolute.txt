@@ -1,0 +1,8 @@
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\bin\Debug\ModernOOP.exe.config
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\bin\Debug\ModernOOP.exe
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\bin\Debug\ModernOOP.pdb
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\obj\Debug\ModernOOP.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\obj\Debug\ModernOOP.csproj.SuggestedBindingRedirects.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\obj\Debug\ModernOOP.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\obj\Debug\ModernOOP.exe
+C:\ERP301AKŞAM\6-OOP\Diziler\ModernOOP\ModernOOP\obj\Debug\ModernOOP.pdb

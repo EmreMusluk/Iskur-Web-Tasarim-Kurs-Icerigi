@@ -1,0 +1,4623 @@
+li zostanie okreÅ›lone zachowanie zgodne ze standardem ECMAScript, element \d jest rÃ³wnowaÅ¼ny elementowi [0-9].znak cyfry dziesiÄ™tnej¹Znak numeru (#) oznacza komentarz w trybie x, ktÃ³ry zaczyna siÄ™ od znaku # bez zmiany znaczenia na koÅ„cu wzorca wyraÅ¼enia regularnego i jest kontynuowany do koÅ„ca wiersza. Aby uÅ¼yÄ‡ tej konstrukcji, naleÅ¼y wÅ‚Ä…czyÄ‡ opcjÄ™ x (za poÅ›rednictwem opcji w tekÅ›cie) lub podaÄ‡ wartoÅ›Ä‡ RegexOptions.IgnorePatternWhitespace w parametrze opcji podczas tworzenia wystÄ…pienia obiektu Regex lub wywoÅ‚ywania metody statycznej obiektu Regex.komentarz na koÅ„cu wierszaÍKotwica \z okreÅ›la, Å¼e dopasowanie musi nastÄ…piÄ‡ na koÅ„cu ciÄ…gu wejÅ›ciowego. Podobnie jak element jÄ™zyka $, element \z ignoruje opcjÄ™ RegexOptions.Multiline. W przeciwieÅ„stwie do elementu jÄ™zyka \Z, element \z nie pasuje do znaku \n na koÅ„cu ciÄ…gu. Dlatego moÅ¼e pasowaÄ‡ tylko do ostatniego wiersza ciÄ…gu wejÅ›ciowego.tylko koniec ciÄ…gu­Kotwica \Z okreÅ›la, Å¼e dopasowanie musi nastÄ…piÄ‡ na koÅ„cu ciÄ…gu wejÅ›ciowego lub przed znakiem \n na koÅ„cu ciÄ…gu wejÅ›ciowego. Jest ona identyczna z kotwicÄ… $ z wyjÄ…tkiem tego, Å¼e element \Z ignoruje opcjÄ™ RegexOptions.Multiline. Dlatego w przypadku ciÄ…gu wielowierszowego moÅ¼e zostaÄ‡ dopasowany tylko na koÅ„cu ostatniego wiersza lub w ostatnim wierszu przed znakiem \n.
+
+Kotwica \Z pasuje do znaku \n, ale nie do znakÃ³w \r\n (kombinacji znakÃ³w CR/LF). Aby dopasowaÄ‡ znaki CR/LF, doÅ‚Ä…cz element \r?\Z do wzorca wyraÅ¼enia regularnego.8koniec ciÄ…gu lub przed koÅ„cowym znakiem nowego wierszaãKotwica $ okreÅ›la, Å¼e poprzedzajÄ…cy wzorzec musi wystÄ…piÄ‡ na koÅ„cu ciÄ…gu wejÅ›ciowego lub przed znakiem \n na koÅ„cu ciÄ…gu wejÅ›ciowego. JeÅ›li uÅ¼yjesz elementu $ z opcjÄ… RegexOptions.Multiline, dopasowanie moÅ¼e takÅ¼e nastÄ…piÄ‡ na koÅ„cu wiersza.
+
+Kotwica $ pasuje do znaku \n, lecz nie do znakÃ³w \r\n (kombinacji znakÃ³w powrotu karetki i nowego wiersza, czyli CR/LF). Aby dopasowaÄ‡ kombinacjÄ™ znakÃ³w CR/LF, doÅ‚Ä…cz element \r?$ do wzorca wyraÅ¼enia regularnego.koniec ciÄ…gu lub wiersza#Pasuje do znaku ucieczki â€” \u001Bznak ucieczkigrupa wykluczona
+wyraÅ¼enie(Pasuje do znaku wysuwu strony â€” \u000Cznak wysuwu strony¢Ta konstrukcja grupujÄ…ca stosuje okreÅ›lone opcje dla podwyraÅ¼enia lub wyÅ‚Ä…cza je. Opcje do wÅ‚Ä…czenia okreÅ›la siÄ™ po znaku zapytania, a opcje do wyÅ‚Ä…czenia po znaku minus. Dozwolone opcje:
+
+    i	UÅ¼yj dopasowywania bez uwzglÄ™dniania wielkoÅ›ci liter.
+    m	UÅ¼yj trybu wielowierszowego, gdzie znaki ^ i $ pasujÄ… na poczÄ…tku i na koÅ„cu kaÅ¼dego wiersza
+	(zamiast na poczÄ…tku i na koÅ„cu ciÄ…gu wejÅ›ciowego).
+    s	UÅ¼yj trybu jednowierszowego, gdzie kropka (.) pasuje do kaÅ¼dego znaku
+	(zamiast do kaÅ¼dego znaku z wyjÄ…tkiem znaku \n).
+    n	Nie przechwytuj grup nienazwanych. Przechwytywane sÄ… tylko jawnie
+	nazwane lub numerowane grupy w postaci (?<nazwa> podwyraÅ¼enie).
+    x	Wyklucz z wzorca biaÅ‚e znaki bez zmiany znaczenia i wÅ‚Ä…cz komentarze
+	po znaku numeru (#).opcje grupyRPasuje do znaku ASCII, gdzie ## to kod znaku w postaci dwÃ³ch cyfr szesnastkowych.szesnastkowy znak kontrolnyÔKonstrukcja (?# komentarz) umoÅ¼liwia doÅ‚Ä…czenie komentarza w tekÅ›cie do wyraÅ¼enia regularnego. Aparat wyraÅ¼eÅ„ regularnych nie uÅ¼ywa Å¼adnej czÄ™Å›ci komentarza podczas dopasowywania wzorca, mimo Å¼e komentarz jest doÅ‚Ä…czony do ciÄ…gu zwracanego przez metodÄ™ Regex.ToString. Komentarz koÅ„czy siÄ™ pierwszym nawiasem zamykajÄ…cym.komentarz wewnÄ™trznyÅWÅ‚Ä…cza lub wyÅ‚Ä…cza okreÅ›lone opcje dopasowania wzorca dla pozostaÅ‚ej czÄ™Å›ci wyraÅ¼enia regularnego. Opcje do wÅ‚Ä…czenia okreÅ›la siÄ™ po znaku zapytania, a opcje do wyÅ‚Ä…czenia okreÅ›la siÄ™ po znaku minus. Dozwolone opcje:
+
+    i	UÅ¼yj dopasowywania bez uwzglÄ™dniania wielkoÅ›ci liter.
+    m	UÅ¼yj trybu wielowierszowego, gdzie znaki ^ i $ pasujÄ… na poczÄ…tku i na koÅ„cu kaÅ¼dego wiersza
+	(zamiast na poczÄ…tku i na koÅ„cu ciÄ…gu wejÅ›ciowego).
+    s	UÅ¼yj trybu jednowierszowego, gdzie kropka (.) pasuje do kaÅ¼dego znaku
+	(zamiast do kaÅ¼dego znaku z wyjÄ…tkiem znaku \n).
+    n	Nie przechwytuj grup nienazwanych. Przechwytywane sÄ… tylko jawnie
+	nazwane lub numerowane grupy w postaci (?<nazwa> podwyraÅ¼enie).
+    x	Wyklucz z wzorca biaÅ‚e znaki bez zmiany znaczenia i wÅ‚Ä…cz komentarze
+	po znaku numeru (#).opcje wewnÄ™trzne%Problem z wyraÅ¼eniem regularnym: {0}litera, maÅ‚alitera, modyfikatorlitera, innalitera, jak nazwy wÅ‚asnelitera, wielkaznacznik, otaczajÄ…cyznacznik, nierozdzielajÄ…cy#znacznik, rozdzielajÄ…cy Å‚Ä…czÄ…cyãKwantyfikator {n,}? dopasowuje poprzedzajÄ…cy element co najmniej n razy, gdzie n jest dowolnÄ… liczbÄ… caÅ‚kowitÄ…, lecz najmniejszÄ… moÅ¼liwÄ… liczbÄ™ razy. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego {n,}.2dopasuj co najmniej â€nâ€ razy (powÅ›ciÄ…gliwie)ÁKwantyfikator {n,} dopasowuje poprzedzajÄ…cy element co najmniej n razy, gdzie n jest dowolnÄ… liczbÄ… caÅ‚kowitÄ…. Jest to kwantyfikator zachÅ‚anny, a jego powÅ›ciÄ…gliwy odpowiednik to {n,}?. dopasuj co najmniej â€nâ€ razyàKwantyfikator {n,m}? dopasowuje poprzedzajÄ…cy element od n do m razy, gdzie n i m to dowolne liczby caÅ‚kowite, lecz najmniejszÄ… moÅ¼liwÄ… liczbÄ™ razy. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego {n,m}.2dopasuj co najmniej â€nâ€ razy (powÅ›ciÄ…gliwie)İKwantyfikator {n,m} dopasowuje poprzedzajÄ…cy element co najmniej n razy, lecz nie wiÄ™cej niÅ¼ m razy, gdzie n i m to liczby caÅ‚kowite. {n,m} to kwantyfikator zachÅ‚anny, ktÃ³rego powÅ›ciÄ…gliwy rÃ³wnowaÅ¼nik to {n,m}?."dopasuj od â€mâ€ do â€nâ€ razy·Kwantyfikator {n}? dopasowuje poprzedzajÄ…cy element dokÅ‚adnie n razy, gdzie n jest dowolnÄ… liczbÄ… caÅ‚kowitÄ…. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego {n}+.1dopasuj dokÅ‚adnie â€nâ€ razy (powÅ›ciÄ…gliwie)¿Kwantyfikator {n} dopasowuje poprzedzajÄ…cy element dokÅ‚adnie n razy, gdzie n jest dowolnÄ… liczbÄ… caÅ‚kowitÄ…. {n} to kwantyfikator zachÅ‚anny, a jego powÅ›ciÄ…gliwy rÃ³wnowaÅ¼nik to {n}?.dopasuj dokÅ‚adnie â€nâ€ razy§Kwantyfikator +? dopasowuje poprzedzajÄ…cy element co najmniej raz, lecz moÅ¼liwie jak najmniej razy. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego +.)dopasuj co najmniej raz (powÅ›ciÄ…gliwie)¹Kwantyfikator + dopasowuje poprzedzajÄ…cy element co najmniej raz. Jest to rÃ³wnowaÅ¼nik kwantyfikatora {1,}. Kwantyfikator + jest zachÅ‚anny, a jego powÅ›ciÄ…gliwy rÃ³wnowaÅ¼nik to +?.dopasuj co najmniej raz­Kwantyfikator *? dopasowuje poprzedzajÄ…cy element zero lub wiÄ™cej razy, lecz moÅ¼liwie jak najmniej razy. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego *./dopasuj zero lub wiÄ™cej razy (powÅ›ciÄ…gliwie)¿Kwantyfikator + dopasowuje poprzedzajÄ…cy element zero lub wiÄ™cej razy. Jest to rÃ³wnowaÅ¼nik kwantyfikatora {0,}. Kwantyfikator * jest zachÅ‚anny, a jego powÅ›ciÄ…gliwy rÃ³wnowaÅ¼nik to *?.dopasuj zero lub wiÄ™cej razy­Kwantyfikator ?? dopasowuje poprzedzajÄ…cy element zero lub wiÄ™cej razy, lecz moÅ¼liwie jak najmniej razy. Jest to powÅ›ciÄ…gliwy odpowiednik kwantyfikatora zachÅ‚annego ?.1dopasuj zero razy lub jeden raz (powÅ›ciÄ…gliwie)ÂKwantyfikator ? dopasowuje poprzedzajÄ…cy element zero razy lub jeden raz. Jest to rÃ³wnowaÅ¼nik kwantyfikatora {0,1}. Kwantyfikator ? jest zachÅ‚anny, a jego powÅ›ciÄ…gliwy rÃ³wnowaÅ¼nik to ??.dopasuj zero razy lub jeden raz³Ta konstrukcja grupujÄ…ca przechwytuje dopasowane â€podwyraÅ¼enieâ€, gdzie â€podwyraÅ¼enieâ€ to dowolny prawidÅ‚owy wzorzec wyraÅ¼enia regularnego. Przechwycenia uÅ¼ywajÄ…ce nawiasÃ³w sÄ… numerowane automatycznie od lewej do prawej na podstawie kolejnoÅ›ci nawiasÃ³w otwierajÄ…cych w wyraÅ¼eniu regularnym, rozpoczynajÄ…c od numeru jeden. Przechwycenie o numerze zero to tekst dopasowany przez caÅ‚y wzorzec wyraÅ¼enia regularnego.dopasowane podwyraÅ¼enienazwanazwa1nazwa2nazwa lub numerŠNazwane lub numerowane odwoÅ‚anie wsteczne.
+
+â€Nazwaâ€ to nazwa grupy przechwytujÄ…cej zdefiniowanej we wzorcu wyraÅ¼enia regularnego.nazwane odwoÅ‚anie wsteczneäPrzechwytuje dopasowane podwyraÅ¼enie i umoÅ¼liwia dostÄ™p do niego za pomocÄ… nazwy lub numeru.
+
+Element â€nazwaâ€ to prawidÅ‚owa nazwa grupy, a element â€podwyraÅ¼enieâ€ to dowolny prawidÅ‚owy wzorzec wyraÅ¼enia regularnego. Element â€nazwaâ€ nie moÅ¼e zawieraÄ‡ Å¼adnych znakÃ³w interpunkcyjnych i nie moÅ¼e zaczynaÄ‡ siÄ™ od cyfry.
+
+JeÅ›li parametr RegexOptions metody dopasowywania wzorca wyraÅ¼enia regularnego zawiera flagÄ™ RegexOptions.ExplicitCapture lub jeÅ›li dla tego wyraÅ¼enia zastosowano opcjÄ™ n, jedynym sposobem przechwycenia podwyraÅ¼enia jest jawne nazwanie grup przechwytujÄ…cych. nazwane dopasowane podwyraÅ¼enie¯Negatywna grupa znakÃ³w okreÅ›la listÄ™ znakÃ³w, ktÃ³re nie mogÄ… pojawiÄ‡ siÄ™ w ciÄ…gu wejÅ›ciowym, jeÅ›li ma nastÄ…piÄ‡ dopasowanie. Znaki na liÅ›cie sÄ… okreÅ›lane pojedynczo.
+
+MoÅ¼na poÅ‚Ä…czyÄ‡ dwa lub wiÄ™cej zakresÃ³w znakÃ³w. Na przykÅ‚ad aby okreÅ›liÄ‡ zakres cyfr dziesiÄ™tnych od â€0â€ do â€9â€, zakres maÅ‚ych liter od â€aâ€ do â€fâ€ i zakres wielkich liter od â€Aâ€ do â€Fâ€, uÅ¼yj elementu [0-9A-fA-F].negatywna grupa znakÃ³wúNegatywny zakres znakÃ³w okreÅ›la listÄ™ znakÃ³w, ktÃ³re nie mogÄ… pojawiÄ‡ siÄ™ w ciÄ…gu wejÅ›ciowym, jeÅ›li ma nastÄ…piÄ‡ dopasowanie. Element â€firstCharacterâ€ to znak rozpoczynajÄ…cy zakres, a element â€lastCharacterâ€ to znak koÅ„czÄ…cy zakres.
+
+MoÅ¼na poÅ‚Ä…czyÄ‡ dwa lub wiÄ™cej zakresÃ³w znakÃ³w. Na przykÅ‚ad aby okreÅ›liÄ‡ zakres cyfr dziesiÄ™tnych od â€0â€ do â€9â€, zakres maÅ‚ych liter od â€aâ€ do â€fâ€ i zakres wielkich liter od â€Aâ€ do â€Fâ€, uÅ¼yj elementu [0-9A-fA-F].negatywny zakres znakÃ³wÛKonstrukcja wyraÅ¼enia regularnego \P{ nazwa } pasuje do dowolnego znaku, ktÃ³ry nie naleÅ¼y do kategorii ogÃ³lnej znakÃ³w Unicode ani do bloku nazwanego, gdzie â€nazwaâ€ to skrÃ³t kategorii lub nazwa bloku nazwanego.negatywna kategoria unicode)Pasuje do znaku nowego wiersza â€” \u000Aznak nowego wierszanieïElement \D pasuje do dowolnego znaku innego niÅ¼ cyfra. Jest to rÃ³wnowaÅ¼nik wzorca wyraÅ¼enia regularnego \P{Nd}.
+
+JeÅ›li zostanie okreÅ›lone zachowanie zgodne ze standardem ECMAScript, element \D jest rÃ³wnowaÅ¼nikiem elementu [^0-9].znak inny niÅ¼ cyfraàElement \S pasuje do dowolnego znaku innego niÅ¼ biaÅ‚y znak. Jest to rÃ³wnowaÅ¼nik wzorca wyraÅ¼enia regularnego [^\f\n\r\t\v\x85\p{Z}] lub odwrotnoÅ›Ä‡ wzorca wyraÅ¼enia regularnego \s, ktÃ³ry pasuje do biaÅ‚ych znakÃ³w.
+
+JeÅ›li zostaÅ‚o okreÅ›lone zachowanie zgodne ze standardem ECMAScript, element \S jest rÃ³wnowaÅ¼ny elementowi [^ \f\n\r\t\v].znak inny niÅ¼ biaÅ‚ypKotwica \B okreÅ›la, Å¼e dopasowanie nie moÅ¼e nastÄ…piÄ‡ na granicy sÅ‚owa. Jest to przeciwieÅ„stwo kotwicy \b.granica inna niÅ¼ sÅ‚owa†Element \W pasuje do dowolnego znaku niebÄ™dÄ…cego czÄ™Å›ciÄ… sÅ‚owa. Pasuje do dowolnego znaku z wyjÄ…tkiem znakÃ³w naleÅ¼Ä…cych do nastÄ™pujÄ…cych kategorii Unicode:
+
+    Ll	Litera, maÅ‚a
+    Lu	Litera, wielka
+    Lt	Litera, jak nazwy wÅ‚asne
+    Lo	Litera, inna
+    Lm	Litera, modyfikator
+    Mn	Znacznik, nierozdzielajÄ…cy
+    Nd	Cyfra, cyfra dziesiÄ™tna
+    Pc	Interpunkcja, Å‚Ä…cznik
+
+JeÅ›li okreÅ›lono zachowanie zgodne ze standardem ECMAScript, element \W jest rÃ³wnowaÅ¼ny elementowi [^a-zA-Z_0-9].znak nienaleÅ¼Ä…cy do sÅ‚owaÀTa konstrukcja nie przechwytuje podciÄ…gu dopasowanego przez podwyraÅ¼enie:
+
+Konstrukcja grupy nieprzechwytujÄ…cej jest zazwyczaj uÅ¼ywana, gdy kwantyfikator stosuje siÄ™ do grupy, lecz podciÄ…gi przechwycone przez grupÄ™ mogÄ… zostaÄ‡ zignorowane.
+
+JeÅ›li wyraÅ¼enie regularne zawiera zagnieÅ¼dÅ¼one konstrukcje grupujÄ…ce, konstrukcja zewnÄ™trznej grupy nieprzechwytujÄ…cej nie stosuje siÄ™ do wewnÄ™trznych zagnieÅ¼dÅ¼onych konstrukcji grup.grupa nieprzechwytujÄ…cacyfra, cyfra dziesiÄ™tnacyfra, literacyfra, innaøNumerowane odwoÅ‚anie wsteczne, gdzie element â€numerâ€ to numer kolejny grupy przechwytujÄ…cej w wyraÅ¼eniu regularnym. Na przykÅ‚ad element \4 pasuje do zawartoÅ›ci czwartej grupy przechwytujÄ…cej.
+
+Istnieje niejednoznacznoÅ›Ä‡ miÄ™dzy Ã³semkowymi kodami ucieczki (takimi jak \16) i odwoÅ‚aniami wstecznymi \numer, ktÃ³re uÅ¼ywajÄ… tej samej notacji. JeÅ›li niejednoznacznoÅ›Ä‡ jest problemem, moÅ¼esz uÅ¼yÄ‡ notacji \k<nazwa>, ktÃ³ra jest jednoznaczna i ktÃ³rej nie moÅ¼na pomyliÄ‡ z Ã³semkowymi kodami znakÃ³w. Podobnie kody szesnastkowe, takie jak \xdd, sÄ… jednoznaczne i nie moÅ¼na ich pomyliÄ‡ z odwoÅ‚aniami wstecznymi.numerowane odwoÅ‚anie wsteczneinne, kontrolneinne, formatujÄ…ceinne, nieprzypisaneinne, uÅ¼ytek prywatnyinne, dwuskÅ‚adnikowePozytywna grupa znakÃ³w okreÅ›la listÄ™ znakÃ³w, z ktÃ³rych dowolny moÅ¼e siÄ™ pojawiÄ‡ siÄ™ w ciÄ…gu wejÅ›ciowym, aby nastÄ…piÅ‚o dopasowanie.pozytywna grupa znakÃ³w‡Pozytywny zakres znakÃ³w okreÅ›la zakres znakÃ³w, z ktÃ³rych dowolny moÅ¼e siÄ™ pojawiÄ‡ siÄ™ w ciÄ…gu wejÅ›ciowym, aby nastÄ…piÅ‚o dopasowanie. Element â€firstCharacterâ€ to znak rozpoczynajÄ…cy zakres, a element â€lastCharacterâ€ to znak koÅ„czÄ…cy zakres. pozytywny zakres znakÃ³winterpunkcja, zamkniÄ™cieinterpunkcja, Å‚Ä…cznikinterpunkcja, myÅ›lnik"interpunkcja, cudzysÅ‚Ã³w koÅ„cowy%interpunkcja, cudzysÅ‚Ã³w poczÄ…tkowyinterpunkcja, otwarcieinterpunkcja, inneseparator, wierszseparator, akapitseparator, spacja£Kotwica \A okreÅ›la, Å¼e dopasowanie musi nastÄ…piÄ‡ na poczÄ…tku ciÄ…gu wejÅ›ciowego. Jest ona identyczna z kotwicÄ… ^ z tym wyjÄ…tkiem, Å¼e kotwica \A ignoruje opcjÄ™ RegexOptions.Multiline. Dlatego moÅ¼e pasowaÄ‡ tylko na poczÄ…tku pierwszego wiersza wielowierszowego ciÄ…gu wejÅ›ciowego.tylko poczÄ…tek ciÄ…guâKotwica ^ okreÅ›la, Å¼e nastÄ™pujÄ…cy wzorzec musi rozpoczynaÄ‡ siÄ™ od poÅ‚oÅ¼enia pierwszego znaku ciÄ…gu. JeÅ›li uÅ¼yjesz kotwicy ^ z opcjÄ… RegexOptions.Multiline, dopasowanie musi nastÄ…piÄ‡ na poczÄ…tku kaÅ¼dego wiersza.poczÄ…tek ciÄ…gu lub wierszapodwyraÅ¼eniesymbol, walutasymbol, matematykasymbol, modyfikatorsymbol, inny$Pasuje do znaku tabulacji â€” \u0009znak tabulacjiÉKonstrukcja wyraÅ¼enia regularnego \p{ nazwa } pasuje do dowolnego znaku naleÅ¼Ä…cego do ogÃ³lnej kategorii Unicode lub bloku nazwanego, gdzie â€nazwaâ€ to skrÃ³t kategorii lub nazwa bloku nazwanego.kategoria unicodeHPasuje do jednostki kodu UTF-16, ktÃ³rej wartoÅ›Ä‡ szesnastkowa to ####.znak ucieczki unicodeKategoria ogÃ³lna Unicode: {0}-Pasuje do znaku tabulacji pionowej â€” \u000Bznak tabulacji pionowej¼Element \s pasuje do dowolnego znaku innego niÅ¼ biaÅ‚y. Jest to rÃ³wnowaÅ¼ne nastÄ™pujÄ…cym sekwencjom ucieczki i kategoriom Unicode:
+
+    \f	Znak wysuwu strony â€” \u000C
+    \n	Znak nowego wiersza â€” \u000A
+    \r	Znak powrotu karetki â€” \u000D
+    \t	Znak tabulacji â€” \u0009
+    \v	Znak tabulacji pionowej â€” \u000B
+    \x85	Znak wielokropka lub nastÄ™pnego wiersza (NEL), (â€¦) â€” \u0085
+    \p{Z}	Pasuje do dowolnego znaku separatora
+
+JeÅ›li okreÅ›lono zachowanie zgodne ze standardem ECMAScript, element \s jest rÃ³wnowaÅ¼ny elementowi [ \f\n\r\t\v]biaÅ‚y znak„Kotwica \b okreÅ›la, Å¼e dopasowanie musi nastÄ…piÄ‡ na granicy miÄ™dzy znakiem sÅ‚owa (elementem jÄ™zyka \w) a znakiem innym niÅ¼ sÅ‚owa (elementem jÄ™zyka \W). Znaki sÅ‚owa obejmujÄ… znaki alfanumeryczne i podkreÅ›lenia; znaki inne niÅ¼ sÅ‚owa obejmujÄ… wszystkie pozostaÅ‚e znaki. Dopasowanie moÅ¼e takÅ¼e nastÄ…piÄ‡ na granicy sÅ‚owa na poczÄ…tku lub na koÅ„cu ciÄ…gu.
+
+Kotwica \b jest czÄ™sto uÅ¼ywana w celu zapewnienia, Å¼e podwyraÅ¼enie pasuje do caÅ‚ego wyrazu, a nie tylko na poczÄ…tku lub koÅ„cu sÅ‚owa.granica sÅ‚owaÏElement \w pasuje do dowolnego znaku sÅ‚owa. Znak sÅ‚owa naleÅ¼y do dowolnej z nastÄ™pujÄ…cych kategorii Unicode:
+
+    Ll	Litera, maÅ‚a
+    Lu	Litera, wielka
+    Lt	Litera, jak nazwy wÅ‚asne
+    Lo	Litera, inna
+    Lm	Litera, modyfikator
+    Mn	Znacznik, nierozdzielajÄ…cy
+    Nd	Cyfra, cyfra dziesiÄ™tna
+    Pc	Interpunkcja, Å‚Ä…cznik
+
+JeÅ›li okreÅ›lono zachowanie zgodne ze standardem ECMAScript, element \w jest rÃ³wnowaÅ¼ny elementowi [a-zA-Z_0-9].znak sÅ‚owatakNegatywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci, w przypadku ktÃ³rej powodzenie dopasowania wymaga, aby ciÄ…g wejÅ›ciowy nie pasowaÅ‚ do wzorca wyraÅ¼enia regularnego w podwyraÅ¼eniu. Dopasowany ciÄ…g nie jest doÅ‚Ä…czany do wyniku dopasowania.
+
+Negatywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci jest zwykle uÅ¼ywana na poczÄ…tku lub na koÅ„cu wyraÅ¼enia regularnego. Na poczÄ…tku wyraÅ¼enia regularnego moÅ¼e definiowaÄ‡ konkretny wzorzec, ktÃ³ry nie powinien zostaÄ‡ dopasowany, jeÅ›li poczÄ…tek wyraÅ¼enia regularnego definiuje podobny, ale bardziej ogÃ³lny wzorzec dopasowania. W takim przypadku jest czÄ™sto uÅ¼ywana do ograniczenia cofania siÄ™. Na koÅ„cu wyraÅ¼enia regularnego moÅ¼e definiowaÄ‡ podwyraÅ¼enie, ktÃ³re nie moÅ¼e wystÄ…piÄ‡ na koÅ„cu dopasowania.6negatywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci›Negatywna asercja wsteczna o zerowej szerokoÅ›ci, w przypadku ktÃ³rej powodzenie dopasowania wymaga, aby â€podwyraÅ¼enieâ€ nie wystÄ™powaÅ‚o w ciÄ…gu wejÅ›ciowym po lewej stronie bieÅ¼Ä…cej pozycji. Dowolny podciÄ…g niepasujÄ…cy do â€podwyraÅ¼eniaâ€ nie jest doÅ‚Ä…czany do wyniku dopasowania.
+
+Negatywne asercje wsteczne o zerowej szerokoÅ›ci sÄ… zwykle uÅ¼ywane na poczÄ…tku wyraÅ¼eÅ„ regularnych. Definiowany przez nie wzorzec wyklucza dopasowanie w nastÄ™pujÄ…cym ciÄ…gu. SÄ… one takÅ¼e uÅ¼ywane do ograniczenia cofania siÄ™, jeÅ›li ostatni znak lub znaki w przechwyconej grupie nie mogÄ… byÄ‡ znakami pasujÄ…cymi do wzorca wyraÅ¼enie regularnego tej grupy.0negatywna asercja wsteczna o zerowej szerokoÅ›ci€Pozytywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci, w przypadku ktÃ³rej powodzenie dopasowania wymaga, aby ciÄ…g wejÅ›ciowy pasowaÅ‚ do wzorca wyraÅ¼enia regularnego w â€podwyraÅ¼eniuâ€. Dopasowany podciÄ…g nie jest doÅ‚Ä…czany do wyniku dopasowania. Pozytywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci nie wykonuje cofania siÄ™.
+
+Zwykle pozytywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci znajduje siÄ™ na koÅ„cu wzorca wyraÅ¼enia regularnego. Definiuje ona podciÄ…g, ktÃ³ry musi znajdowaÄ‡ siÄ™ na koÅ„cu ciÄ…gu, aby nastÄ…piÅ‚o dopasowanie, lecz ktÃ³ry nie powinien zostaÄ‡ doÅ‚Ä…czony do dopasowania. Jest takÅ¼e przydatna do ograniczenia nadmiernego cofania siÄ™. Pozytywnej asercji wyprzedzajÄ…cej o zerowej szerokoÅ›ci moÅ¼esz uÅ¼yÄ‡, aby zapewniÄ‡, Å¼e konkretna przechwycona grupa zaczyna siÄ™ tekstem pasujÄ…cym do podzbioru wzorca definiujÄ…cego tÄ™ przechwyconÄ… grupÄ™.6pozytywna asercja wyprzedzajÄ…ca o zerowej szerokoÅ›ci¬Pozytywna asercja wsteczna o zerowej szerokoÅ›ci, w przypadku ktÃ³rej powodzenie dopasowania wymaga, aby â€podwyraÅ¼enieâ€ wystÄ™powaÅ‚o w ciÄ…gu wejÅ›ciowym po lewej stronie bieÅ¼Ä…cej pozycji. â€PodwyraÅ¼enieâ€ nie jest doÅ‚Ä…czane do wyniku dopasowania. Pozytywna asercja wsteczna o zerowej szerokoÅ›ci nie wykonuje cofania.
+
+Pozytywne asercje wsteczne o zerowej szerokoÅ›ci sÄ… zwykle uÅ¼ywane na poczÄ…tku wyraÅ¼eÅ„ regularnych. Definiowany przez nie wzorzec jest warunkiem wstÄ™pnym dopasowania, lecz sam nie jest czÄ™Å›ciÄ… wyniku dopasowania.0pozytywna asercja wsteczna o zerowej szerokoÅ›ciQSygnatury powiÄ…zanych metod znalezione w metadanych nie zostanÄ… zaktualizowane.Uwagi:*UsuniÄ™cie dokumentu nie jest obsÅ‚ugiwaneUsuÅ„ pominiÄ™cieUsuÅ„ pominiÄ™cie {0}UsuÅ„ modyfikator â€asyncâ€UsuÅ„ dokument â€{0}â€UsuÅ„ kwalifikacje'UsuÅ„ odwoÅ‚anie do elementu â€{0}â€.UsuÅ„ separatory	UsuÅ„ tagUsuÅ„ niepotrzebne rzutowaniaUsuÅ„ nieuÅ¼ywanÄ… zmiennÄ…UsuÅ„ nieuÅ¼ywane zmienne¬UsuniÄ™cie elementu {0}, ktÃ³ry uzyskaÅ‚ dostÄ™p do przechwyconych zmiennych â€{1}" i â€{2}" deklarowanych w rÃ³Å¼nych zakresach, wymaga ponownego uruchomienia aplikacji.dUsuwanie elementu {0}, ktÃ³ry zawiera aktywnÄ… instrukcjÄ™, wymaga ponownego uruchomienia aplikacji.ZmieÅ„ nazwÄ™ pliku na {0}ZmieÅ„ nazwÄ™ typu na {0}BZmiana nazwy elementu {0} wymaga ponownego uruchomienia aplikacji.‹Zmienianie nazwy elementu {0} wymaga ponownego uruchomienia aplikacji, poniewaÅ¼ nie jest to obsÅ‚ugiwane przez Å›rodowisko uruchomieniowe.aZmienianie nazwy przechwyconej zmiennej z "{0}" na "{1}" wymaga ponownego uruchomienia aplikacji.7ZastÄ…p elementy â€{0}â€ i â€{1}â€ wÅ‚aÅ›ciwoÅ›ciÄ….ZamieÅ„ element â€{0}â€ na element â€{1}â€!ZastÄ…p element â€{0}â€ metodÄ…"ZastÄ…p element â€{0}â€ metodami*ZastÄ…p element â€{0}â€ wÅ‚aÅ›ciwoÅ›ciÄ…†ZgÅ‚oszone dane diagnostyczne â€{0}â€ majÄ… lokalizacjÄ™ ÅºrÃ³dÅ‚owÄ… â€{1}â€ w pliku â€{2}â€, ktÃ³ry jest spoza podanego pliku.šLokalizacja ÅºrÃ³dÅ‚owa zgÅ‚oszonych danych diagnostycznych â€{0}â€ znajduje siÄ™ w pliku â€{1}â€, ktÃ³ry nie jest czÄ™Å›ciÄ… analizowanej kompilacji.[ZgÅ‚oszona diagnostyka z identyfikatorem â€{0}â€ nie jest obsÅ‚ugiwana przez analizatora.LReprezentuje obiekt, ktÃ³rego operacje bÄ™dÄ… rozpoznane w czasie wykonania.>Å»Ä…dany zestaw zostaÅ‚ juÅ¼ zaÅ‚adowany z elementu â€{0}â€.RozwiÄ…Å¼ znaczniki konfliktÃ³wZwraca:Roslyn.HostErrorEdycja reguÅ‚y-Zaznaczenie nie zawiera prawidÅ‚owego tokenu.+Zaznaczenie nie jest uwzglÄ™dnione w typie.Oddziel pÃ³Å‚bajtyOddziel tysiÄ…ceOddziel wyrazyUproÅ›Ä‡ dostÄ™p do skÅ‚adowejUproÅ›Ä‡ nazwyFragmenty koduRozwiÄ…zanie!Sortuj modyfikatory dostÄ™pnoÅ›ci'Podziel na kolejne instrukcje â€{0}â€.Podziel na zagnieÅ¼dÅ¼one instrukcje â€{0}â€<StrumieÅ„ musi obsÅ‚ugiwaÄ‡ operacje odczytu i wyszukiwania.	StrukturyPodsumowanie:PomiÅ„ element {0}fPrzeÅ‚Ä…czenie miÄ™dzy wyraÅ¼eniem lambda a funkcjÄ… lokalnÄ… wymaga ponownego uruchomienia aplikacji.8TODO: WyczyÅ›ciÄ‡ stan zarzÄ…dzany (obiekty zarzÄ…dzane)XTODO: ZwolniÄ‡ niezarzÄ…dzane zasoby (niezarzÄ…dzane obiekty) i przesÅ‚oniÄ‡ finalizatorTODO: PrzesÅ‚oniÄ‡ finalizator tylko w sytuacji, gdy powyÅ¼sza metoda â€{0}â€ zawiera kod sÅ‚uÅ¼Ä…cy do zwalniania niezarzÄ…dzanych zasobÃ³w.TODO: UstawiÄ‡ wartoÅ›Ä‡ null dla duÅ¼ych pÃ³lPrzyjmij â€{0}â€Przyjmij obaPrzyjmij dÃ³Å‚Przyjmij gÃ³rÄ™Dopasowania typu docelowego3Adres zmiennej zostaÅ‚ uÅ¼yty w zaznaczonym kodzie.qZestaw â€{0}â€ zawierajÄ…cy typ â€{1}â€ odwoÅ‚uje siÄ™ do platformy .NET Framework, co nie jest obsÅ‚ugiwane..Zestaw {0} nie zawiera Å¼adnych analizatorÃ³w.)SkÅ‚adowa jest zdefiniowana w metadanych.DZaznaczenie zawiera wywoÅ‚anie funkcji lokalnej bez jego deklaracji.,Zaznaczenie zawiera bÅ‚Ä…d lub nieznany typ.4Zaznaczenie nie zawiera Å¼adnej aktywnej instrukcji.Symbol nie ma ikony.œTen symbol zawiera powiÄ…zane definicje lub odwoÅ‚ania w metadanych. Zmiana jego sygnatury moÅ¼e spowodowaÄ‡ bÅ‚Ä™dy kompilacji.
+
+Czy chcesz kontynuowaÄ‡?(Zbyt wiele znakÃ³w | w wyraÅ¼eniu (?()|)Zbyt wiele znakÃ³w )GParametr typu â€{0}â€ jest ukryty przez inny parametr typu â€{1}â€.Parametry typu:™Nie moÅ¼na odczytaÄ‡ pliku ÅºrÃ³dÅ‚owego â€{0}â€ lub pliku PDB skompilowanego dla projektu, w ktÃ³rym jest on zawarty. Wszystkie zmiany wprowadzone w tym pliku podczas debugowania nie zostanÄ… zastosowane do czasu, aÅ¼ jego zawartoÅ›Ä‡ bÄ™dzie zgodna ze skompilowanym ÅºrÃ³dÅ‚em.3Nie moÅ¼na zaÅ‚adowaÄ‡ zestawu analizatora {0}: {1}/Nieoczekiwany rodzaj skÅ‚adowej interfejsu: {0}WystÄ…piÅ‚ nieznany bÅ‚Ä…dNieznana wÅ‚aÅ›ciwoÅ›Ä‡!Nieznana wÅ‚aÅ›ciwoÅ›Ä‡ â€{0}â€Nieznany rodzaj symboluNierozpoznany znak kontrolny%Nierozpoznana sekwencja ucieczki \{0}$Nierozpoznana konstrukcja grupujÄ…caNiezakoÅ„czony zestaw [] NiezakoÅ„czony komentarz (?#...)Odwijaj wszystkie argumentyOdwijaj wszystkie parametry7Odwijaj wszystkie argumenty i dodawaj dla nich wciÄ™cie7Odwijaj wszystkie parametry i dodawaj dla nich wciÄ™cieOdwijaj listÄ™ argumentÃ³wOdwijaj Å‚aÅ„cuch wywoÅ‚aÅ„Odwijaj wyraÅ¼enieOdwijaj listÄ™ parametrÃ³wHAktualizacja elementu â€{0}â€ wymaga ponownego uruchomienia aplikacji.`Aktualizowanie elementu {0} wokÃ³Å‚ aktywnej instrukcji wymaga ponownego uruchomienia aplikacji.jAktualizacja zÅ‚oÅ¼onej instrukcji zawierajÄ…cej wyraÅ¼enie await wymaga ponownego uruchomienia aplikacji.KAktualizowanie aktywnej instrukcji wymaga ponownego uruchomienia aplikacji.“Aktualizowanie modyfikatora asynchronicznego lub modyfikatora moduÅ‚y iterator wokÃ³Å‚ aktywnej instrukcji wymaga ponownego uruchomienia aplikacji.ÙAktualizacja typu moÅ¼liwego do zaÅ‚adowania ponownego (oznaczonego przez element {0}) lub jego skÅ‚adowej wymaga ponownego uruchomienia aplikacji, poniewaÅ¼ nie jest ona obsÅ‚ugiwana przez Å›rodowisko uruchomieniowe.^Aktualizowanie klauzuli procedur Handles elementu {0} wymaga ponownego uruchomienia aplikacji._Aktualizacja klauzuli Implements sÅ‚owa kluczowego {0} wymaga ponownego uruchomienia aplikacji.OAktualizacja aliasu instrukcji Declare wymaga ponownego uruchomienia aplikacji.Aktualizacja atrybutÃ³w elementu {0} wymaga ponownego uruchomienia aplikacji, poniewaÅ¼ nie jest obsÅ‚ugiwany przez Å›rodowisko uruchomieniowe.nAktualizacja klasy bazowej i/lub interfejsu podstawowego elementu {0} wymaga ponownego uruchomienia aplikacji.MAktualizacja inicjatora elementu {0} wymaga ponownego uruchomienia aplikacji.kAktualizowanie rodzaju metody dostÄ™pu do wÅ‚aÅ›ciwoÅ›ci/zdarzenia wymaga ponownego uruchomienia aplikacji.BAktualizacja rodzaju typu wymaga ponownego uruchomienia aplikacji.YAktualizacja nazwy biblioteki instrukcji Declare wymaga ponownego uruchomienia aplikacji.SAktualizacja modyfikatorÃ³w elementÃ³w {0} wymaga ponownego uruchomienia aplikacji.MAktualizowanie rozmiaru elementu {0} wymaga ponownego uruchomienia aplikacji.GAktualizacja typu elementu {0} wymaga ponownego uruchomienia aplikacji.VAktualizowanie typu podstawowego elementu {0} wymaga ponownego uruchomienia aplikacji.OAktualizowanie odchylenia elementu {0} wymaga ponownego uruchomienia aplikacji.	UÅ¼yj {0}(UÅ¼yj treÅ›ci bloku dla wyraÅ¼eÅ„ lambda-UÅ¼yj treÅ›ci wyraÅ¼enia dla wyraÅ¼eÅ„ lambdaUÅ¼yj typu platformy3UÅ¼yj interpolowanego ciÄ…gu dosÅ‚ownego wyraÅ¼eniaUÅ¼yj wersji lokalnej â€{0}â€_UÅ¼yj lokalnie zainstalowanej wersji â€{0}â€ (â€{1}â€)
+Ta wersja jest uÅ¼ywana wersja: {2}0BÅ‚Ä…d analizatora diagnostycznego uÅ¼ytkownika.
+WartoÅ›Ä‡:`Element SignatureHelpItem ze zmiennÄ… liczbÄ… argumentÃ³w musi mieÄ‡ co najmniej jeden parametr.3OstrzeÅ¼enie: metoda zastÄ™puje symbol z metadanychEOstrzeÅ¼enie: kolekcja mogÅ‚a zostaÄ‡ zmodyfikowana podczas iteracji.?OstrzeÅ¼enie: kolekcja zostaÅ‚a zmodyfikowana podczas iteracji.>OstrzeÅ¼enie: zmienna iteracji przekroczyÅ‚a granicÄ™ funkcji.fOstrzeÅ¼enie: Zmiana przestrzeni nazw moÅ¼e skutkowaÄ‡ nieprawidÅ‚owym kodem i zmianÄ… jego znaczenia.LOstrzeÅ¼enie: semantyka moÅ¼e ulec zmianie podczas konwertowania instrukcji.'Zawijaj i wyrÃ³wnuj Å‚aÅ„cuch wywoÅ‚aÅ„Zawijaj i wyrÃ³wnuj wyraÅ¼enie.Zawijaj i wyrÃ³wnuj dÅ‚ugi Å‚aÅ„cuch wywoÅ‚aÅ„Zawijaj Å‚aÅ„cuch wywoÅ‚aÅ„Zawijaj kaÅ¼dy argumentZawijaj kaÅ¼dy parametrZawijaj wyraÅ¼enie"Zawijaj dÅ‚ugÄ… listÄ™ argumentÃ³w"Zawijaj dÅ‚ugi Å‚aÅ„cuch wywoÅ‚aÅ„"Zawijaj dÅ‚ugÄ… listÄ™ parametrÃ³w	ZawijanieQMoÅ¼esz zmieniÄ‡ tylko sygnaturÄ™ konstruktora, indeksatora, metody lub delegata.>Za pomocÄ… paska nawigacyjnego moÅ¼na przeÅ‚Ä…czaÄ‡ konteksty.    {0} - {1}SÅ‚owo kluczowe {0}@Element â€{0}â€ nie moÅ¼e mieÄ‡ wartoÅ›ci null ani byÄ‡ pusty.XElement â€{0}â€ nie moÅ¼e mieÄ‡ wartoÅ›ci null ani skÅ‚adaÄ‡ siÄ™ ze znakÃ³w odstÄ™pu.	{0} - {1}6Element â€{0}â€ nie ma wartoÅ›ci null w tym miejscu.;Element â€{0}â€ moÅ¼e mieÄ‡ wartoÅ›Ä‡ null w tym miejscu.1/10 000 000 sekundy´Indywidualny specyfikator formatu â€fffffffâ€ reprezentuje siedem najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje dziesiÄ™ciomilionowÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika dziesiÄ™ciomilionowej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.01/10 000 000 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)ıIndywidualny specyfikator formatu â€FFFFFFFâ€ reprezentuje siedem najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje dziesiÄ™ciomilionowÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z siedmioma zerami nie sÄ… jednak wyÅ›wietlane.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika dziesiÄ™ciomilionowej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.1/1 000 000 sekundyIndywidualny specyfikator formatu â€ffffffâ€ reprezentuje szeÅ›Ä‡ najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje milionowÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika milionowej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund./1/1 000 000 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)èIndywidualny specyfikator formatu â€FFFFFFâ€ reprezentuje szeÅ›Ä‡ najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje milionowÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z szeÅ›cioma zerami nie sÄ… jednak wyÅ›wietlane.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika milionowej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.1/100 000 sekundy¤Indywidualny specyfikator formatu â€fffffâ€ reprezentuje piÄ™Ä‡ najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje stutysiÄ™cznÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika stutysiÄ™cznej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.-1/100 000 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)íIndywidualny specyfikator formatu â€FFFFFâ€ reprezentuje piÄ™Ä‡ najbardziej znaczÄ…cych cyfr uÅ‚amka sekundy; tzn. reprezentuje stutysiÄ™cznÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z piÄ™cioma zerami nie sÄ… jednak wyÅ›wietlane.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika stutysiÄ™cznej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.1/10 000 sekundy²Indywidualny specyfikator formatu â€ffffâ€ reprezentuje cztery najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje dziesiÄ™ciotysiÄ™cznÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika dziesiÄ™ciotysiÄ™cznej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.,1/10 000 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)úIndywidualny specyfikator formatu â€FFFFâ€ reprezentuje cztery najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje dziesiÄ™ciotysiÄ™cznÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z czterema zerami nie sÄ… jednak wyÅ›wietlane.
+
+Co prawda moÅ¼liwe jest wyÅ›wietlenie skÅ‚adnika dziesiÄ™ciotysiÄ™cznej czÄ™Å›ci sekundy wartoÅ›ci godziny, ale ta wartoÅ›Ä‡ moÅ¼e nie mieÄ‡ znaczenia. DokÅ‚adnoÅ›Ä‡ wartoÅ›ci daty i godziny zaleÅ¼y od rozdzielczoÅ›ci zegara systemowego. W systemach operacyjnych Windows NT 3.5 (i nowszych) oraz Windows Vista rozdzielczoÅ›Ä‡ zegara wynosi ok. 10â€“15 milisekund.1/1000 sekundy¤Indywidualny specyfikator formatu â€fffâ€ reprezentuje trzy najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje milisekundy w wartoÅ›ci daty i godziny.*1/1000 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)êIndywidualny specyfikator formatu â€FFFâ€ reprezentuje trzy najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje milisekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z trzema zerami nie sÄ… jednak wyÅ›wietlane.1/100 sekundy¯Indywidualny specyfikator formatu â€ffâ€ reprezentuje dwie najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje setnÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny.)1/100 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)ôIndywidualny specyfikator formatu â€FFâ€ reprezentuje dwie najbardziej znaczÄ…ce cyfry uÅ‚amka sekundy; tzn. reprezentuje setnÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. Zera koÅ„cowe ani liczby z dwoma zerami nie sÄ… jednak wyÅ›wietlane.1/10 sekundyƒSpecyfikator formatu niestandardowego "f" reprezentuje najbardziej znaczÄ…cÄ… cyfrÄ™ uÅ‚amka sekundy; tzn. reprezentuje czÄ™Å›Ä‡ dziesiÄ™tnÄ… sekundy wÂ wartoÅ›ci daty iÂ godziny.
+
+JeÅ›li specyfikator formatu "f" zostanie uÅ¼yty bez innych specyfikatorÃ³w formatu, bÄ™dzie to interpretowane jako specyfikator standardowego formatu daty i godziny "f".
+
+Gdy specyfikatory formatu "f" sÄ… uÅ¼ywane jako czÄ™Å›Ä‡ ciÄ…gu formatu podanego dla metody ParseExact lub TryParseExact, liczba specyfikatorÃ³w formatu "f" bÄ™dzie wskazywaÄ‡ liczbÄ™ najwaÅ¼niejszych cyfr uÅ‚amka sekund, jaka musi byÄ‡ obecna, aby pomyÅ›lnie przeanalizowaÄ‡ dany ciÄ…g.(1/10 sekundy (wartroÅ›Ä‡ inna niÅ¼ zero)ŸIndywidualny specyfikator formatu â€Fâ€ reprezentuje najbardziej znaczÄ…cÄ… cyfrÄ™ uÅ‚amka sekundy; tzn. reprezentuje dziesiÄ…tÄ… czÄ™Å›Ä‡ sekundy w wartoÅ›ci daty i godziny. JeÅ›li tÄ… cyfrÄ… jest zero, nic nie jest wyÅ›wietlane.
+
+JeÅ›li specyfikator formatu â€Fâ€ zostanie uÅ¼yty bez innych indywidualnych specyfikatorÃ³w formatu, bÄ™dzie interpretowany jako standardowy specyfikator daty i godziny â€Fâ€.
+
+Liczba specyfikatorÃ³w formatu â€fâ€ uÅ¼ywanych z metodÄ… ParseExact, TryParseExact, ParseExact lub TryParseExact wskazuje maksymalnÄ… liczbÄ™ najwaÅ¼niejszych cyfr uÅ‚amka sekund, jaka moÅ¼e byÄ‡ reprezentowana, aby pomyÅ›lnie przeanalizowaÄ‡ ciÄ…g.Zegar 12-godzinny (1â€“2 cyfr)ãIndywidualny specyfikator formatu â€hâ€ reprezentuje godzinÄ™ jako liczbÄ™ z zakresu od 1 do 12; tzn. godzina jest reprezentowana przez 12-godzinny zegar liczÄ…cy peÅ‚ne godziny od pÃ³Å‚nocy lub poÅ‚udnia. OkreÅ›lona godzina po pÃ³Å‚nocy jest nie do odrÃ³Å¼nienia od tej samej godziny po poÅ‚udniu. Godzina nie jest zaokrÄ…glana, a godzina 1-cyfrowa jest wyÅ›wietlana w formacie bez wiodÄ…cego zera. Na przykÅ‚ad w przypadku godziny 5:43 rano lub po poÅ‚udniu ten indywidualny specyfikator formatu wyÅ›wietla wartoÅ›Ä‡ â€5â€.
+
+JeÅ›li specyfikator formatu â€hâ€ zostanie uÅ¼yty bez innych indywidualnych specyfikatorÃ³w formatu, bÄ™dzie interpretowany jako standardowy specyfikator daty i godziny i zwrÃ³ci wyjÄ…tek FormatException.Zegar 12-godzinny (2 cyfry)ÃIndywidualny specyfikator formatu â€hhâ€ (wraz z dowolnÄ… liczbÄ… dodatkowych specyfikatorÃ³w â€hâ€) reprezentuje godzinÄ™ jako liczbÄ™ z zakresu od 01 do 12; tzn. godzina jest reprezentowana przez 12-godzinny zegar liczÄ…cy peÅ‚ne godziny od pÃ³Å‚nocy lub poÅ‚udnia. OkreÅ›lona godzina po pÃ³Å‚nocy jest nie do odrÃ³Å¼nienia od tej samej godziny po poÅ‚udniu. Godzina nie jest zaokrÄ…glana, a godzina 1-cyfrowa jest wyÅ›wietlana w formacie z wiodÄ…cym zerem. Na przykÅ‚ad w przypadku godziny 5:43 rano lub po poÅ‚udniu ten specyfikator formatu wyÅ›wietla wartoÅ›Ä‡ â€05â€.Zegar 24-godzinny (1â€“2 cyfr)úIndywidualny specyfikator formatu â€Hâ€ reprezentuje godzinÄ™ jako liczbÄ™ z zakresu od 0 do 23; tzn. godzina jest reprezentowana przez 24-godzinny zegar zaczynajÄ…cy siÄ™ od zera i liczÄ…cy godziny od pÃ³Å‚nocy lub poÅ‚udnia. Godzina 1-cyfrowa jest wyÅ›wietlana w formacie bez wiodÄ…cego zera.
+
+JeÅ›li specyfikator formatu â€Hâ€ zostanie uÅ¼yty bez innych indywidualnych specyfikatorÃ³w formatu, bÄ™dzie interpretowany jako standardowy specyfikator daty i godziny i zwrÃ³ci wyjÄ…tek FormatException.Zegar 24-godzinny (2 cyfry)ØIndywidualny specyfikator formatu â€HHâ€ (wraz z dowolnÄ… liczbÄ… dodatkowych specyfikatorÃ³w â€Hâ€) reprezentuje godzinÄ™ jako liczbÄ™ z zakresu od 00 do 23; tzn. godzina jest reprezentowana przez 24-godzinny zegar zaczynajÄ…cy siÄ™ od zera i liczÄ…cy godziny od pÃ³Å‚nocy. Godzina 1-cyfrowa jest wyÅ›wietlana w formacie z wiodÄ…cym zerem.%wszystkie typy anonimowe w kontenerze2i aktualizowanie miejsc wywoÅ‚ywania bezpoÅ›rednioatrybutwÅ‚aÅ›ciwoÅ›Ä‡ automatyczna&nie moÅ¼na utworzyÄ‡ drzewa koÅ„cowegoclasskod
+pole conststaÅ‚akonstruktorseparator daty¿Indywidualny specyfikator formatu â€/â€ reprezentuje separator daty, ktÃ³ry sÅ‚uÅ¼y do rozdzielania lat, miesiÄ™cy i dni. Odpowiedni zlokalizowany separator jest pobierany z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.DateSeparator bieÅ¼Ä…cej lub okreÅ›lonej kultury.
+
+Uwaga: Aby zmieniÄ‡ separator daty dla okreÅ›lonego ciÄ…gu daty i godziny, okreÅ›l znak separatora w ograniczniku ciÄ…gu literaÅ‚u. Na przykÅ‚ad ciÄ…g formatu niestandardowego mm'/'dd'/'yyyy daje ciÄ…g wyniku, w ktÃ³rym znak â€/â€ jest zawsze uÅ¼ywany jako separator daty. Aby zmieniÄ‡ separator daty dla wszystkich dat w kulturze, zmieÅ„ wartoÅ›Ä‡ wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.DateSeparator bieÅ¼Ä…cej kultury lub utwÃ³rz wystÄ…pienie obiektu DateTimeFormatInfo, przypisz dany znak do jego wÅ‚aÅ›ciwoÅ›ci DateSeparator i wywoÅ‚aj przeciÄ…Å¼enie metody formatowania, ktÃ³ra zawiera parametr IFormatProvider.
+
+JeÅ›li specyfikator formatu â€/â€ zostanie uÅ¼yty bez innych indywidualnych specyfikatorÃ³w formatu, bÄ™dzie interpretowany jako standardowy specyfikator daty i godziny i zwrÃ³ci wyjÄ…tek FormatException.dzieÅ„ miesiÄ…ca (1â€“2 cyfr)äIndywidualny specyfikator formatu â€dâ€ reprezentuje dzieÅ„ miesiÄ…ca jako liczbÄ™ z zakresu od 1 do 31. DzieÅ„ 1-cyfrowy jest wyÅ›wietlany w formacie bez wiodÄ…cego zera.
+
+JeÅ›li specyfikator formatu â€dâ€ zostanie uÅ¼yty bez innych indywidualnych specyfikatorÃ³w formatu, bÄ™dzie interpretowany jako standardowy specyfikator daty i godziny â€dâ€.dzieÅ„ miesiÄ…ca (2 cyfry)ªCiÄ…g formatu niestandardowego â€ddâ€ reprezentuje dzieÅ„ miesiÄ…ca jako liczbÄ™ z zakresu od 01 do 31. DzieÅ„ 1-cyfrowy jest wyÅ›wietlany w formacie z wiodÄ…cym zerem.dzieÅ„ tygodnia (skrÃ³t)ğIndywidualny specyfikator formatu â€dddâ€ reprezentuje skrÃ³conÄ… nazwÄ™ dnia tygodnia. Zlokalizowana skrÃ³cona nazwa dnia tygodnia jest pobierana z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.AbbreviatedDayNames bieÅ¼Ä…cej lub okreÅ›lonej kultury.dzieÅ„ tygodnia (peÅ‚na nazwa)—Indywidualny specyfikator formatu â€ddddâ€ (wraz z dowolnÄ… liczbÄ… dodatkowych specyfikatorÃ³w â€dâ€) reprezentuje peÅ‚nÄ… nazwÄ™ dnia tygodnia. Zlokalizowana nazwa dnia tygodnia jest pobierana z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.DayNames bieÅ¼Ä…cej lub okreÅ›lonej kultury.delegateodrzuÄ‡enumwartoÅ›Ä‡ enumeventmetoda dostÄ™pu do zdarzeÅ„polez {0}z metadanychpeÅ‚na dÅ‚uga data/godzinaStandardowy specyfikator formatu â€Fâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny definiowany przez bieÅ¼Ä…cÄ… wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.FullDateTimePattern. Na przykÅ‚ad niestandardowy ciÄ…g formatu dla kultury niezmiennej to â€dddd, dd MMMM yyyy HH:mm:ssâ€.peÅ‚na krÃ³tka data/godzinaÚSpecyfikator formatu peÅ‚nej daty i krÃ³tkiej godziny (â€fâ€)
+
+Standardowy specyfikator formatu â€fâ€ reprezentuje poÅ‚Ä…czenie wzorcÃ³w dÅ‚ugiej daty(â€Dâ€) i krÃ³tkiej godziny (â€tâ€) rozdzielonych spacjÄ….ogÃ³lna data/godzina dÅ‚uga—Standardowy specyfikator formatu â€Gâ€ reprezentuje kombinacjÄ™ wzorcÃ³w daty krÃ³tkiej (â€dâ€) i godziny dÅ‚ugiej (â€Tâ€) rozdzielonych spacjÄ….ogÃ³lna data/godzina krÃ³tka˜Standardowy specyfikator formatu â€gâ€ reprezentuje kombinacjÄ™ wzorcÃ³w daty krÃ³tkiej (â€dâ€) i godziny krÃ³tkiej (â€tâ€) rozdzielonych spacjÄ….7wygenerowany kod pokrywa siÄ™ z ukrytÄ… czÄ™Å›ciÄ… koduAgenerowanie ÅºrÃ³dÅ‚a dla symboli tego typu nie jest obsÅ‚ugiwaneprzeciÄ…Å¼enie ogÃ³lneprzeciÄ…Å¼enia ogÃ³lneww {0} ({1} â€” {2})w {0} (projekt {1})
+w ÅºrÃ³dlew ÅºrÃ³dle (atrybut)w pliku pominiÄ™Ä‡
+indeksator	interfaceAna wyodrÄ™bnionÄ… metodÄ™ do wywoÅ‚ania wÂ miejscach wywoÅ‚ywaniana nowe przeciÄ…Å¼eniejesttylko ten typ anonimowyetykietastaÅ‚a lokalnafunkcja lokalnazmienna lokalnalokalizacja nieznanadata dÅ‚uga‘Standardowy specyfikator formatu â€Dâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez bieÅ¼Ä…cÄ… wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.LongDatePattern. Na przykÅ‚ad niestandardowy ciÄ…g formatu dla kultury niezmiennej to â€dddd, dd MMMM yyyyâ€.godzina dÅ‚ugaStandardowy specyfikator formatu â€Tâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.LongTimePattern konkretnej kultury. Na przykÅ‚ad niestandardowy ciÄ…g formatu dla kultury niezmiennej to â€HH:mm:ssâ€.{0} â€{1}â€metodaminuta (1-2 cyfry)»Niestandardowy specyfikator formatu â€mâ€ reprezentuje minutÄ™ jako liczbÄ™ z zakresu od 0 do 59. WartoÅ›Ä‡ minuty reprezentuje caÅ‚e minuty, ktÃ³re upÅ‚ynÄ™Å‚y od ostatniej godziny. Jednocyfrowa wartoÅ›Ä‡ minuty jest formatowana bez zera wiodÄ…cego.
+
+JeÅ›li specyfikator formatu â€mâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny â€mâ€.minuta (2 cyfry)¿Niestandardowy specyfikator formatu â€mmâ€ (oraz dowolna liczba dodatkowych specyfikatorÃ³w â€mâ€) reprezentuje minutÄ™ jako liczbÄ™ z zakresu od 00 do 59. WartoÅ›Ä‡ minuty reprezentuje caÅ‚e minuty, ktÃ³re upÅ‚ynÄ™Å‚y od ostatniej godziny. Jednocyfrowa wartoÅ›Ä‡ minuty jest formatowana za pomocÄ… zera wiodÄ…cego.miesiÄ…c (1-2 cyfry)›Niestandardowy specyfikator formatu â€Mâ€ reprezentuje miesiÄ…c jako liczbÄ™ z zakresu od 1 do 12 (lub od 1 do 13 dla kalendarzy z 13 miesiÄ…cami). Jednocyfrowa wartoÅ›Ä‡ miesiÄ…ca jest formatowana bez zera wiodÄ…cego.
+
+JeÅ›li specyfikator formatu â€Mâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny â€Mâ€.miesiÄ…c (2 cyfry)İNiestandardowy specyfikator formatu â€MMâ€ reprezentuje miesiÄ…c jako liczbÄ™ z zakresu od 01 do 12 (lub od 01 do 13 dla kalendarzy z 13 miesiÄ…cami). MiesiÄ…c jednocyfrowy jest formatowany przy uÅ¼yciu zera wiodÄ…cego.miesiÄ…c (skrÃ³t)ïNiestandardowy specyfikator formatu â€MMMâ€ reprezentujÄ…cy skrÃ³conÄ… nazwÄ™ miesiÄ…ca. Zlokalizowana skrÃ³cona nazwa miesiÄ…ca jest pobierana z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.AbbreviatedMonthNames bieÅ¼Ä…cej lub okreÅ›lonej kultury.dzieÅ„ miesiÄ…ca’Standardowy specyfikator formatu â€Mâ€ lub â€mâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez bieÅ¼Ä…cÄ… wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.MonthDayPattern. Na przykÅ‚ad niestandardowy ciÄ…g formatu dla kultury niezmiennej to â€MMMM ddâ€.miesiÄ…c (peÅ‚ny)ÕNiestandardowy specyfikator formatu â€MMMMâ€ reprezentuje peÅ‚nÄ… nazwÄ™ miesiÄ…ca. Zlokalizowana nazwa miesiÄ…ca jest pobierana z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.MonthNames bieÅ¼Ä…cej lub okreÅ›lonej kultury.	namespaceoperatorprzeciÄ…Å¼enieprzeciÄ…Å¼eniaparametr
+(Nieznany)	okres/eraÒNiestandardowe specyfikatory formatu â€gâ€ lub â€ggâ€ (oraz dowolna liczba dodatkowych specyfikatorÃ³w â€gâ€) reprezentujÄ… okres lub erÄ™ takÄ… jak A.D. Operacja formatowania ignoruje ten specyfikator, jeÅ›li formatowana data nie ma skojarzonego ciÄ…gu okresu lub ery.
+
+JeÅ›li specyfikator formatu â€gâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny â€gâ€.projekt {0}wÅ‚aÅ›ciwoÅ›Ä‡!metoda dostÄ™pu do wÅ‚aÅ›ciwoÅ›cizmienna zakresudata/godzina zgodna z rfc1123¸Standardowy specyfikator formatu â€Râ€ lub â€râ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.RFC1123Pattern. Wzorzec odpowiada zdefiniowanemu standardowi, a wÅ‚aÅ›ciwoÅ›Ä‡ jest tylko do odczytu. Dlatego jest on zawsze taki sam niezaleÅ¼nie od uÅ¼ytej kultury lub okreÅ›lonego dostawcy formatu. Niestandardowy ciÄ…g formatu to â€ddd, dd MMM yyyy HH':'mm':'ss 'GMT'â€. Gdy jest uÅ¼ywany ten standardowy specyfikator formatu, operacja formatowania lub analizowania zawsze uÅ¼ywa kultury niezmiennej.data/godzina rundyæStandardowy specyfikator formatu â€Oâ€ lub â€oâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny przy uÅ¼yciu wzorca, ktÃ³ry zachowuje informacje o strefie czasowej i generuje ciÄ…g wynikowy zgodny z normÄ… ISO 8601. W przypadku wartoÅ›ci DateTime ten specyfikator formatu zostaÅ‚ zaprojektowany tak, aby zachowywaÄ‡ wartoÅ›ci daty i godziny wraz z wÅ‚aÅ›ciwoÅ›ciÄ… DateTime.Kind w postaci tekstu. Sformatowany ciÄ…g moÅ¼na z powrotem przeanalizowaÄ‡ przy uÅ¼yciu metody DateTime.Parse(String, IFormatProvider, DateTimeStyles) lub DateTime.ParseExact, jeÅ›li parametr stylÃ³w ma wartoÅ›Ä‡ DateTimeStyles.RoundtripKind.
+
+Standardowy specyfikator formatu â€Oâ€ lub â€oâ€ odpowiada niestandardowemu ciÄ…gowi formatu â€yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffKâ€ dla wartoÅ›ci DateTime i niestandardowemu ciÄ…gowi formatu â€yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzzâ€ dla wartoÅ›ci DateTimeOffset. W tym ciÄ…gu pary apostrofÃ³w ograniczajÄ…ce pojedyncze znaki, takie jak Å‚Ä…czniki, dwukropki i litera â€Tâ€ wskazujÄ…, Å¼e dany znak jest literaÅ‚em, ktÃ³rego nie moÅ¼na zmieniÄ‡. Apostrofy nie pojawiajÄ… siÄ™ w ciÄ…gu wyjÅ›ciowym.
+
+Standardowy specyfikator formatu â€Oâ€ lub â€oâ€ (oraz niestandardowy ciÄ…g formatu â€yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffKâ€) uÅ¼ywajÄ… trzech sposobÃ³w zdefiniowanych przez normÄ™ ISO 8601 do reprezentowania informacji o strefie czasowej w celu zachowania wÅ‚aÅ›ciwoÅ›ci Kind wartoÅ›ci DateTime:
+
+    SkÅ‚adnik strefy czasowej DateTimeKind.Local wartoÅ›ci daty i godziny to przesuniÄ™cie wzglÄ™dem czasu UTC (na przykÅ‚ad +01:00, -07:00). Wszystkie wartoÅ›ci DateTimeOffset sÄ… takÅ¼e reprezentowane za pomocÄ… tego formatu.
+
+    SkÅ‚adnik strefy czasowej DateTimeKind.Utc wartoÅ›ci daty i godziny uÅ¼ywa elementu â€Zâ€ (oznaczajÄ…cego zerowe przesuniÄ™cie) do reprezentowania czasu UTC.
+
+     WartoÅ›ci daty i godziny ze skÅ‚adnikiem DateTimeKind.Unspecified nie majÄ… informacji o strefie czasowej.
+
+PoniewaÅ¼ standardowy specyfikator formatu â€Oâ€ lub â€oâ€ jest zgodny ze standardem miÄ™dzynarodowym, operacja formatowania lub przetwarzania uÅ¼ywajÄ…ca tego specyfikatora zawsze uÅ¼ywa kultury niezmiennej i kalendarza gregoriaÅ„skiego.
+
+CiÄ…gi przekazywane do metod Parse, TryParse, ParseExact i TryParseExact wartoÅ›ci DateTime i DateTimeOffset mogÄ… byÄ‡ analizowane przy uÅ¼yciu specyfikatora formatu â€Oâ€ lub â€oâ€, jeÅ›li majÄ… one jeden z tych formatÃ³w. W przypadku obiektÃ³w DateTime wywoÅ‚anie przeciÄ…Å¼enia analizy powinno takÅ¼e obejmowaÄ‡ parametr stylu o wartoÅ›ci DateTimeStyles.RoundtripKind. ZauwaÅ¼, Å¼e wywoÅ‚anie metody analizy z niestandardowym ciÄ…giem formatu odpowiadajÄ…cym specyfikatorowi formatu â€Oâ€ lub â€oâ€ da inne wyniki niÅ¼ w przypadku specyfikatora â€Oâ€ lub â€oâ€. Dzieje siÄ™ tak dlatego, Å¼e metody analizy uÅ¼ywajÄ…ce niestandardowego ciÄ…gu formatu nie mogÄ… analizowaÄ‡ wartoÅ›ci daty i godziny w postaci ciÄ…gu, ktÃ³ry nie zawiera skÅ‚adnika strefy czasowej lub elementu â€Zâ€ wskazujÄ…cego czas UTC.sekunda (1-2 cyfry)±Niestandardowy specyfikator formatu â€sâ€ reprezentuje sekundy jako liczbÄ™ z zakresu od 0 do 59. Wynik reprezentuje caÅ‚e sekundy, ktÃ³re upÅ‚ynÄ™Å‚y od ostatniej minuty. Jednocyfrowa wartoÅ›Ä‡ sekundy jest formatowana bez zera wiodÄ…cego.
+
+JeÅ›li specyfikator formatu â€sâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny â€sâ€.sekunda (2 cyfry)ÄNiestandardowy specyfikator formatu â€ssâ€ (oraz dowolna liczba dodatkowych specyfikatorÃ³w â€sâ€) reprezentuje sekundÄ™ jako liczbÄ™ z zakresu od 00 do 59. WartoÅ›Ä‡ sekundy reprezentuje caÅ‚e sekundy, ktÃ³re upÅ‚ynÄ™Å‚y od ostatniej minuty. Jednocyfrowa wartoÅ›Ä‡ sekundy jest formatowana przy uÅ¼yciu zera wiodÄ…cego.data krÃ³tkaÁStandardowy specyfikator formatu â€dâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.ShortDatePattern konkretnej kultury. Na przykÅ‚ad niestandardowy ciÄ…g formatu zwracany przez wÅ‚aÅ›ciwoÅ›Ä‡ ShortDatePattern dla kultury niezmiennej to â€MM/dd/yyyyâ€.godzina krÃ³tka…Standardowy specyfikator formatu â€tâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez bieÅ¼Ä…cÄ… wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.ShortTimePattern. Na przykÅ‚ad niestandardowy ciÄ…g formatu dla kultury niezmiennej to â€HH:mmâ€.sortowalna data/godzina¼	Standardowy specyfikator formatu â€sâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.SortableDateTimePattern. Wzorzec odpowiada zdefiniowanemu standardowi (ISO 8601), a wÅ‚aÅ›ciwoÅ›Ä‡ jest tylko do odczytu. Dlatego jest zawsze taki sam niezaleÅ¼nie od uÅ¼ytej kultury lub okreÅ›lonego dostawcy formatu. Niestandardowy ciÄ…g formatu to â€yyyy'-'MM'-'dd'T'HH':'mm':'ssâ€.
+
+Specyfikator formatu â€sâ€ jest przeznaczony do tworzenia ciÄ…gÃ³w wyniku, ktÃ³re moÅ¼na spÃ³jnie sortowaÄ‡ w kolejnoÅ›ci rosnÄ…cej lub malejÄ…cej na podstawie wartoÅ›ci daty i godziny. Dlatego mimo Å¼e standardowy specyfikator formatu â€sâ€ reprezentuje wartoÅ›Ä‡ daty i godziny w spÃ³jnym formacie, operacja formatowania nie modyfikuje wartoÅ›ci formatowanego obiektu daty i godziny w celu odzwierciedlenia jego wÅ‚aÅ›ciwoÅ›ci DateTime.Kind lub wartoÅ›ci DateTimeOffset.Offset. Na przykÅ‚ad ciÄ…gi wyniku generowane przez formatowanie wartoÅ›ci daty i godziny 2014-11-15T18:32:17+00:00 oraz 2014-11-15T18:32:17+08:00 sÄ… identyczne.
+
+Gdy jest uÅ¼ywany ten standardowy specyfikator formatu, operacja formatowania lub analizowania zawsze uÅ¼ywa kultury niezmiennej.konstruktor statyczny8'Element â€symbolâ€ nie moÅ¼e byÄ‡ przestrzeniÄ… nazw.separator godziny‚	Niestandardowy specyfikator formatu â€:â€ reprezentuje separator godziny, ktÃ³ry jest uÅ¼ywany do rozdzielania godzin, minut i sekund. Odpowiedni zlokalizowany separator godziny jest pobierany z wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.TimeSeparator bieÅ¼Ä…cej lub okreÅ›lonej kultury.
+
+Uwaga: aby zmieniÄ‡ separator godziny dla okreÅ›lonego ciÄ…gu daty i godziny, okreÅ›l znak separatora w ramach ogranicznika ciÄ…gu literaÅ‚u. Na przykÅ‚ad niestandardowy ciÄ…g formatu hh'_'dd'_'ss tworzy ciÄ…g wyniku, w ktÃ³rym znak â€_â€ (podkreÅ›lenie) jest zawsze uÅ¼ywany jako separator godziny. Aby zmieniÄ‡ separator godziny dla wszystkich dat kultury, zmieÅ„ wartoÅ›Ä‡ wÅ‚aÅ›ciwoÅ›ci DateTimeFormatInfo.TimeSeparator bieÅ¼Ä…cej kultury lub utwÃ³rz wystÄ…pienie obiektu DateTimeFormatInfo, przypisz znak do jego wÅ‚aÅ›ciwoÅ›ci TimeSeparator i wywoÅ‚aj przeciÄ…Å¼enie metody formatowania, ktÃ³re obejmuje parametr IFormatProvider.
+
+JeÅ›li specyfikator formatu â€:â€ zostanie uÅ¼yty bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny i powoduje zgÅ‚oszenie wyjÄ…tku FormatException.strefa czasowaÀ
+Niestandardowy specyfikator formatu â€Kâ€ reprezentuje informacje o strefie czasowej dla wartoÅ›ci daty i godziny. JeÅ›li ten specyfikator formatu jest uÅ¼ywany dla wartoÅ›ci DateTime, ciÄ…g wyniku jest definiowany przez wartoÅ›Ä‡ wÅ‚aÅ›ciwoÅ›ci DateTime.Kind:
+
+    W przypadku lokalnej strefy czasowej (wÅ‚aÅ›ciwoÅ›Ä‡ DateTime.Kind o wartoÅ›ci DateTimeKind.Local) ten specyfikator jest rÃ³wnowaÅ¼ny specyfikatorowi â€zzzâ€ i tworzy ciÄ…g wyniku zawierajÄ…cy przesuniÄ™cie lokalne wzglÄ™dem uniwersalnego czasu koordynowanego (UTC), na przykÅ‚ad â€-07:00â€.
+
+    W przypadku czasu UTC (wÅ‚aÅ›ciwoÅ›Ä‡ DateTime.Kind o wartoÅ›ci DateTimeKind.Utc) ciÄ…g wyniku zawiera znak â€Zâ€ reprezentujÄ…cy datÄ™ UTC.
+
+    W przypadku godziny z nieokreÅ›lonej strefy czasowej (wÅ‚aÅ›ciwoÅ›Ä‡ DateTime.Kind o wartoÅ›ci DateTimeKind.Unspecified) wynik jest rÃ³wnowaÅ¼ny wartoÅ›ci String.Empty.
+
+W przypadku wartoÅ›ci typu DateTimeOffset specyfikator formatu â€Kâ€ jest rÃ³wnowaÅ¼ny specyfikatorowi formatu â€zzzâ€" i tworzy ciÄ…g wyniku zawierajÄ…cy przesuniÄ™cie wartoÅ›ci DateTimeOffset wzglÄ™dem czasu UTC.
+
+JeÅ›li specyfikator formatu â€Kâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny i powoduje zgÅ‚oszenie wyjÄ…tku FormatException.typograniczenie typuparametr typuuniwersalna peÅ‚na data/godzinaÌStandardowy specyfikator formatu â€Uâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.FullDateTimePattern okreÅ›lonej kultury. Wzorzec ten dziaÅ‚a tak samo jak wzorzec â€Fâ€, jednak wartoÅ›Ä‡ DateTime jest automatycznie konwertowana na czas UTC przed formatowaniem.#uniwersalna sortowalna data/godzina“Standardowy specyfikator formatu â€uâ€ reprezentuje niestandardowy ciÄ…g formatu daty i godziny zdefiniowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.UniversalSortableDateTimePattern. Wzorzec odpowiada zdefiniowanemu standardowi, a wÅ‚aÅ›ciwoÅ›Ä‡ jest tylko do odczytu. Dlatego jest on zawsze taki sam niezaleÅ¼nie od uÅ¼ytej kultury lub okreÅ›lonego dostawcy formatu. Niestandardowy ciÄ…g formatu to â€yyyy'-'MM'-'dd HH':'mm':'ss'Z'â€. Gdy jest uÅ¼ywany ten standardowy specyfikator formatu, operacja formatowania lub analizowania zawsze uÅ¼ywa kultury niezmiennej.
+
+Mimo Å¼e ciÄ…g wyniku powinien wyraÅ¼aÄ‡ godzinÄ™ za pomocÄ… uniwersalnego czasu koordynowanego (UTC), podczas operacji formatowania nie jest wykonywana Å¼adna konwersja oryginalnej wartoÅ›ci DateTime. Dlatego przed sformatowaniem wartoÅ›ci DateTime naleÅ¼y skonwertowaÄ‡ jÄ… na czas UTC za pomocÄ… wywoÅ‚ania metody DateTime.ToUniversalTime.=aktualizowanie uÅ¼yÄ‡ w zawierajÄ…cym elemencie czÅ‚onkowskim/aktualizowanie uÅ¼yÄ‡ w projekcie zawierajÄ…cym+aktualizowanie uÅ¼yÄ‡ w typie zawierajÄ…cym-aktualizowanie uÅ¼yÄ‡ w projektach zaleÅ¼nych"przesuniÄ™cie godziny i minuty utc—W przypadku wartoÅ›ci DateTime niestandardowy specyfikator formatu â€zzzâ€ reprezentuje przesuniÄ™cie ze znakiem strefy czasowej lokalnego systemu operacyjnego wzglÄ™dem czasu UTC wyraÅ¼one w godzinach i minutach. Nie uwzglÄ™dnia on wartoÅ›ci wÅ‚aÅ›ciwoÅ›ci DateTime.Kind wystÄ…pienia. Z tego powodu nie zaleca siÄ™ uÅ¼ycia specyfikatora formatu â€zzzâ€ z wartoÅ›ciami DateTime.
+
+W przypadku wartoÅ›ci DateTimeOffset ten specyfikator formatu reprezentuje przesuniÄ™cie wartoÅ›ci DateTimeOffset wzglÄ™dem czasu UTC w godzinach i minutach.
+
+PrzesuniÄ™cie jest zawsze wyÅ›wietlane ze znakiem wiodÄ…cym. Znak plus (+) wskazuje godzinÄ™ po czasie UTC, a znak minus (-) wskazuje godzinÄ™ przed czasem UTC. Jednocyfrowa wartoÅ›Ä‡ przesuniÄ™cia jest formatowana przy uÅ¼yciu wiodÄ…cego zera.%przesuniÄ™cie godziny utc (1-2 cyfry)ûW przypadku wartoÅ›ci DateTime niestandardowy specyfikator formatu â€zâ€ reprezentuje przesuniÄ™cie ze znakiem strefy czasowej lokalnego systemu operacyjnego wzglÄ™dem uniwersalnego czasu koordynowanego (UTC) wyraÅ¼one w godzinach. Nie uwzglÄ™dnia on wartoÅ›ci wÅ‚aÅ›ciwoÅ›ci DateTime.Kind wystÄ…pienia. Z tego powodu nie zaleca siÄ™ uÅ¼ycia specyfikatora formatu â€zâ€ z wartoÅ›ciami DateTime.
+
+W przypadku wartoÅ›ci DateTimeOffset ten specyfikator formatu reprezentuje przesuniÄ™cie wartoÅ›ci DateTimeOffset wzglÄ™dem czasu UTC w godzinach.
+
+PrzesuniÄ™cie jest zawsze wyÅ›wietlane ze znakiem wiodÄ…cym. Znak plus (+) wskazuje godzinÄ™ po czasie UTC, a znak minus (-) wskazuje godzinÄ™ przed czasem UTC. Jednocyfrowa wartoÅ›Ä‡ przesuniÄ™cia jest formatowana przy uÅ¼yciu wiodÄ…cego zera.
+
+JeÅ›li specyfikator formatu â€zâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator daty i godziny i powoduje zgÅ‚oszenie wyjÄ…tku FormatException.#przesuniÄ™cie godziny UTC (2 cyfry)ÿW przypadku wartoÅ›ci DateTime niestandardowy specyfikator formatu â€zzâ€ reprezentuje przesuniÄ™cie ze znakiem strefy czasowej lokalnego systemu operacyjnego wzglÄ™dem czasu UTC wyraÅ¼one w godzinach. Nie uwzglÄ™dnia on wartoÅ›ci wÅ‚aÅ›ciwoÅ›ci DateTime.Kind wystÄ…pienia. Z tego powodu nie zaleca siÄ™ uÅ¼ycia specyfikatora formatu â€zzâ€ z wartoÅ›ciami DateTime.
+
+W przypadku wartoÅ›ci DateTimeOffset ten specyfikator formatu reprezentuje przesuniÄ™cie wartoÅ›ci DateTimeOffset wzglÄ™dem czasu UTC w godzinach.
+
+PrzesuniÄ™cie jest zawsze wyÅ›wietlane ze znakiem wiodÄ…cym. Znak plus (+) wskazuje godzinÄ™ po czasie UTC, a znak minus (-) wskazuje godzinÄ™ przed czasem UTC. Jednocyfrowa wartoÅ›Ä‡ przesuniÄ™cia jest formatowana przy uÅ¼yciu wiodÄ…cego zera.$Zakres [x-y] w odwrotnej kolejnoÅ›cirok (1-2 cyfry)ªNiestandardowy specyfikator formatu â€yâ€ reprezentuje rok w postaci liczby skÅ‚adajÄ…cej siÄ™ z jednej lub dwÃ³ch cyfr. JeÅ›li rok skÅ‚ada siÄ™ z wiÄ™cej niÅ¼ dwÃ³ch cyfr, w wyniku pojawiajÄ… siÄ™ tylko dwie najmniej znaczÄ…ce cyfry. JeÅ›li pierwsza cyfra roku dwucyfrowego zaczyna siÄ™ od zera (na przykÅ‚ad 2008), liczba jest formatowana bez zera wiodÄ…cego.
+
+JeÅ›li specyfikator formatu â€yâ€ jest uÅ¼ywany bez innych niestandardowych specyfikatorÃ³w formatu, jest on interpretowany jako standardowy specyfikator formatu daty i godziny â€yâ€.rok (2 cyfry)¶Niestandardowy specyfikator formatu â€yyâ€ reprezentuje rok w postaci liczby dwucyfrowej. JeÅ›li rok skÅ‚ada siÄ™ z wiÄ™cej niÅ¼ dwÃ³ch cyfr, w wyniku pojawiajÄ… siÄ™ tylko dwie najmniej znaczÄ…ce cyfry. JeÅ›li rok dwucyfrowy ma mniej niÅ¼ dwie cyfry znaczÄ…ce, liczba jest uzupeÅ‚niana zerami wiodÄ…cymi w celu uzyskania dwÃ³ch cyfr.
+
+W ramach operacji analizowania rok dwucyfrowy analizowany przy uÅ¼yciu niestandardowego specyfikatora formatu â€yyâ€ jest interpretowany na podstawie wÅ‚aÅ›ciwoÅ›ci Calendar.TwoDigitYearMax bieÅ¼Ä…cego kalendarza dostawcy formatu. PoniÅ¼szy przykÅ‚ad przedstawia analizowanie reprezentacji ciÄ…gu daty, ktÃ³ry zawiera rok dwucyfrowy, za pomocÄ… domyÅ›lnego kalendarza gregoriaÅ„skiego kultury en-US, ktÃ³ra w tym przypadku jest kulturÄ… bieÅ¼Ä…cÄ…. NastÄ™pnie jest zmieniany obiekt CultureInfo bieÅ¼Ä…cej kultury, tak aby uÅ¼ywaÅ‚ obiektu GregorianCalendar ze zmodyfikowanÄ… wÅ‚aÅ›ciwoÅ›ciÄ… TwoDigitYearMax.rok (3-4 cyfry)£Niestandardowy specyfikator formatu â€yyyâ€ reprezentuje rok za pomocÄ… minimalnie 3 cyfr. JeÅ›li rok ma wiÄ™cej niÅ¼ trzy cyfry znaczÄ…ce, sÄ… one uwzglÄ™dniane w ciÄ…gu wyniku. JeÅ›li rok ma mniej niÅ¼ trzy cyfry, liczba jest uzupeÅ‚niana zerami wiodÄ…cymi, tak aby otrzymaÄ‡ trzy cyfry.rok (4 cyfry)ªNiestandardowy specyfikator formatu â€yyyyâ€ reprezentuje rok za pomocÄ… minimalnie 4 cyfr. JeÅ›li rok ma wiÄ™cej niÅ¼ cztery cyfry znaczÄ…ce, sÄ… one uwzglÄ™dniane w ciÄ…gu wyniku. JeÅ›li rok ma mniej niÅ¼ cztery cyfry, liczba jest uzupeÅ‚niana zerami wiodÄ…cymi, tak aby otrzymaÄ‡ cztery cyfry.rok (5 cyfr)‘Niestandardowy specyfikator formatu â€yyyyyâ€ (oraz dowolna liczba dodatkowych specyfikatorÃ³w â€yâ€) reprezentuje rok za pomocÄ… minimalnie 5 cyfr. JeÅ›li rok ma wiÄ™cej niÅ¼ piÄ™Ä‡ cyfr znaczÄ…cych, sÄ… one uwzglÄ™dniane w ciÄ…gu wyniku. JeÅ›li rok ma mniej niÅ¼ piÄ™Ä‡ cyfr, liczba jest uzupeÅ‚niana zerami wiodÄ…cymi, tak aby otrzymaÄ‡ piÄ™Ä‡ cyfr.
+
+JeÅ›li podano dodatkowe specyfikatory â€yâ€, liczba jest uzupeÅ‚niana takÄ… liczbÄ… zer wiodÄ…cych, aby otrzymaÄ‡ liczbÄ™ cyfr rÃ³wnÄ… liczbie specyfikatorÃ³w â€yâ€.rok miesiÄ…c®Standardowy specyfikator formatu â€Râ€ lub â€râ€ reprezentuje ciÄ…g niestandardowego formatu daty i godziny, ktÃ³ry jest definiowany przez wÅ‚aÅ›ciwoÅ›Ä‡ DateTimeFormatInfo.YearMonthPattern okreÅ›lonej kultury. Na przykÅ‚ad ciÄ…g niestandardowego formatu dla niezmiennej kultury to â€rrrr MMMMâ€. '0  ÎÊï¾   ‘   lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.RuntimeResourceSet   M       PADPADP)Z„n‰c…'ƒ†•ƒ@‡.º©ŠŠÓ&ù¼FÎs‘|Ç_–,Ù™îKœÙ7Øº¢dEİ¤_Ä¯©qO«®²"–¶šÇ¸†v‘¼mä˜ÀpGÎÅôùÅÈºœ^Êí¹xÌ”ÙÌÓ!Ë×nÜÛ¹Üœ(êçyYëÖîeìü]*íœ÷Ôí¾ï%Dêïş	óãêó" ‹ù§Ùû.uÂfŸ!Q‘ı"5ŒQó¶oâ»Ásë›o“ÿsî‡É!ÖR(§a˜/†Z‡2Lª¨2‡, =@IAÜ”¤GêêH9E5L>y•L‚{1R‰×S<ÄÖW4óäX9zŠ[4{Ëa•<ƒma ¹m«©ŒpF\Ouıh)wE±4xg
+^})ƒ•~™¿~)ÀCAC$  ã	  t  Ë  .  4  ˆ  ^  µ    M  Š  v  ˆ	    Á  ¶  8
+  é   +  —  Ÿ  ÿ  M      ¿    Ú    Ô  W  ¬  B  Œ  à  Á  :  À
+  D  §  ª  0  ¹  º  *  ú  i  ë  &  m  
+    7    ø  ”  V  Q  °  ;  ñ  ¬  2  Ç  è  
+  w  í  ¥  ú  ~    i       ª    P  ŠA _ s o u r c e _ f i l e _ c o n t a i n s _ a _ h e a d e r _ t h a t _ d o e s _ n o t _ m a t c h _ t h e _ r e q u i r e d _ t e x t     TA _ s o u r c e _ f i l e _ i s _ m i s s i n g _ a _ r e q u i r e d _ h e a d e r Q   @A c c e s s i b i l i t y _ m o d i f i e r s _ r e q u i r e d ƒ   6A d d _ a c c e s s i b i l i t y _ m o d i f i e r s ¨   "A d d _ m i s s i n g _ c a s e s Ê   6A d d _ p a r e n t h e s e s _ f o r _ c l a r i t y æ   *A d d _ r e a d o n l y _ m o d i f i e r   8A d d _ t h i s _ o r _ M e _ q u a l i f i c a t i o n =  pA v o i d _ l e g a c y _ f o r m a t _ t a r g e t _ 0 _ i n _ S u p p r e s s M e s s a g e A t t r i b u t e j  lA v o i d _ l e g a c y _ f o r m a t _ t a r g e t _ i n _ S u p p r e s s M e s s a g e A t t r i b u t e Õ  4A v o i d _ m u l t i p l e _ b l a n k _ l i n e s 6  ØA v o i d _ u n n e c e s s a r y _ v a l u e _ a s s i g n m e n t s _ i n _ y o u r _ c o d e _ a s _ t h e s e _ l i k e l y _ i n d i c a t e _ r e d u n d a n t _ v a l u e _ c o m p u t a t i o n s _ I f _ t h e _ v a l u e _ c o m p u t a t i o n _ i s _ n o t _ r e d u n d a n t _ a n d _ y o u _ i n t e n d _ t o _ r e t a i n _ t h e _ a s s i g n m e n t c o m m a _ t h e n _ c h a n g e _ t h e _ a s s i g n m e n t _ t a r g e t _ t o _ a _ l o c a l _ v a r i a b l e _ w h o s e _ n a m e _ s t a r t s _ w i t h _ a n _ u n d e r s c o r e _ a n d _ i s _ o p t i o n a l l y _ f o l l o w e d _ b y _ a n _ i n t e g e r c o m m a _ s u c h _ a s _ _ _ c o m m a _ _ 1 _ c o m m a _ _ 2 _ c o m m a _ e t c T  ìA v o i d _ u n u s e d _ p a r a m e t e r s _ i n _ y o u r _ c o d e _ I f _ t h e _ p a r a m e t e r _ c a n n o t _ b e _ r e m o v e d _ t h e n _ c h a n g e _ i t s _ n a m e _ s o _ i t _ s t a r t s _ w i t h _ a n _ u n d e r s c o r e _ a n d _ i s _ o p t i o n a l l y _ f o l l o w e d _ b y _ a n _ i n t e g e r _ s u c h _ a s _ _ c o m m a _ _ 1 _ c o m m a _ _ 2 _ e t c _ T h e s e _ a r e _ t r e a t e d _ a s _ s p e c i a l _ d i s c a r d _ s y m b o l _ n a m e s ,  tB l a n k _ l i n e _ r e q u i r e d _ b e t w e e n _ b l o c k _ a n d _ s u b s e q u e n t _ s t a t e m e n t g  TC h a n g e _ n a m e s p a c e _ t o _ m a t c h _ f o l d e r _ s t r u c t u r e ª  ŠC h a n g e s _ t o _ e x p r e s s i o n _ t r e e s _ m a y _ r e s u l t _ i n _ b e h a v i o r _ c h a n g e s _ a t _ r u n t i m e î  VC o l l e c t i o n _ i n i t i a l i z a t i o n _ c a n _ b e _ s i m p l i f i e d P  PC o n d i t i o n a l _ e x p r e s s i o n _ c a n _ b e _ s i m p l i f i e d x  BC o n v e r t _ t o _ c o n d i t i o n a l _ e x p r e s s i o n    <E x p r e s s i o n _ v a l u e _ i s _ n e v e r _ u s e d Ã  TF o r m a t _ s t r i n g _ c o n t a i n s _ i n v a l i d _ p l a c e h o l d e r ò  XG e t H a s h C o d e _ i m p l e m e n t a t i o n _ c a n _ b e _ s i m p l i f i e d *  >I n t e r p o l a t i o n _ c a n _ b e _ s i m p l i f i e d ^  *I n v a l i d _ f o r m a t _ s t r i n g   NI n v a l i d _ g l o b a l _ S u p p r e s s M e s s a g e A t t r i b u t e   lI n v a l i d _ o r _ m i s s i n g _ t a r g e t _ f o r _ S u p p r e s s M e s s a g e A t t r i b u t e İ  TI n v a l i d _ s c o p e _ f o r _ S u p p r e s s M e s s a g e A t t r i b u t e 9  &M a k e _ f i e l d _ r e a d o n l y |  BM e m b e r _ a c c e s s _ s h o u l d _ b e _ q u a l i f i e d   :M e m b e r _ n a m e _ c a n _ b e _ s i m p l i f i e d Ò  2M o d i f i e r s _ a r e _ n o t _ o r d e r e d ÷  lN a m e s p a c e _ 0 _ d o e s _ n o t _ m a t c h _ f o l d e r _ s t r u c t u r e _ e x p e c t e d _ 1 	  RN a m e s p a c e _ d o e s _ n o t _ m a t c h _ f o l d e r _ s t r u c t u r e u	  N a m i n g _ S t y l e s ¯	  .N a m i n g _ r u l e _ v i o l a t i o n _ 0 Â	  8N u l l _ c h e c k _ c a n _ b e _ s i m p l i f i e d ç	  NO b j e c t _ i n i t i a l i z a t i o n _ c a n _ b e _ s i m p l i f i e d 
+  O r d e r _ m o d i f i e r s C
+  ÈP a r a m e t e r _ 0 _ c a n _ b e _ r e m o v e d _ i f _ i t _ i s _ n o t _ p a r t _ o f _ a _ s h i p p e d _ p u b l i c _ A P I _ i t s _ i n i t i a l _ v a l u e _ i s _ n e v e r _ u s e d ]
+  tP a r a m e t e r _ 0 _ c a n _ b e _ r e m o v e d _ i t s _ i n i t i a l _ v a l u e _ i s _ n e v e r _ u s e d   4P a r e n t h e s e s _ c a n _ b e _ r e m o v e d g  NP a r e n t h e s e s _ s h o u l d _ b e _ a d d e d _ f o r _ c l a r i t y €  P o p u l a t e _ s w i t c h Ä  ZP r e f e r _ e x p l i c i t l y _ p r o v i d e d _ t u p l e _ e l e m e n t _ n a m e â  ’P r i v a t e _ m e m b e r _ 0 _ c a n _ b e _ r e m o v e d _ a s _ t h e _ v a l u e _ a s s i g n e d _ t o _ i t _ i s _ n e v e r _ r e a d   4P r i v a t e _ m e m b e r _ 0 _ i s _ u n u s e d …  lP r i v a t e _ m e t h o d _ 0 _ c a n _ b e _ r e m o v e d _ a s _ i t _ i s _ n e v e r _ i n v o k e d ´  ¨P r i v a t e _ p r o p e r t y _ 0 _ c a n _ b e _ c o n v e r t e d _ t o _ a _ m e t h o d _ a s _ i t s _ g e t _ a c c e s s o r _ i s _ n e v e r _ i n v o k e d   .R e m o v e _ U n n e c e s s a r y _ C a s t   2R e m o v e _ r e d u n d a n t _ e q u a l i t y ®  <R e m o v e _ u n n e c e s s a r y _ p a r e n t h e s e s Ì  <R e m o v e _ u n n e c e s s a r y _ s u p p r e s s i o n è  :R e m o v e _ u n r e a d _ p r i v a t e _ m e m b e r s   (R e m o v e _ u n u s e d _ m e m b e r /  .R e m o v e _ u n u s e d _ p a r a m e t e r N  2R e m o v e _ u n u s e d _ p a r a m e t e r _ 0 j  †R e m o v e _ u n u s e d _ p a r a m e t e r _ 0 _ i f _ i t _ i s _ n o t _ p a r t _ o f _ a _ s h i p p e d _ p u b l i c _ A P I   :R e m o v e _ u n u s e d _ p r i v a t e _ m e m b e r s ğ  0S i m p l i f y _ L I N Q _ e x p r e s s i o n   DS i m p l i f y _ c o l l e c t i o n _ i n i t i a l i z a t i o n 0  >S i m p l i f y _ c o n d i t i o n a l _ e x p r e s s i o n O  ,S i m p l i f y _ i n t e r p o l a t i o n n  <S i m p l i f y _ o b j e c t _ i n i t i a l i z a t i o n †  `T h e _ f i l e _ h e a d e r _ d o e s _ n o t _ m a t c h _ t h e _ r e q u i r e d _ t e x t ¦  €T h e _ f i l e _ h e a d e r _ i s _ m i s s i n g _ o r _ n o t _ l o c a t e d _ a t _ t h e _ t o p _ o f _ t h e _ f i l e Ü  BU n n e c e s s a r y _ a s s i g n m e n t _ o f _ a _ v a l u e %  LU n n e c e s s a r y _ a s s i g n m e n t _ o f _ a _ v a l u e _ t o _ 0 I  &U s e _ S y s t e m _ H a s h C o d e ƒ  "U s e _ a u t o _ p r o p e r t y ©  .U s e _ c o a l e s c e _ e x p r e s s i o n Í  .U s e _ c o m p o u n d _ a s s i g n m e n t ì  ,U s e _ d e c r e m e n t _ o p e r a t o r   DU s e _ e x p l i c i t l y _ p r o v i d e d _ t u p l e _ n a m e %  ,U s e _ i n c r e m e n t _ o p e r a t o r H  0U s e _ i n f e r r e d _ m e m b e r _ n a m e b  (U s e _ n u l l _ p r o p a g a t i o n ˜  (U s e _ t h r o w _ e x p r e s s i o n ¹  OPlik ÅºrÃ³dÅ‚owy zawiera nagÅ‚Ã³wek, ktÃ³ry nie jest zgodny z wymaganym tekstem0Brak wymaganego nagÅ‚Ã³wka w pliku ÅºrÃ³dÅ‚owym.#Wymagane modyfikatory dostÄ™pnoÅ›ci Dodaj modyfikatory dostÄ™pnoÅ›ciDodaj brakujÄ…ce przypadki1Dodaj nawiasy w celu zapewnienia jednoznacznoÅ›ci"Dodaj modyfikator tylko do odczytu+Dodaj kwalifikacje â€thisâ€ lub â€Meâ€.iUnikaj elementu docelowego w starszym formacie â€{0}â€ we wÅ‚aÅ›ciwoÅ›ci â€SuppressMessageAttributeâ€_Unikaj elementu docelowego w starszym formacie we wÅ‚aÅ›ciwoÅ›ci â€SuppressMessageAttributeâ€Unikaj wielu pustych wierszyÕUnikaj niepotrzebnych przypisaÅ„ wartoÅ›ci w kodzie, poniewaÅ¼ mogÄ… one wskazywaÄ‡ nadmiarowe obliczenia wartoÅ›ci. JeÅ›li obliczenie wartoÅ›ci nie jest nadmiarowe i zamierzasz zachowaÄ‡ przypisanie, zmieÅ„ wartoÅ›Ä‡ docelowÄ… przypisania na zmiennÄ… lokalnÄ…, ktÃ³rej nazwa rozpoczyna siÄ™ od znaku podkreÅ›lenia, a opcjonalnie nastÄ™puje po niej liczba caÅ‚kowita, taka jak â€_â€, â€_1â€, â€_2â€ itp. SÄ… one traktowane jako specjalne nazwy symboli odrzucenia.¸Unikaj nieuÅ¼ywanych parametrÃ³w w kodzie. JeÅ›li nie moÅ¼na usunÄ…Ä‡ parametru, zmieÅ„ jego nazwÄ™, tak aby rozpoczynaÅ‚a siÄ™ od znaku podkreÅ›lenia, a opcjonalnie nastÄ™powaÅ‚a po niej liczba caÅ‚kowita, na przykÅ‚ad â€_â€, â€_1â€, â€_2â€ itp. SÄ… one traktowane jako specjalne nazwy symboli odrzucenia.AWymagany jest pusty wiersz miÄ™dzy blokiem a kolejnÄ… instrukcjÄ…BZmieÅ„ element namespace, aby byÅ‚a zgodna ze strukturÄ… folderÃ³w`Wprowadzenie zmian w drzewach wyraÅ¼eÅ„ moÅ¼e spowodowaÄ‡ zmiany zachowania w czasie wykonywania&MoÅ¼na uproÅ›ciÄ‡ inicjowanie kolekcji&WyraÅ¼enie warunkowe moÅ¼na uproÅ›ciÄ‡!Konwertuj na wyraÅ¼enie warunkowe-WartoÅ›Ä‡ wyraÅ¼enia nie jest nigdy uÅ¼ywana.6CiÄ…g formatu zawiera nieprawidÅ‚owy symbol zastÄ™pczy2ImplementacjÄ™ â€GetHashCodeâ€ moÅ¼na uproÅ›ciÄ‡InterpolacjÄ™ moÅ¼na uproÅ›ciÄ‡NieprawidÅ‚owy ciÄ…g formatu>NieprawidÅ‚owy globalny element â€SuppressMessageAttributeâ€ZNieprawidÅ‚owy lub brakujÄ…cy element docelowy dla elementu â€SuppressMessageAttributeâ€ANieprawidÅ‚owy zakres dla elementu â€SuppressMessageAttributeâ€ Ustaw pole jako tylko do odczytu2DostÄ™p do skÅ‚adowej powinien mieÄ‡ kwalifikator.#NazwÄ™ skÅ‚adowej moÅ¼na uproÅ›ciÄ‡#Modyfikatory nie sÄ… uporzÄ…dkowaneWPrzestrzeÅ„ nazw â€{0}â€ nie jest zgodna z strukturÄ… folderÃ³w, oczekiwano â€{1}â€8PrzestrzeÅ„ nazw nie jest zgodna ze strukturÄ… folderÃ³wStyle nazewnictwa#Naruszenie reguÅ‚y nazewnictwa: {0}3MoÅ¼na uproÅ›ciÄ‡ test na obecnoÅ›Ä‡ wartoÅ›ci null%Inicjowanie obiektu moÅ¼na uproÅ›ciÄ‡UporzÄ…dkuj modyfikatory¥Parametr â€{0}â€ moÅ¼na usunÄ…Ä‡, jeÅ›li nie jest czÄ™Å›ciÄ… dostarczonego publicznego interfejsu API, poniewaÅ¼ jego wartoÅ›Ä‡ poczÄ…tkowa nie jest nigdy uÅ¼ywana`Parametr â€{0}â€ moÅ¼na usunÄ…Ä‡, poniewaÅ¼ jego wartoÅ›Ä‡ poczÄ…tkowa nie jest nigdy uÅ¼ywanaNawiasy moÅ¼na usunÄ…Ä‡BNawiasy powinny zostaÄ‡ dodane w celu zapewnienia jednoznacznoÅ›ciWypeÅ‚nij instrukcjÄ™ switch.Preferuj jawnie podanÄ… nazwÄ™ elementu krotkiqPrywatnÄ… skÅ‚adowÄ… â€{0}â€ moÅ¼na usunÄ…Ä‡, poniewaÅ¼ przypisana do niej wartoÅ›Ä‡ nie jest nigdy odczytywana-Prywatna skÅ‚adowa â€{0}â€ jest nieuÅ¼ywanaRMetodÄ™ prywatnÄ… â€{0}â€ moÅ¼na usunÄ…Ä‡, poniewaÅ¼ nie jest nigdy wywoÅ‚ywana.„WÅ‚aÅ›ciwoÅ›Ä‡ prywatnÄ… â€{0}â€ moÅ¼na przekonwertowaÄ‡ na metodÄ™, poniewaÅ¼ jej metoda dostÄ™pu get nie jest nigdy wywoÅ‚ywana.UsuÅ„ niepotrzebne rzutowanieUsuÅ„ nadmiarowÄ… rÃ³wnoÅ›Ä‡UsuÅ„ niepotrzebne nawiasyUsuÅ„ niepotrzebne pomijanie'UsuÅ„ nieodczytywane skÅ‚adowe prywatneUsuÅ„ nieuÅ¼ywanÄ… skÅ‚adowÄ…UsuÅ„ nieuÅ¼ywany parametr$UsuÅ„ nieuÅ¼ywany parametr â€{0}â€^UsuÅ„ nieuÅ¼ywany parametr â€{0}â€, jeÅ›li nie jest czÄ™Å›ciÄ… dostarczonego publicznego API$UsuÅ„ nieuÅ¼ywane prywatne skÅ‚adoweUproÅ›Ä‡ wyraÅ¼enie LINQUproÅ›Ä‡ inicjowanie kolekcjiUproÅ›Ä‡ wyraÅ¼enie warunkoweUproÅ›Ä‡ interpolacjÄ™UproÅ›Ä‡ inicjowanie obiektÃ³w4NagÅ‚Ã³wek pliku nie jest zgodny z wymaganym tekstemGBrak nagÅ‚Ã³wka pliku lub nie znajduje siÄ™ on w gÃ³rnej czÄ™Å›ci pliku"Niepotrzebne przypisanie wartoÅ›ci8Niepotrzebne przypisanie wartoÅ›ci do elementu â€{0}â€$UÅ¼yj elementu â€System.HashCodeâ€"UÅ¼yj wÅ‚aÅ›ciwoÅ›ci automatycznejUÅ¼yj wyraÅ¼enia Å‚Ä…czÄ…cegoUÅ¼yj przypisania zÅ‚oÅ¼onegoUÅ¼yj operatora â€--â€!UÅ¼yj jawnie podanej nazwy krotkiUÅ¼yj operatora â€++â€4UÅ¼yj nazwy wywnioskowanego elementu czÅ‚onkowskiegoUÅ¼yj propagacji wartoÅ›ci nullUÅ¼yj wyraÅ¼enia â€throwâ€œ     ±  ÎÊï¾   ‘   lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.RuntimeResourceSet          PADPADP4Ÿ]é¨õvÄlúÈËg€„ã¯%ƒü –È{½Ö%	vYd®8pjı¹tp  s      ä  5  Ï     N   –       ­  9   T  4A d d _ b l a n k _ l i n e _ a f t e r _ b l o c k     A d d _ b o t h     A d d _ d e f a u l t _ c a s e (   A d d _ f i l e _ h e a d e r C   4F i x _ N a m e _ V i o l a t i o n _ c o l o n _ 0 [   ,F i x _ a l l _ o c c u r r e n c e s _ i n y   0R e m o v e _ e x t r a _ b l a n k _ l i n e s š   6R e m o v e _ r e d u n d a n t _ a s s i g n m e n t ¹   8S u p p r e s s _ o r _ C o n f i g u r e _ i s s u e s ×   2U p d a t e _ s u p p r e s s i o n _ f o r m a t   ,U s e _ d i s c a r d _ u n d e r s c o r e   &U s e _ d i s c a r d e d _ l o c a l 9  Dodaj pusty wiersz po bloku	Dodaj obaDodaj przypadek domyÅ›lnyDodaj nagÅ‚Ã³wek plikuNapraw naruszenie nazwy: {0}Popraw wszystkie wystÄ…pienia wUsuÅ„ dodatkowe puste wierszeUsuÅ„ nadmiarowe przypisanie)Problemy z pomijaniem lub konfigurowaniemAktualizuj format pomijaniaUÅ¼yj odrzucenia â€_â€"UÅ¼yj odrzuconej zmiennej lokalnej   ù’S­†U{/fàªœüöŒ–°Š–'°¢A*!²^İ…nÍƒœì›öIìr†Næåak‚C†Äkn,ÅŠß
+†F†GÌ4|bCğºÍSâ½•›BÚY„¹Ş3"üœÄ8Jˆ†Én|DÒ0<öµ=Q\öµ                           `²         z²                         l²           _CorDllMain mscoree.dll     ÿ%                                                                                                                                                                                                                                                                                                                                                                                                       €                  0  €                   H   XÀ |          |4   V S _ V E R S I O N _ I N F O     ½ïş      ÌÈ         ?                         D    V a r F i l e I n f o     $    T r a n s l a t i o n       °Ü   S t r i n g F i l e I n f o   ¸   0 0 0 0 0 4 b 0   L   C o m p a n y N a m e     M i c r o s o f t   C o r p o r a t i o n   h    F i l e D e s c r i p t i o n     M i c r o s o f t . C o d e A n a l y s i s . F e a t u r e s   :   F i l e V e r s i o n     4 . 0 . 2 1 . 5 1 4 0 4     | .  I n t e r n a l N a m e   M i c r o s o f t . C o d e A n a l y s i s . F e a t u r e s . r e s o u r c e s . d l l   € .  L e g a l C o p y r i g h t   ©   M i c r o s o f t   C o r p o r a t i o n .   A l l   r i g h t s   r e s e r v e d .   „ .  O r i g i n a l F i l e n a m e   M i c r o s o f t . C o d e A n a l y s i s . F e a t u r e s . r e s o u r c e s . d l l   `    P r o d u c t N a m e     M i c r o s o f t . C o d e A n a l y s i s . F e a t u r e s   – 9  P r o d u c t V e r s i o n   4 . 0 . 0 - 6 . 2 1 5 1 4 . 4 + d f 4 5 0 6 1 e 2 1 8 c 9 b 5 8 1 3 c 5 5 3 1 b c 0 6 f b 2 3 8 a 2 3 e 3 0 f 6     8   A s s e m b l y   V e r s i o n   4 . 0 . 0 . 0                                                                                                                                                                                                                                                                                                                °    Œ2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      h$    0‚$X	*†H†÷ ‚$I0‚$E10	`†He 0\
++‚7 N0L0
++‚70	  ¢€ 010	`†He  òy¯ê5‹mãİ+:S ¦“¯£ş{ÍB‹Ö¥¥¹è ‚ğ0‚n0‚V 3  Œ15¼Ò_    0	*†H†÷ 0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20110210211200951Z220210200951Z0c10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation10U.NET0‚¢0	*†H†÷ ‚ 0‚Š‚ ›YpBİ¬aå!zŸ>ËÖ—“7õÈ²Xìê/G0y:m%›ËFgè‚­bíôÜıÏ^¡¦øK.XyÚœ	½FÌJ7O±€Qj'õc§r„o ¹CJ–™jì½dŞWW\òß®ñLÂ/”Â&àÚu¢B`¤ •¡ˆ‘ÄCàŸì³b¦˜mhêüµ?‡"é£$N=¬Öç-ş_•ŒĞ;
+ÔêÅ´/ Š–—QxÙ8©Å¡šÛoœ‹j1³òÕ’
+œ3 ·ä¡ïPÂ[rÌ÷R`M^à‰á¾KqéÎ‰š“‹a¶´1—°´Ğ¾ÅÚL¤	CW=vI¯=(“‹ù,ğã
+d¹GJíÄTi1›+û×Û7Ù<n"khƒH_^íyzâ~DøsõäŒ·¨AÂÎc.c{ÓXÔ:u@İKùşL+aÙ½·÷ıøø¦p€ıDZO	¡ÛçJ„¯¥çÍ/I³R²s ño—*™¬¿A £‚~0‚z0U%0
++‚7L+0UïMi ·ÜŒ,CCŠ¥açr[-{­90PUI0G¤E0C1)0'U Microsoft Operations Puerto Rico10U464223+4642930U#0€HndåPÓ‚ª77"µm¨Êu•0TUM0K0I G E†Chttp://www.microsoft.com/pkiops/crl/MicCodSigPCA2011_2011-07-08.crl0a+U0S0Q+0†Ehttp://www.microsoft.com/pkiops/certs/MicCodSigPCA2011_2011-07-08.crt0Uÿ0 0	*†H†÷ ‚ XƒùÄt+§¯1G”¬ ¤¹cW®F4ó”>#ª¾Œ»SSy›ù/Ò	•ƒ,
+h™Ák·ÙgóüVZ²g8Óå¢æ¶Î9ÎÈ¥òwE­Z¸¢ ƒ¯;šŞZ#ìÒp¸Ú€r½Cì­>1I;Gú}x$Ï5cHÂ-ˆ¿˜€±i•ê,ğuw/ŠÄJ®_~eÕô]’ÅBë_òÛÁ¦|ïåá‹­)?H¨åzV"ÌPhšÆÌîZs’ø¯Í2wO/³ŞˆjÄË»‚ÁTÊ|X—ç²Ôı#ÑëQj§â|ÎÄp¾È4CèÈ¶¤ş!³pkÖx¹‰}íÎ“*w=8Éz·ßúß-.ÕµN‰ PŒ~Naû
+ˆ=hèŸ{iNám
+CK2(²ÔêGWÑø+yÍ(›)y(oe0ó8¬3¹­joƒ3Ì~ØõÉš…–2fr0q³ñÊÂ|²İL)È"`×ç9°v¸	og×BæËA»ğœóJınĞ°ÏĞ·G›lsm>ÃŒ`D=¶íE¸–JØîş§¸•Î,¾—W;ˆS»É‰‘§şÛ_´7Ò;Ìõ•şV0º¸8~K‹òHŞzXbŠTd]En®–•Yæå	ÌÆ6ŸkU0Yz¦	Æ™ 6kK¢|ô“u´µGú0‚z0‚b 
+aÒ     0	*†H†÷ 0ˆ10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1200U)Microsoft Root Certificate Authority 20110110708205909Z260708210909Z0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20110‚"0	*†H†÷ ‚ 0‚
+‚ «ğúr.­Ønª‚M4ºò¶X!ŸB*kéZPª¸8IºÃİ7kÆØğ8Â™°È9Õ1BÓ‰yd‡~”`$l¯Iœéh^Òß›S²
+,Ã¯Ù©+®z	¯×–YÊ`éfvè2R&/ç«PÏ³D·]ØÄ.u«hóËmó:\¡ôFºà8d¬nd5x¦ c-Ó@“øãŞÕ\y¥I)ç¾ w¾”=ïûã+ZMV(¢zrà:·I^ØííC‘ƒÙ{²{†Ù>±Œ]è‰O„ò¡/Yä;-®3XÅ·>ş2Ó³=±²¯’8~Ò€,õNV‘!5%Ã9ndSºœ­#„Ëôº†÷_ğĞR¿Œ”‡¼À!t%_(¶Ì'(8%˜9J6Ï|±’®#§©fìajá(I_ˆâ%]Ó!K>RÄµW?$ğÑz[/Õ#ãp]QFw³ø á¼¬‚_ÛÀ³½ÔUKç9¡é#I¼¸D|EäÁÃrzàrç$ß¿F™ÅïÂWÛƒìMI0§«ßì[Ÿ¯üİ°fâÁ—{íÖíKçI)§(¦§}g€æŠbx_²/„×Wœ\¿w((ñímÃ(,@7OÁá…D‰Ä	LÅÔ¥C/t•÷nøx X,]`•š>O3„Ú°ˆŞNô–°¼F l˜ÒàÖˆŒ £‚í0‚é0	+‚7 0UHndåPÓ‚ª77"µm¨Êu•0	+‚7
+ S u b C A0U†0Uÿ0ÿ0U#0€r-:1C¹Náê§Ç1Ñ#‰40ZUS0Q0O M K†Ihttp://crl.microsoft.com/pki/crl/products/MicRooCerAut2011_2011_03_22.crl0^+R0P0N+0†Bhttp://www.microsoft.com/pki/certs/MicRooCerAut2011_2011_03_22.crt0ŸU —0”0‘	+‚7.0ƒ0?+3http://www.microsoft.com/pkiops/docs/primarycps.htm0@+042  L e g a l _ p o l i c y _ s t a t e m e n t . 0	*†H†÷ ‚ gò†¥˜àTy.ÓØtg"›–ác’™B–}ÒyÁe_.,>øÃrÑmƒş¾?è
+Ê;¿G©£óiÛc¿"5¥—]e„}‹FPUØ’|ÒKó<B‹RĞ°ıkã>.)›æ=¥Ôµw”9âédÉD=xz#ó}¦tƒôË&F*ÂŠ»¤©›íhúh.• *?*kXIc	inZ˜–äƒôÀóF+Şü;Ğ½5ïn%®å¯'íĞİó¯™(—˜M=ò‰ÖÃ2âğÅ-Î[´I9
+Æ
+ÂÆ­®å²ÙÛˆQEX82q'±ô'øŞ,: i˜²Y‰hno§·tÃ@¦*(>‚?MfÀ³Mõáo}E§vå@*e£Ã]Rb†Ãc6—†ßÚóøò¡š'áÍ¥—Ğî]cAã[œ‡>wÑ±u¾aaµğÜÆ¾ßAÇ(îŞe/ì—ö¡\–Ø Ö¡F½Yó—¥	KH™€Ğ )Å±›¥?Ew5ÆÒ¢¢Ÿzz"úH•«ûG#€õø¿k·K—âëuxìê7™yKÿÖ³#huæ¯úü‹ë€êi;¯ü0íLßßumc‘=ÑVNO¿€W"¡x2!zïA
+±?û¨Ì¤]Á¡ˆ›WqVNHEÀBÉ›v[
+€HkıyŸÁ½mmjÉRszPÍ1‚Û0‚×0•0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20113  Œ15¼Ò_    0	`†He  ®0	*†H†÷	1
++‚70
++‚710
++‚70/	*†H†÷	1" £‡pÔ§[Ë?ñ*´~¸°;”±™¹oê‹m”§$„‘†Ş 80B
++‚71402 € M i c r o s o f t¡€http://www.microsoft.com0	*†H†÷ ‚€9 Ôr:`7*1¨[Ğùõ9¸rCEIÑÂ^’ßŸ½a––’‚LÜC¢QQß¤ûŸKO_i˜*®ãÌ°DÖü’$9{òásÉ»[Í!Hõÿ‘ÈÊ¦]'qrñ7‹lÅröÚ`¬,Š…û—q¬˜Yrjpeç°ó*ùˆ©¤Y/ÁËÃ™¢6?ß‰GO²§¼i}vx¤+sÍ›ÿZÃAŸkÓ—iÔŠ?¹CGO¥îĞ¶S"gÚş  îXrä„@öê¯>¨«‡äì¢	šj$ôó~l·”··’‹q÷­8dìjÑÀ¸ @È½˜´£ÄŒBG8¯{@À‘¬!¾Ô%t;ªÉúM1¡ë´±Ç>UÈF(€R4 ’¨áì±†R ÁÅ8Ó^ÇC‰Ï9dŞrº‘ÍÿbX°Ëİ OfA{,bM:·äsƒw×nÉ”3Ì”™_ùéñBtjFn®—]LVeÖûıQBT°¿¨yôP¼5«ßlH¡‚å0‚á
++‚71‚Ñ0‚Í	*†H†÷ ‚¾0‚º10	`†He 0‚Q*†H†÷	 ‚@‚<0‚8
++„Y
+010	`†He  jŸ8÷0>“év¾M#päDj~qßY¸Ó{ÑæLİCaCœ+×·20211014191008.035Z0€ô Ğ¤Í0Ê10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:E5A6-E27C-592E1%0#UMicrosoft Time-Stamp Service ‚<0‚ñ0‚Ù 3  GñæŞ1ƒY    G0	*†H†÷ 0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100201112182555Z220211182555Z0Ê10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:E5A6-E27C-592E1%0#UMicrosoft Time-Stamp Service0‚"0	*†H†÷ ‚ 0‚
+‚ ­Lé}ö(Y?ŸjšßÌKz.=øåK8†IWu2îç
+˜JĞ®(Èúó"ØF0xHŠ«¡³ƒCO1/›ó±«ÈjòmiİUkñºŸØò ü
+Ñ UÌ °Fî[óô¸º3° >Çåàæø¾ÛãéXC	`Âó¦"s3¾9kEÇŠ¸”hêXYù0;Ñóêçş“aêï!²‚áü£Ë2v™‚-ØõÀÁeoƒá†ã\Y×‹‡¶%©”Ì¹­çöDõ	ìüş£Ÿ'²†¦]æû,8ÕWïœd†K;on²"4¿mowÒ¾mS´ì(«4 XjI £‚0‚0U´øÜoŞd¡†W/C?xõÔ‚°º0U#0€Õc:\Š1óC{|FÅ3hZ…mU0VUO0M0K I G†Ehttp://crl.microsoft.com/pki/crl/products/MicTimStaPCA_2010-07-01.crl0Z+N0L0J+0†>http://www.microsoft.com/pki/certs/MicTimStaPCA_2010-07-01.crt0Uÿ0 0U%0
++0	*†H†÷ ‚ PÄÊ5~y­¤ÕêG|=™ØñT#.d.A”çtCÇá—2õ	S’êLH`,»‚K.£rf¾œø;{•àÖŠ‚eÆIGQ?4µ¯Ìé„wä}Û¬İ&iYÏ®jĞ÷Y$~Ãj;nX8€ ä4H¥Boƒ•Üs.ä¿g89uF‰íq>,©„”‹›Zo-áùCÓlùÑöfåâ6aE‰®êV¯·aÍæ™m6ûò–Ãõø¨l‘¼r±˜!$ÆÙ\ghºÜYo<)QEÃ?àb‹ªİCÀû²òœM¾íôO£D
+Zá`8£Ln>+0fëµãUˆ•p’0‚q0‚Y 
+a	*     0	*†H†÷ 0ˆ10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1200U)Microsoft Root Certificate Authority 20100100701213655Z250701214655Z0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100‚"0	*†H†÷ ‚ 0‚
+‚ ©¼wŠ: ìü—õúi”ktTÕ¥
+ ‚…ûí|hK,_ÅÃåaÂv·>f+[ğS'1A•Î	|a0Y±0Dñ`ˆ„TC×M¸8³Bİ“¬Ös0W&‚£EĞêõGÍ¿$`2X`FòXG†2„tag‘_T±Ï“L’ÁÄ¦]Ñan(Æù†€»ßaüFÁ'$gr!Š¯Kd‰Pb±]ıw=ğWu¬½ŠBM@QÑœ>gõfÀ–D~ïĞKınåšÊ±¨òz*
+1ğÚN‘¶ˆ5èx°é™Í<ç/Dº§ôÜd½¤Á 	“xÍü¼ÀÉD]^œO"M £‚æ0‚â0	+‚7 0UÕc:\Š1óC{|FÅ3hZ…mU0	+‚7
+ S u b C A0U†0Uÿ0ÿ0U#0€ÕöVËè¢\bhÑ=”[×ÎšÄ0VUO0M0K I G†Ehttp://crl.microsoft.com/pki/crl/products/MicRooCerAut_2010-06-23.crl0Z+N0L0J+0†>http://www.microsoft.com/pki/certs/MicRooCerAut_2010-06-23.crt0 U ÿ•0’0	+‚7.00=+1http://www.microsoft.com/PKI/docs/CPS/default.htm0@+042  L e g a l _ P o l i c y _ S t a t e m e n t . 0	*†H†÷ ‚ æˆQâÆà˜?q=£¡!o³ë¦Ìõ1¾Ïâ©şúWm0³ÂÅfÉjßõçğx½Ç¨%ãù¼íkTW+Q‚Dû¹SŒÌô`ŠvÌ@@A›Ü\ÿ\ù^5˜$VKtïBÈ¯¿Æò7}Z?ò™yJ‘R ¯8õ/yeÙ©µkäÇÎöÊz oK0D$"<Ïí¥–Y)¼¶ıápŸ2J'ıU¯/ş¶å3»b_šÛW@éñÎ™fŒÿjbİÅJ‘&â9ìJqc{!mÃœ£¢<ú}–jx¦mÒáœùü8Ø”ôÆ¥
+–†¤½®Bƒ¸µ€›"8 µ%ådì÷ô¿~cY%z.9Wv¢qªŠ‰ºa§ËšØGš€ÅĞÍ§Ğï}ƒğá;q	ß]t˜"aÚ°Po½ñá ßç1¤“:÷eGxèø¨H«÷Şr~akow©Ë§	¬9»ìÆËØ‚´rÍô¸…€û‰*T9²[ÚÈU™z‡s;æ˜-êà3.)õÀ/T'!÷È¬NÚ(¸±©Û–²§B¢ÉÏAMà†ù*š£f0Ó»t2Kßc{õ™Š/Ç!¯Yµ®ÜD<—Pq×¡ÒÅUãiŞWÁÑŞ0ÀıÌæMû¿]Oé8/¼ÏX.ï P5Úï	'Õ³~5ºÚ6ÛÓ_ŞtˆI¡‚Î0‚70ø¡Ğ¤Í0Ê10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:E5A6-E27C-592E1%0#UMicrosoft Time-Stamp Service¢#
+0+ «§Á´A¡Ã@HÊ‹Ó|Æ%-0eİ ƒ0€¤~0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100	*†H†÷  å[Z0"20211014153138Z20211015153138Z0w0=
++„Y
+1/0-0
+ å[Z 0
+ Mÿ0 b0
+ å¬Ú 06
++„Y
+1(0&0
++„Y
+ 
+0 ¡ ¡
+0 † 0	*†H†÷  e9„“q#*`uñòr¸´&P\=Ïºj…›CÍûœ³Áì’Ú7° y¤,‘è€W¾H±ë†{íMyR´(”Á)Êl—ÛSÛ:Ë©o'èr7ÿI³H¶Hğ+êló´y±(zJ'*YœUCÖjNçá;·6ş>Œºn+1‚0‚	0“0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20103  GñæŞ1ƒY    G0	`†He  ‚J0	*†H†÷	1*†H†÷	0/	*†H†÷	1" 0ìƒã¯^°·&ôš
+‹CšØÆn®s „CÂ+§me0ú*†H†÷	/1ê0ç0ä0½ {Û<”ÏºÈ‰“¿Ø}a®+ T‹pÌ;oEªŠé…0˜0€¤~0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20103  GñæŞ1ƒY    G0" ³§_‹hd^|ºûĞ;ôBI!…ûüÎ‘›Ïd)ó…0	*†H†÷ ‚ _ü–E•wÛuMqë”§cÊŠÌˆqxLÓxœKîĞĞÖ'û{`#lì†A½«‚Ÿ-ZMrXÜ““Yíp'yÉÄÅÒıMg†Ü‰	‡áifJ•‘PP©n—ü©³·ì€E|üóx—Åy®)ôˆ‡ï«æ]|eĞñ#±¤:ós¹sßxËeb~;È¤Š²ÓûşôŠ‡v‡—ËÍÂ¹õ½´ß¯ö:€{}qÎ(¾Eœ[Tdg¥¤ñ‚ÑW±’?vd0m¾·àrk‹ÓÓƒ4oY¾¨K›ÁF¾=:Jl·ø§M!^2mÜF
+şÙºí‹A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            /*!
+ * Bootstrap Utilities v5.1.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.link-primary {
+  color: #0d6efd;
+}
+.link-primary:hover, .link-primary:focus {
+  color: #0a58ca;
+}
+
+.link-secondary {
+  color: #6c757d;
+}
+.link-secondary:hover, .link-secondary:focus {
+  color: #565e64;
+}
+
+.link-success {
+  color: #198754;
+}
+.link-success:hover, .link-success:focus {
+  color: #146c43;
+}
+
+.link-info {
+  color: #0dcaf0;
+}
+.link-info:hover, .link-info:focus {
+  color: #3dd5f3;
+}
+
+.link-warning {
+  color: #ffc107;
+}
+.link-warning:hover, .link-warning:focus {
+  color: #ffcd39;
+}
+
+.link-danger {
+  color: #dc3545;
+}
+.link-danger:hover, .link-danger:focus {
+  color: #b02a37;
+}
+
+.link-light {
+  color: #f8f9fa;
+}
+.link-light:hover, .link-light:focus {
+  color: #f9fafb;
+}
+
+.link-dark {
+  color: #212529;
+}
+.link-dark:hover, .link-dark:focus {
+  color: #1a1e21;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.ratio::before {
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+  content: "";
+}
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-1x1 {
+  --bs-aspect-ratio: 100%;
+}
+
+.ratio-4x3 {
+  --bs-aspect-ratio: calc(3 / 4 * 100%);
+}
+
+.ratio-16x9 {
+  --bs-aspect-ratio: calc(9 / 16 * 100%);
+}
+
+.ratio-21x9 {
+  --bs-aspect-ratio: calc(9 / 21 * 100%);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+@media (min-width: 576px) {
+  .sticky-sm-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+@media (min-width: 768px) {
+  .sticky-md-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+@media (min-width: 992px) {
+  .sticky-lg-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+@media (min-width: 1200px) {
+  .sticky-xl-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+@media (min-width: 1400px) {
+  .sticky-xxl-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+.hstack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+
+.vstack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1em;
+  background-color: currentColor;
+  opacity: 0.25;
+}
+
+.align-baseline {
+  vertical-align: baseline !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+  vertical-align: text-top !important;
+}
+
+.float-start {
+  float: left !important;
+}
+
+.float-end {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-table {
+  display: table !important;
+}
+
+.d-table-row {
+  display: table-row !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.top-50 {
+  top: 50% !important;
+}
+
+.top-100 {
+  top: 100% !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.bottom-50 {
+  bottom: 50% !important;
+}
+
+.bottom-100 {
+  bottom: 100% !important;
+}
+
+.start-0 {
+  left: 0 !important;
+}
+
+.start-50 {
+  left: 50% !important;
+}
+
+.start-100 {
+  left: 100% !important;
+}
+
+.end-0 {
+  right: 0 !important;
+}
+
+.end-50 {
+  right: 50% !important;
+}
+
+.end-100 {
+  right: 100% !important;
+}
+
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-end {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.border-end-0 {
+  border-right: 0 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-start {
+  border-left: 1px solid #dee2e6 !important;
+}
+
+.border-start-0 {
+  border-left: 0 !important;
+}
+
+.border-primary {
+  border-color: #0d6efd !important;
+}
+
+.border-secondary {
+  border-color: #6c757d !important;
+}
+
+.border-success {
+  border-color: #198754 !important;
+}
+
+.border-info {
+  border-color: #0dcaf0 !important;
+}
+
+.border-warning {
+  border-color: #ffc107 !important;
+}
+
+.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.border-light {
+  border-color: #f8f9fa !important;
+}
+
+.border-dark {
+  border-color: #212529 !important;
+}
+
+.border-white {
+  border-color: #fff !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+
+.vw-100 {
+  width: 100vw !important;
+}
+
+.min-vw-100 {
+  min-width: 100vw !important;
+}
+
+.h-25 {
+  height: 25% !important;
+}
+
+.h-50 {
+  height: 50% !important;
+}
+
+.h-75 {
+  height: 75% !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+.mh-100 {
+  max-height: 100% !important;
+}
+
+.vh-100 {
+  height: 100vh !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.gap-0 {
+  gap: 0 !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.gap-5 {
+  gap: 3rem !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-baseline {
+  align-items: baseline !important;
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.align-content-start {
+  align-content: flex-start !important;
+}
+
+.align-content-end {
+  align-content: flex-end !important;
+}
+
+.align-content-center {
+  align-content: center !important;
+}
+
+.align-content-between {
+  align-content: space-between !important;
+}
+
+.align-content-around {
+  align-content: space-around !important;
+}
+
+.align-content-stretch {
+  align-content: stretch !important;
+}
+
+.align-self-auto {
+  align-self: auto !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-baseline {
+  align-self: baseline !important;
+}
+
+.align-self-stretch {
+  align-self: stretch !important;
+}
+
+.order-first {
+  order: -1 !important;
+}
+
+.order-0 {
+  order: 0 !important;
+}
+
+.order-1 {
+  order: 1 !important;
+}
+
+.order-2 {
+  order: 2 !important;
+}
+
+.order-3 {
+  order: 3 !important;
+}
+
+.order-4 {
+  order: 4 !important;
+}
+
+.order-5 {
+  order: 5 !important;
+}
+
+.order-last {
+  order: 6 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+.m-4 {
+  margin: 1.5rem !important;
+}
+
+.m-5 {
+  margin: 3rem !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.mx-1 {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+
+.mx-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.mx-3 {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+
+.mx-4 {
+  margin-right: 1.5rem !important;
+  margin-left: 1.5rem !important;
+}
+
+.mx-5 {
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.my-1 {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.me-0 {
+  margin-right: 0 !important;
+}
+
+.me-1 {
+  margin-right: 0.25rem !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+.me-3 {
+  margin-right: 1rem !important;
+}
+
+.me-4 {
+  margin-right: 1.5rem !important;
+}
+
+.me-5 {
+  margin-right: 3rem !important;
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ms-0 {
+  margin-left: 0 !important;
+}
+
+.ms-1 {
+  margin-left: 0.25rem !important;
+}
+
+.ms-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ms-3 {
+  margin-left: 1rem !important;
+}
+
+.ms-4 {
+  margin-left: 1.5rem !important;
+}
+
+.ms-5 {
+  margin-left: 3rem !important;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.px-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.px-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.px-3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.px-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.py-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pt-1 {
+  padding-top: 0.25rem !important;
+}
+
+.pt-2 {
+  padding-top: 0.5rem !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 3rem !important;
+}
+
+.pe-0 {
+  padding-right: 0 !important;
+}
+
+.pe-1 {
+  padding-right: 0.25rem !important;
+}
+
+.pe-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pe-3 {
+  padding-right: 1rem !important;
+}
+
+.pe-4 {
+  padding-right: 1.5rem !important;
+}
+
+.pe-5 {
+  padding-right: 3rem !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.pb-3 {
+  padding-bottom: 1rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.pb-5 {
+  padding-bottom: 3rem !important;
+}
+
+.ps-0 {
+  padding-left: 0 !important;
+}
+
+.ps-1 {
+  padding-left: 0.25rem !important;
+}
+
+.ps-2 {
+  padding-left: 0.5rem !important;
+}
+
+.ps-3 {
+  padding-left: 1rem !important;
+}
+
+.ps-4 {
+  padding-left: 1.5rem !important;
+}
+
+.ps-5 {
+  padding-left: 3rem !important;
+}
+
+.font-monospace {
+  font-family: var(--bs-font-monospace) !important;
+}
+
+.fs-1 {
+  font-size: calc(1.375rem + 1.5vw) !important;
+}
+
+.fs-2 {
+  font-size: calc(1.325rem + 0.9vw) !important;
+}
+
+.fs-3 {
+  font-size: calc(1.3rem + 0.6vw) !important;
+}
+
+.fs-4 {
+  font-size: calc(1.275rem + 0.3vw) !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+
+.fst-normal {
+  font-style: normal !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-lighter {
+  font-weight: lighter !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.lh-1 {
+  line-height: 1 !important;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+
+.lh-base {
+  line-height: 1.5 !important;
+}
+
+.lh-lg {
+  line-height: 2 !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+/* rtl:begin:remove */
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* rtl:end:remove */
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-secondary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-success {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-info {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-warning {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-danger {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-light {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-dark {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-black {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-body {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+}
+
+.text-black-50 {
+  --bs-text-opacity: 1;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.text-white-50 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-reset {
+  --bs-text-opacity: 1;
+  color: inherit !important;
+}
+
+.text-opacity-25 {
+  --bs-text-opacity: 0.25;
+}
+
+.text-opacity-50 {
+  --bs-text-opacity: 0.5;
+}
+
+.text-opacity-75 {
+  --bs-text-opacity: 0.75;
+}
+
+.text-opacity-100 {
+  --bs-text-opacity: 1;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-info {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-warning {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-black {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-body {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-body-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+
+.bg-opacity-10 {
+  --bs-bg-opacity: 0.1;
+}
+
+.bg-opacity-25 {
+  --bs-bg-opacity: 0.25;
+}
+
+.bg-opacity-50 {
+  --bs-bg-opacity: 0.5;
+}
+
+.bg-opacity-75 {
+  --bs-bg-opacity: 0.75;
+}
+
+.bg-opacity-100 {
+  --bs-bg-opacity: 1;
+}
+
+.bg-gradient {
+  background-image: var(--bs-gradient) !important;
+}
+
+.user-select-all {
+  -webkit-user-select: all !important;
+  -moz-user-select: all !important;
+  user-select: all !important;
+}
+
+.user-select-auto {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  user-select: auto !important;
+}
+
+.user-select-none {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  user-select: none !important;
+}
+
+.pe-none {
+  pointer-events: none !important;
+}
+
+.pe-auto {
+  pointer-events: auto !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.rounded-1 {
+  border-radius: 0.2rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-3 {
+  border-radius: 0.3rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.rounded-end {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.rounded-start {
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+@media (min-width: 576px) {
+  .float-sm-start {
+    float: left !important;
+  }
+
+  .float-sm-end {
+    float: right !important;
+  }
+
+  .float-sm-none {
+    float: none !important;
+  }
+
+  .d-sm-inline {
+    display: inline !important;
+  }
+
+  .d-sm-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-sm-block {
+    display: block !important;
+  }
+
+  .d-sm-grid {
+    display: grid !important;
+  }
+
+  .d-sm-table {
+    display: table !important;
+  }
+
+  .d-sm-table-row {
+    display: table-row !important;
+  }
+
+  .d-sm-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-sm-flex {
+    display: flex !important;
+  }
+
+  .d-sm-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-sm-none {
+    display: none !important;
+  }
+
+  .flex-sm-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-sm-row {
+    flex-direction: row !important;
+  }
+
+  .flex-sm-column {
+    flex-direction: column !important;
+  }
+
+  .flex-sm-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-sm-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-sm-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-sm-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-sm-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-sm-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-sm-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-sm-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-sm-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .gap-sm-0 {
+    gap: 0 !important;
+  }
+
+  .gap-sm-1 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-sm-2 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-sm-3 {
+    gap: 1rem !important;
+  }
+
+  .gap-sm-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-sm-5 {
+    gap: 3rem !important;
+  }
+
+  .justify-content-sm-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-sm-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-sm-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-sm-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-sm-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-sm-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-sm-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-sm-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-sm-center {
+    align-items: center !important;
+  }
+
+  .align-items-sm-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-sm-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-sm-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-sm-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-sm-center {
+    align-content: center !important;
+  }
+
+  .align-content-sm-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-sm-around {
+    align-content: space-around !important;
+  }
+
+  .align-content-sm-stretch {
+    align-content: stretch !important;
+  }
+
+  .align-self-sm-auto {
+    align-self: auto !important;
+  }
+
+  .align-self-sm-start {
+    align-self: flex-start !important;
+  }
+
+  .align-self-sm-end {
+    align-self: flex-end !important;
+  }
+
+  .align-self-sm-center {
+    align-self: center !important;
+  }
+
+  .align-self-sm-baseline {
+    align-self: baseline !important;
+  }
+
+  .align-self-sm-stretch {
+    align-self: stretch !important;
+  }
+
+  .order-sm-first {
+    order: -1 !important;
+  }
+
+  .order-sm-0 {
+    order: 0 !important;
+  }
+
+  .order-sm-1 {
+    order: 1 !important;
+  }
+
+  .order-sm-2 {
+    order: 2 !important;
+  }
+
+  .order-sm-3 {
+    order: 3 !important;
+  }
+
+  .order-sm-4 {
+    order: 4 !important;
+  }
+
+  .order-sm-5 {
+    order: 5 !important;
+  }
+
+  .order-sm-last {
+    order: 6 !important;
+  }
+
+  .m-sm-0 {
+    margin: 0 !important;
+  }
+
+  .m-sm-1 {
+    margin: 0.25rem !important;
+  }
+
+  .m-sm-2 {
+    margin: 0.5rem !important;
+  }
+
+  .m-sm-3 {
+    margin: 1rem !important;
+  }
+
+  .m-sm-4 {
+    margin: 1.5rem !important;
+  }
+
+  .m-sm-5 {
+    margin: 3rem !important;
+  }
+
+  .m-sm-auto {
+    margin: auto !important;
+  }
+
+  .mx-sm-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .mx-sm-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+
+  .mx-sm-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .mx-sm-3 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .mx-sm-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-sm-5 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
+
+  .mx-sm-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .my-sm-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .my-sm-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .my-sm-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .my-sm-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .my-sm-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .my-sm-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .my-sm-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .mt-sm-0 {
+    margin-top: 0 !important;
+  }
+
+  .mt-sm-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .mt-sm-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mt-sm-3 {
+    margin-top: 1rem !important;
+  }
+
+  .mt-sm-4 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-sm-5 {
+    margin-top: 3rem !important;
+  }
+
+  .mt-sm-auto {
+    margin-top: auto !important;
+  }
+
+  .me-sm-0 {
+    margin-right: 0 !important;
+  }
+
+  .me-sm-1 {
+    margin-right: 0.25rem !important;
+  }
+
+  .me-sm-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .me-sm-3 {
+    margin-right: 1rem !important;
+  }
+
+  .me-sm-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .me-sm-5 {
+    margin-right: 3rem !important;
+  }
+
+  .me-sm-auto {
+    margin-right: auto !important;
+  }
+
+  .mb-sm-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .mb-sm-1 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-sm-2 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-sm-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-sm-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-sm-5 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-sm-auto {
+    margin-bottom: auto !important;
+  }
+
+  .ms-sm-0 {
+    margin-left: 0 !important;
+  }
+
+  .ms-sm-1 {
+    margin-left: 0.25rem !important;
+  }
+
+  .ms-sm-2 {
+    margin-left: 0.5rem !important;
+  }
+
+  .ms-sm-3 {
+    margin-left: 1rem !important;
+  }
+
+  .ms-sm-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .ms-sm-5 {
+    margin-left: 3rem !important;
+  }
+
+  .ms-sm-auto {
+    margin-left: auto !important;
+  }
+
+  .p-sm-0 {
+    padding: 0 !important;
+  }
+
+  .p-sm-1 {
+    padding: 0.25rem !important;
+  }
+
+  .p-sm-2 {
+    padding: 0.5rem !important;
+  }
+
+  .p-sm-3 {
+    padding: 1rem !important;
+  }
+
+  .p-sm-4 {
+    padding: 1.5rem !important;
+  }
+
+  .p-sm-5 {
+    padding: 3rem !important;
+  }
+
+  .px-sm-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .px-sm-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .px-sm-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .px-sm-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .px-sm-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .px-sm-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .py-sm-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .py-sm-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .py-sm-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .py-sm-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-sm-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-sm-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-sm-0 {
+    padding-top: 0 !important;
+  }
+
+  .pt-sm-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .pt-sm-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .pt-sm-3 {
+    padding-top: 1rem !important;
+  }
+
+  .pt-sm-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .pt-sm-5 {
+    padding-top: 3rem !important;
+  }
+
+  .pe-sm-0 {
+    padding-right: 0 !important;
+  }
+
+  .pe-sm-1 {
+    padding-right: 0.25rem !important;
+  }
+
+  .pe-sm-2 {
+    padding-right: 0.5rem !important;
+  }
+
+  .pe-sm-3 {
+    padding-right: 1rem !important;
+  }
+
+  .pe-sm-4 {
+    padding-right: 1.5rem !important;
+  }
+
+  .pe-sm-5 {
+    padding-right: 3rem !important;
+  }
+
+  .pb-sm-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .pb-sm-1 {
+    padding-bottom: 0.25rem !important;
+  }
+
+  .pb-sm-2 {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .pb-sm-3 {
+    padding-bottom: 1rem !important;
+  }
+
+  .pb-sm-4 {
+    padding-bottom: 1.5rem !important;
+  }
+
+  .pb-sm-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .ps-sm-0 {
+    padding-left: 0 !important;
+  }
+
+  .ps-sm-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ps-sm-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ps-sm-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ps-sm-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ps-sm-5 {
+    padding-left: 3rem !important;
+  }
+
+  .text-sm-start {
+    text-align: left !important;
+  }
+
+  .text-sm-end {
+    text-align: right !important;
+  }
+
+  .text-sm-center {
+    text-align: center !important;
+  }
+}
+@media (min-width: 768px) {
+  .float-md-start {
+    float: left !important;
+  }
+
+  .float-md-end {
+    float: right !important;
+  }
+
+  .float-md-none {
+    float: none !important;
+  }
+
+  .d-md-inline {
+    display: inline !important;
+  }
+
+  .d-md-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-md-block {
+    display: block !important;
+  }
+
+  .d-md-grid {
+    display: grid !important;
+  }
+
+  .d-md-table {
+    display: table !important;
+  }
+
+  .d-md-table-row {
+    display: table-row !important;
+  }
+
+  .d-md-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-md-flex {
+    display: flex !important;
+  }
+
+  .d-md-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-md-none {
+    display: none !important;
+  }
+
+  .flex-md-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-md-row {
+    flex-direction: row !important;
+  }
+
+  .flex-md-column {
+    flex-direction: column !important;
+  }
+
+  .flex-md-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-md-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-md-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-md-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-md-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-md-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-md-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-md-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-md-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .gap-md-0 {
+    gap: 0 !important;
+  }
+
+  .gap-md-1 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-md-2 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-md-3 {
+    gap: 1rem !important;
+  }
+
+  .gap-md-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-md-5 {
+    gap: 3rem !important;
+  }
+
+  .justify-content-md-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-md-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-md-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-md-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-md-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-md-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-md-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-md-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-md-center {
+    align-items: center !important;
+  }
+
+  .align-items-md-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-md-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-md-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-md-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-md-center {
+    align-content: center !important;
+  }
+
+  .align-content-md-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-md-around {
+    align-content: space-around !important;
+  }
+
+  .align-content-md-stretch {
+    align-content: stretch !important;
+  }
+
+  .align-self-md-auto {
+    align-self: auto !important;
+  }
+
+  .align-self-md-start {
+    align-self: flex-start !important;
+  }
+
+  .align-self-md-end {
+    align-self: flex-end !important;
+  }
+
+  .align-self-md-center {
+    align-self: center !important;
+  }
+
+  .align-self-md-baseline {
+    align-self: baseline !important;
+  }
+
+  .align-self-md-stretch {
+    align-self: stretch !important;
+  }
+
+  .order-md-first {
+    order: -1 !important;
+  }
+
+  .order-md-0 {
+    order: 0 !important;
+  }
+
+  .order-md-1 {
+    order: 1 !important;
+  }
+
+  .order-md-2 {
+    order: 2 !important;
+  }
+
+  .order-md-3 {
+    order: 3 !important;
+  }
+
+  .order-md-4 {
+    order: 4 !important;
+  }
+
+  .order-md-5 {
+    order: 5 !important;
+  }
+
+  .order-md-last {
+    order: 6 !important;
+  }
+
+  .m-md-0 {
+    margin: 0 !important;
+  }
+
+  .m-md-1 {
+    margin: 0.25rem !important;
+  }
+
+  .m-md-2 {
+    margin: 0.5rem !important;
+  }
+
+  .m-md-3 {
+    margin: 1rem !important;
+  }
+
+  .m-md-4 {
+    margin: 1.5rem !important;
+  }
+
+  .m-md-5 {
+    margin: 3rem !important;
+  }
+
+  .m-md-auto {
+    margin: auto !important;
+  }
+
+  .mx-md-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .mx-md-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+
+  .mx-md-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .mx-md-3 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .mx-md-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-md-5 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
+
+  .mx-md-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .my-md-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .my-md-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .my-md-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .my-md-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .my-md-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .my-md-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .my-md-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .mt-md-0 {
+    margin-top: 0 !important;
+  }
+
+  .mt-md-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .mt-md-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mt-md-3 {
+    margin-top: 1rem !important;
+  }
+
+  .mt-md-4 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-md-5 {
+    margin-top: 3rem !important;
+  }
+
+  .mt-md-auto {
+    margin-top: auto !important;
+  }
+
+  .me-md-0 {
+    margin-right: 0 !important;
+  }
+
+  .me-md-1 {
+    margin-right: 0.25rem !important;
+  }
+
+  .me-md-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .me-md-3 {
+    margin-right: 1rem !important;
+  }
+
+  .me-md-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .me-md-5 {
+    margin-right: 3rem !important;
+  }
+
+  .me-md-auto {
+    margin-right: auto !important;
+  }
+
+  .mb-md-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .mb-md-1 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-md-2 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-md-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-md-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-md-5 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-md-auto {
+    margin-bottom: auto !important;
+  }
+
+  .ms-md-0 {
+    margin-left: 0 !important;
+  }
+
+  .ms-md-1 {
+    margin-left: 0.25rem !important;
+  }
+
+  .ms-md-2 {
+    margin-left: 0.5rem !important;
+  }
+
+  .ms-md-3 {
+    margin-left: 1rem !important;
+  }
+
+  .ms-md-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .ms-md-5 {
+    margin-left: 3rem !important;
+  }
+
+  .ms-md-auto {
+    margin-left: auto !important;
+  }
+
+  .p-md-0 {
+    padding: 0 !important;
+  }
+
+  .p-md-1 {
+    padding: 0.25rem !important;
+  }
+
+  .p-md-2 {
+    padding: 0.5rem !important;
+  }
+
+  .p-md-3 {
+    padding: 1rem !important;
+  }
+
+  .p-md-4 {
+    padding: 1.5rem !important;
+  }
+
+  .p-md-5 {
+    padding: 3rem !important;
+  }
+
+  .px-md-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .px-md-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .px-md-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .px-md-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .px-md-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .px-md-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .py-md-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .py-md-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .py-md-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .py-md-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-md-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-md-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-md-0 {
+    padding-top: 0 !important;
+  }
+
+  .pt-md-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .pt-md-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .pt-md-3 {
+    padding-top: 1rem !important;
+  }
+
+  .pt-md-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .pt-md-5 {
+    padding-top: 3rem !important;
+  }
+
+  .pe-md-0 {
+    padding-right: 0 !important;
+  }
+
+  .pe-md-1 {
+    padding-right: 0.25rem !important;
+  }
+
+  .pe-md-2 {
+    padding-right: 0.5rem !important;
+  }
+
+  .pe-md-3 {
+    padding-right: 1rem !important;
+  }
+
+  .pe-md-4 {
+    padding-right: 1.5rem !important;
+  }
+
+  .pe-md-5 {
+    padding-right: 3rem !important;
+  }
+
+  .pb-md-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .pb-md-1 {
+    padding-bottom: 0.25rem !important;
+  }
+
+  .pb-md-2 {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .pb-md-3 {
+    padding-bottom: 1rem !important;
+  }
+
+  .pb-md-4 {
+    padding-bottom: 1.5rem !important;
+  }
+
+  .pb-md-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .ps-md-0 {
+    padding-left: 0 !important;
+  }
+
+  .ps-md-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ps-md-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ps-md-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ps-md-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ps-md-5 {
+    padding-left: 3rem !important;
+  }
+
+  .text-md-start {
+    text-align: left !important;
+  }
+
+  .text-md-end {
+    text-align: right !important;
+  }
+
+  .text-md-center {
+    text-align: center !important;
+  }
+}
+@media (min-width: 992px) {
+  .float-lg-start {
+    float: left !important;
+  }
+
+  .float-lg-end {
+    float: right !important;
+  }
+
+  .float-lg-none {
+    float: none !important;
+  }
+
+  .d-lg-inline {
+    display: inline !important;
+  }
+
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-lg-block {
+    display: block !important;
+  }
+
+  .d-lg-grid {
+    display: grid !important;
+  }
+
+  .d-lg-table {
+    display: table !important;
+  }
+
+  .d-lg-table-row {
+    display: table-row !important;
+  }
+
+  .d-lg-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-lg-flex {
+    display: flex !important;
+  }
+
+  .d-lg-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-lg-none {
+    display: none !important;
+  }
+
+  .flex-lg-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-lg-row {
+    flex-direction: row !important;
+  }
+
+  .flex-lg-column {
+    flex-direction: column !important;
+  }
+
+  .flex-lg-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-lg-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-lg-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-lg-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-lg-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-lg-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-lg-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-lg-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-lg-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .gap-lg-0 {
+    gap: 0 !important;
+  }
+
+  .gap-lg-1 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-lg-2 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-lg-3 {
+    gap: 1rem !important;
+  }
+
+  .gap-lg-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-lg-5 {
+    gap: 3rem !important;
+  }
+
+  .justify-content-lg-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-lg-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-lg-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-lg-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-lg-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-lg-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-lg-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-lg-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-lg-center {
+    align-items: center !important;
+  }
+
+  .align-items-lg-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-lg-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-lg-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-lg-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-lg-center {
+    align-content: center !important;
+  }
+
+  .align-content-lg-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-lg-around {
+    align-content: space-around !important;
+  }
+
+  .align-content-lg-stretch {
+    align-content: stretch !important;
+  }
+
+  .align-self-lg-auto {
+    align-self: auto !important;
+  }
+
+  .align-self-lg-start {
+    align-self: flex-start !important;
+  }
+
+  .align-self-lg-end {
+    align-self: flex-end !important;
+  }
+
+  .align-self-lg-center {
+    align-self: center !important;
+  }
+
+  .align-self-lg-baseline {
+    align-self: baseline !important;
+  }
+
+  .align-self-lg-stretch {
+    align-self: stretch !important;
+  }
+
+  .order-lg-first {
+    order: -1 !important;
+  }
+
+  .order-lg-0 {
+    order: 0 !important;
+  }
+
+  .order-lg-1 {
+    order: 1 !important;
+  }
+
+  .order-lg-2 {
+    order: 2 !important;
+  }
+
+  .order-lg-3 {
+    order: 3 !important;
+  }
+
+  .order-lg-4 {
+    order: 4 !important;
+  }
+
+  .order-lg-5 {
+    order: 5 !important;
+  }
+
+  .order-lg-last {
+    order: 6 !important;
+  }
+
+  .m-lg-0 {
+    margin: 0 !important;
+  }
+
+  .m-lg-1 {
+    margin: 0.25rem !important;
+  }
+
+  .m-lg-2 {
+    margin: 0.5rem !important;
+  }
+
+  .m-lg-3 {
+    margin: 1rem !important;
+  }
+
+  .m-lg-4 {
+    margin: 1.5rem !important;
+  }
+
+  .m-lg-5 {
+    margin: 3rem !important;
+  }
+
+  .m-lg-auto {
+    margin: auto !important;
+  }
+
+  .mx-lg-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .mx-lg-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+
+  .mx-lg-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .mx-lg-3 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .mx-lg-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-lg-5 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
+
+  .mx-lg-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .my-lg-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .my-lg-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .my-lg-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .my-lg-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .my-lg-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .my-lg-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .my-lg-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .mt-lg-0 {
+    margin-top: 0 !important;
+  }
+
+  .mt-lg-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .mt-lg-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mt-lg-3 {
+    margin-top: 1rem !important;
+  }
+
+  .mt-lg-4 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-lg-5 {
+    margin-top: 3rem !important;
+  }
+
+  .mt-lg-auto {
+    margin-top: auto !important;
+  }
+
+  .me-lg-0 {
+    margin-right: 0 !important;
+  }
+
+  .me-lg-1 {
+    margin-right: 0.25rem !important;
+  }
+
+  .me-lg-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .me-lg-3 {
+    margin-right: 1rem !important;
+  }
+
+  .me-lg-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .me-lg-5 {
+    margin-right: 3rem !important;
+  }
+
+  .me-lg-auto {
+    margin-right: auto !important;
+  }
+
+  .mb-lg-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .mb-lg-1 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-lg-2 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-lg-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-lg-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-lg-5 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-lg-auto {
+    margin-bottom: auto !important;
+  }
+
+  .ms-lg-0 {
+    margin-left: 0 !important;
+  }
+
+  .ms-lg-1 {
+    margin-left: 0.25rem !important;
+  }
+
+  .ms-lg-2 {
+    margin-left: 0.5rem !important;
+  }
+
+  .ms-lg-3 {
+    margin-left: 1rem !important;
+  }
+
+  .ms-lg-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .ms-lg-5 {
+    margin-left: 3rem !important;
+  }
+
+  .ms-lg-auto {
+    margin-left: auto !important;
+  }
+
+  .p-lg-0 {
+    padding: 0 !important;
+  }
+
+  .p-lg-1 {
+    padding: 0.25rem !important;
+  }
+
+  .p-lg-2 {
+    padding: 0.5rem !important;
+  }
+
+  .p-lg-3 {
+    padding: 1rem !important;
+  }
+
+  .p-lg-4 {
+    padding: 1.5rem !important;
+  }
+
+  .p-lg-5 {
+    padding: 3rem !important;
+  }
+
+  .px-lg-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .px-lg-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .px-lg-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .px-lg-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .px-lg-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .px-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .py-lg-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .py-lg-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .py-lg-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .py-lg-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-lg-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-lg-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-lg-0 {
+    padding-top: 0 !important;
+  }
+
+  .pt-lg-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .pt-lg-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .pt-lg-3 {
+    padding-top: 1rem !important;
+  }
+
+  .pt-lg-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .pt-lg-5 {
+    padding-top: 3rem !important;
+  }
+
+  .pe-lg-0 {
+    padding-right: 0 !important;
+  }
+
+  .pe-lg-1 {
+    padding-right: 0.25rem !important;
+  }
+
+  .pe-lg-2 {
+    padding-right: 0.5rem !important;
+  }
+
+  .pe-lg-3 {
+    padding-right: 1rem !important;
+  }
+
+  .pe-lg-4 {
+    padding-right: 1.5rem !important;
+  }
+
+  .pe-lg-5 {
+    padding-right: 3rem !important;
+  }
+
+  .pb-lg-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .pb-lg-1 {
+    padding-bottom: 0.25rem !important;
+  }
+
+  .pb-lg-2 {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .pb-lg-3 {
+    padding-bottom: 1rem !important;
+  }
+
+  .pb-lg-4 {
+    padding-bottom: 1.5rem !important;
+  }
+
+  .pb-lg-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .ps-lg-0 {
+    padding-left: 0 !important;
+  }
+
+  .ps-lg-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ps-lg-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ps-lg-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ps-lg-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ps-lg-5 {
+    padding-left: 3rem !important;
+  }
+
+  .text-lg-start {
+    text-align: left !important;
+  }
+
+  .text-lg-end {
+    text-align: right !important;
+  }
+
+  .text-lg-center {
+    text-align: center !important;
+  }
+}
+@media (min-width: 1200px) {
+  .float-xl-start {
+    float: left !important;
+  }
+
+  .float-xl-end {
+    float: right !important;
+  }
+
+  .float-xl-none {
+    float: none !important;
+  }
+
+  .d-xl-inline {
+    display: inline !important;
+  }
+
+  .d-xl-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-xl-block {
+    display: block !important;
+  }
+
+  .d-xl-grid {
+    display: grid !important;
+  }
+
+  .d-xl-table {
+    display: table !important;
+  }
+
+  .d-xl-table-row {
+    display: table-row !important;
+  }
+
+  .d-xl-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-xl-flex {
+    display: flex !important;
+  }
+
+  .d-xl-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-xl-none {
+    display: none !important;
+  }
+
+  .flex-xl-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-xl-row {
+    flex-direction: row !important;
+  }
+
+  .flex-xl-column {
+    flex-direction: column !important;
+  }
+
+  .flex-xl-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-xl-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-xl-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-xl-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-xl-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-xl-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-xl-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-xl-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-xl-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .gap-xl-0 {
+    gap: 0 !important;
+  }
+
+  .gap-xl-1 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-xl-2 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-xl-3 {
+    gap: 1rem !important;
+  }
+
+  .gap-xl-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-xl-5 {
+    gap: 3rem !important;
+  }
+
+  .justify-content-xl-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-xl-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-xl-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-xl-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-xl-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-xl-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-xl-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-xl-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-xl-center {
+    align-items: center !important;
+  }
+
+  .align-items-xl-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-xl-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-xl-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-xl-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-xl-center {
+    align-content: center !important;
+  }
+
+  .align-content-xl-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-xl-around {
+    align-content: space-around !important;
+  }
+
+  .align-content-xl-stretch {
+    align-content: stretch !important;
+  }
+
+  .align-self-xl-auto {
+    align-self: auto !important;
+  }
+
+  .align-self-xl-start {
+    align-self: flex-start !important;
+  }
+
+  .align-self-xl-end {
+    align-self: flex-end !important;
+  }
+
+  .align-self-xl-center {
+    align-self: center !important;
+  }
+
+  .align-self-xl-baseline {
+    align-self: baseline !important;
+  }
+
+  .align-self-xl-stretch {
+    align-self: stretch !important;
+  }
+
+  .order-xl-first {
+    order: -1 !important;
+  }
+
+  .order-xl-0 {
+    order: 0 !important;
+  }
+
+  .order-xl-1 {
+    order: 1 !important;
+  }
+
+  .order-xl-2 {
+    order: 2 !important;
+  }
+
+  .order-xl-3 {
+    order: 3 !important;
+  }
+
+  .order-xl-4 {
+    order: 4 !important;
+  }
+
+  .order-xl-5 {
+    order: 5 !important;
+  }
+
+  .order-xl-last {
+    order: 6 !important;
+  }
+
+  .m-xl-0 {
+    margin: 0 !important;
+  }
+
+  .m-xl-1 {
+    margin: 0.25rem !important;
+  }
+
+  .m-xl-2 {
+    margin: 0.5rem !important;
+  }
+
+  .m-xl-3 {
+    margin: 1rem !important;
+  }
+
+  .m-xl-4 {
+    margin: 1.5rem !important;
+  }
+
+  .m-xl-5 {
+    margin: 3rem !important;
+  }
+
+  .m-xl-auto {
+    margin: auto !important;
+  }
+
+  .mx-xl-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .mx-xl-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+
+  .mx-xl-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .mx-xl-3 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .mx-xl-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-xl-5 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
+
+  .mx-xl-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .my-xl-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .my-xl-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .my-xl-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .my-xl-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .my-xl-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .my-xl-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .my-xl-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .mt-xl-0 {
+    margin-top: 0 !important;
+  }
+
+  .mt-xl-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .mt-xl-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mt-xl-3 {
+    margin-top: 1rem !important;
+  }
+
+  .mt-xl-4 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-xl-5 {
+    margin-top: 3rem !important;
+  }
+
+  .mt-xl-auto {
+    margin-top: auto !important;
+  }
+
+  .me-xl-0 {
+    margin-right: 0 !important;
+  }
+
+  .me-xl-1 {
+    margin-right: 0.25rem !important;
+  }
+
+  .me-xl-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .me-xl-3 {
+    margin-right: 1rem !important;
+  }
+
+  .me-xl-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .me-xl-5 {
+    margin-right: 3rem !important;
+  }
+
+  .me-xl-auto {
+    margin-right: auto !important;
+  }
+
+  .mb-xl-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .mb-xl-1 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-xl-2 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-xl-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-xl-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-xl-5 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-xl-auto {
+    margin-bottom: auto !important;
+  }
+
+  .ms-xl-0 {
+    margin-left: 0 !important;
+  }
+
+  .ms-xl-1 {
+    margin-left: 0.25rem !important;
+  }
+
+  .ms-xl-2 {
+    margin-left: 0.5rem !important;
+  }
+
+  .ms-xl-3 {
+    margin-left: 1rem !important;
+  }
+
+  .ms-xl-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .ms-xl-5 {
+    margin-left: 3rem !important;
+  }
+
+  .ms-xl-auto {
+    margin-left: auto !important;
+  }
+
+  .p-xl-0 {
+    padding: 0 !important;
+  }
+
+  .p-xl-1 {
+    padding: 0.25rem !important;
+  }
+
+  .p-xl-2 {
+    padding: 0.5rem !important;
+  }
+
+  .p-xl-3 {
+    padding: 1rem !important;
+  }
+
+  .p-xl-4 {
+    padding: 1.5rem !important;
+  }
+
+  .p-xl-5 {
+    padding: 3rem !important;
+  }
+
+  .px-xl-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .px-xl-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .px-xl-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .px-xl-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .px-xl-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .px-xl-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .py-xl-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .py-xl-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .py-xl-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .py-xl-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-xl-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-xl-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-xl-0 {
+    padding-top: 0 !important;
+  }
+
+  .pt-xl-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .pt-xl-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .pt-xl-3 {
+    padding-top: 1rem !important;
+  }
+
+  .pt-xl-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .pt-xl-5 {
+    padding-top: 3rem !important;
+  }
+
+  .pe-xl-0 {
+    padding-right: 0 !important;
+  }
+
+  .pe-xl-1 {
+    padding-right: 0.25rem !important;
+  }
+
+  .pe-xl-2 {
+    padding-right: 0.5rem !important;
+  }
+
+  .pe-xl-3 {
+    padding-right: 1rem !important;
+  }
+
+  .pe-xl-4 {
+    padding-right: 1.5rem !important;
+  }
+
+  .pe-xl-5 {
+    padding-right: 3rem !important;
+  }
+
+  .pb-xl-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .pb-xl-1 {
+    padding-bottom: 0.25rem !important;
+  }
+
+  .pb-xl-2 {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .pb-xl-3 {
+    padding-bottom: 1rem !important;
+  }
+
+  .pb-xl-4 {
+    padding-bottom: 1.5rem !important;
+  }
+
+  .pb-xl-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .ps-xl-0 {
+    padding-left: 0 !important;
+  }
+
+  .ps-xl-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ps-xl-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ps-xl-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ps-xl-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ps-xl-5 {
+    padding-left: 3rem !important;
+  }
+
+  .text-xl-start {
+    text-align: left !important;
+  }
+
+  .text-xl-end {
+    text-align: right !important;
+  }
+
+  .text-xl-center {
+    text-align: center !important;
+  }
+}
+@media (min-width: 1400px) {
+  .float-xxl-start {
+    float: left !important;
+  }
+
+  .float-xxl-end {
+    float: right !important;
+  }
+
+  .float-xxl-none {
+    float: none !important;
+  }
+
+  .d-xxl-inline {
+    display: inline !important;
+  }
+
+  .d-xxl-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-xxl-block {
+    display: block !important;
+  }
+
+  .d-xxl-grid {
+    display: grid !important;
+  }
+
+  .d-xxl-table {
+    display: table !important;
+  }
+
+  .d-xxl-table-row {
+    display: table-row !important;
+  }
+
+  .d-xxl-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-xxl-flex {
+    display: flex !important;
+  }
+
+  .d-xxl-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-xxl-none {
+    display: none !important;
+  }
+
+  .flex-xxl-fill {
+    flex: 1 1 auto !important;
+  }
+
+  .flex-xxl-row {
+    flex-direction: row !important;
+  }
+
+  .flex-xxl-column {
+    flex-direction: column !important;
+  }
+
+  .flex-xxl-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-xxl-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .flex-xxl-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  .flex-xxl-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex-xxl-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  .flex-xxl-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-xxl-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .flex-xxl-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-xxl-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .gap-xxl-0 {
+    gap: 0 !important;
+  }
+
+  .gap-xxl-1 {
+    gap: 0.25rem !important;
+  }
+
+  .gap-xxl-2 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-xxl-3 {
+    gap: 1rem !important;
+  }
+
+  .gap-xxl-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-xxl-5 {
+    gap: 3rem !important;
+  }
+
+  .justify-content-xxl-start {
+    justify-content: flex-start !important;
+  }
+
+  .justify-content-xxl-end {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-xxl-center {
+    justify-content: center !important;
+  }
+
+  .justify-content-xxl-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-content-xxl-around {
+    justify-content: space-around !important;
+  }
+
+  .justify-content-xxl-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  .align-items-xxl-start {
+    align-items: flex-start !important;
+  }
+
+  .align-items-xxl-end {
+    align-items: flex-end !important;
+  }
+
+  .align-items-xxl-center {
+    align-items: center !important;
+  }
+
+  .align-items-xxl-baseline {
+    align-items: baseline !important;
+  }
+
+  .align-items-xxl-stretch {
+    align-items: stretch !important;
+  }
+
+  .align-content-xxl-start {
+    align-content: flex-start !important;
+  }
+
+  .align-content-xxl-end {
+    align-content: flex-end !important;
+  }
+
+  .align-content-xxl-center {
+    align-content: center !important;
+  }
+
+  .align-content-xxl-between {
+    align-content: space-between !important;
+  }
+
+  .align-content-xxl-around {
+    align

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jle4FLiulg/IkgmVIF/y3jkwV4iHb9i4WX+r9dmxKNoia6S4VwsT/J/Y2puj9oVuZPsfRCKjaSddtHF2a0maCQ==",
+  "success": true,
+  "projectFilePath": "C:\\ERP301AKŞAM\\16-Session\\Session\\Session\\Session.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SEM\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

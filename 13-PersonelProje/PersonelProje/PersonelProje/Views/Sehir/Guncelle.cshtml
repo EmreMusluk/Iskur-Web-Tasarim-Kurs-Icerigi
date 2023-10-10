@@ -1,0 +1,17 @@
+﻿@model PersonelProje.Data.Sehir
+
+<div class="row">
+    <div class="col-md-5">
+        <h1>Sehir Guncelleme</h1>
+        <hr />
+        <form method="post">
+            <div>
+                <input class="form-control" type="hidden" value="@Model.Id" name="Id" />
+            </div>
+            <div>
+                <input class="form-control" type="text" value="@Model.SehirAd" name="SehirAd" />
+            </div>
+            <input class="btn btn-success" type="submit" value="Guncelle" />
+        </form>
+    </div>
+</div>

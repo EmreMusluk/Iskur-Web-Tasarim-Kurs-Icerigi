@@ -1,0 +1,31 @@
+h3{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div{
+    background-color: yellow;
+    color: blue;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+}
+
+button{
+    color: yellow;
+    background-color: blue;
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: darkblue;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:hover{
+    color: white;
+}

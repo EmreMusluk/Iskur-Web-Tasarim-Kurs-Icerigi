@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\bin\Debug\net6.0\Coffee.exe
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\bin\Debug\net6.0\Coffee.deps.json
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\bin\Debug\net6.0\Coffee.runtimeconfig.json
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\bin\Debug\net6.0\Coffee.dll
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\bin\Debug\net6.0\Coffee.pdb
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.AssemblyInfo.cs
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.dll
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\refint\Coffee.dll
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.pdb
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\Coffee.genruntimeconfig.cache
+C:\ERP301AKŞAM\3-KararYapilari\Coffee\Coffee\obj\Debug\net6.0\ref\Coffee.dll

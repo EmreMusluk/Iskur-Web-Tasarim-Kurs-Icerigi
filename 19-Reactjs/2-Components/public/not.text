@@ -1,0 +1,21 @@
+İki çeşit component vardır
+1-Class based     // Kullanımı çok az 
+2-Function based  // Yeni özellikler eklendi daha yaygın
+
+
+
+
+
+
+
+
+Yeni bir proje oluşturmak yerine olanın içinden node.. klasörünü silip sonra o projeyi kopyalayırız.
+Daha sonra kopyaladığımızda projeyi açıp npm install deriz terminal de sildiğimiz node.. klasörünü tekrar yüklemiş olduk.
+
+Projeden sildiklerimiz-gereksiz olanlar
+index.css
+app.test 
+app.css de 
+setup.cs.. 
+ripotweprital
+Sildikten sonra hata aldığımız yerler var sildiğimiz şeyle alakalı olan yerleri de sildik

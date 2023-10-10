@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\bin\Debug\net6.0\İleriKalıtım.exe
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\bin\Debug\net6.0\İleriKalıtım.deps.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\bin\Debug\net6.0\İleriKalıtım.runtimeconfig.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\bin\Debug\net6.0\İleriKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\bin\Debug\net6.0\İleriKalıtım.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.AssemblyInfo.cs
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\refint\İleriKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\İleriKalıtım.genruntimeconfig.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\İleriKalıtım\İleriKalıtım\obj\Debug\net6.0\ref\İleriKalıtım.dll

@@ -1,0 +1,2201 @@
+og</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>TABLE_CATALOG</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Views</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>TABLE_SCHEMA</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Views</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>@Table</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ViewColumns</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>VIEW_CATALOG</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ViewColumns</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>VIEW_SCHEMA</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ViewColumns</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>@Table</ParameterName>
+    <RestrictionDefault>VIEW_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ViewColumns</CollectionName>
+    <RestrictionName>Column</RestrictionName>
+    <ParameterName>@Column</ParameterName>
+    <RestrictionDefault>COLUMN_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+    <MinimumVersion>08.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>SPECIFIC_CATALOG</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>SPECIFIC_SCHEMA</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>@Name</ParameterName>
+    <RestrictionDefault>SPECIFIC_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>Parameter</RestrictionName>
+    <ParameterName>@Parameter</ParameterName>
+    <RestrictionDefault>PARAMETER_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>SPECIFIC_CATALOG</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>SPECIFIC_SCHEMA</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+</Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>@Name</ParameterName>
+    <RestrictionDefault>SPECIFIC_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Type</RestrictionName>
+    <ParameterName>@Type</ParameterName>
+    <RestrictionDefault>ROUTINE_TYPE</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+    <MinimumVersion>08.00.0000</MinimumVersion>
+</Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>db_name()</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>user_name()</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>@Table</ParameterName>
+    <RestrictionDefault>o.name</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>ConstraintName</RestrictionName>
+    <ParameterName>@ConstraintName</ParameterName>
+    <RestrictionDefault>x.name</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Column</RestrictionName>
+    <ParameterName>@Column</ParameterName>
+    <RestrictionDefault>c.name</RestrictionDefault>
+    <RestrictionNumber>5</RestrictionNumber>
+  </Restrictions>
+ <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>db_name()</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>user_name()</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>@Table</ParameterName>
+    <RestrictionDefault>o.name</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>@Name</ParameterName>
+    <RestrictionDefault>x.name</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>UserDefinedTypes</CollectionName>
+    <RestrictionName>assembly_name</RestrictionName>
+    <ParameterName>@AssemblyName</ParameterName>
+    <RestrictionDefault>assemblies.name</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+    <MinimumVersion>09.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>UserDefinedTypes</CollectionName>
+    <RestrictionName>udt_name</RestrictionName>
+    <ParameterName>@UDTName</ParameterName>
+    <RestrictionDefault>types.assembly_class</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+    <MinimumVersion>09.00.000.0</MinimumVersion>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Catalog</RestrictionName>
+    <ParameterName>@Catalog</ParameterName>
+    <RestrictionDefault>CONSTRAINT_CATALOG</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>@Owner</ParameterName>
+    <RestrictionDefault>CONSTRAINT_SCHEMA</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>@Table</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>@Name</ParameterName>
+    <RestrictionDefault>CONSTRAINT_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <DataSourceInformation>
+    <CompositeIdentifierSeparatorPattern>\.</CompositeIdentifierSeparatorPattern>
+    <DataSourceProductName>Microsoft SQL Server</DataSourceProductName>
+    <GroupByBehavior>2</GroupByBehavior>
+    <IdentifierPattern>(^\[\p{Lo}\p{Lu}\p{Ll}_@#][\p{Lo}\p{Lu}\p{Ll}\p{Nd}@$#_]*$)|(^\[[^\]\0]|\]\]+\]$)|(^\"[^\"\0]|\"\"+\"$)</IdentifierPattern>
+    <IdentifierCase>1</IdentifierCase>
+    <OrderByColumnsInSelect>false</OrderByColumnsInSelect>
+    <ParameterMarkerFormat>{0}</ParameterMarkerFormat>
+    <ParameterMarkerPattern>@[\p{Lo}\p{Lu}\p{Ll}\p{Lm}_@#][\p{Lo}\p{Lu}\p{Ll}\p{Lm}\p{Nd}\uff3f_@#\$]*(?=\s+|$)</ParameterMarkerPattern>
+    <ParameterNameMaxLength>128</ParameterNameMaxLength>
+    <ParameterNamePattern>^[\p{Lo}\p{Lu}\p{Ll}\p{Lm}_@#][\p{Lo}\p{Lu}\p{Ll}\p{Lm}\p{Nd}\uff3f_@#\$]*(?=\s+|$)</ParameterNamePattern>
+    <QuotedIdentifierPattern>(([^\[]|\]\])*)</QuotedIdentifierPattern>
+    <QuotedIdentifierCase>1</QuotedIdentifierCase>
+    <StatementSeparatorPattern>;</StatementSeparatorPattern>
+    <StringLiteralPattern>'(([^']|'')*)'</StringLiteralPattern>
+    <SupportedJoinOperators>15</SupportedJoinOperators>
+  </DataSourceInformation>
+<DataTypes>
+<TypeName>smallint</TypeName>
+<ProviderDbType>16</ProviderDbType>
+<ColumnSize>5</ColumnSize>
+<CreateFormat>smallint</CreateFormat>
+<DataType>System.Int16</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>int</TypeName>
+<ProviderDbType>8</ProviderDbType>
+<ColumnSize>10</ColumnSize>
+<CreateFormat>int</CreateFormat>
+<DataType>System.Int32</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>real</TypeName>
+<ProviderDbType>13</ProviderDbType>
+<ColumnSize>7</ColumnSize>
+<CreateFormat>real</CreateFormat>
+<DataType>System.Single</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>float</TypeName>
+<ProviderDbType>6</ProviderDbType>
+<ColumnSize>53</ColumnSize>
+<CreateFormat>float({0})</CreateFormat>
+<CreateParameters>number of bits used to store the mantissa</CreateParameters>
+<DataType>System.Double</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>money</TypeName>
+<ProviderDbType>9</ProviderDbType>
+<ColumnSize>19</ColumnSize>
+<CreateFormat>money</CreateFormat>
+<DataType>System.Decimal</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>smallmoney</TypeName>
+<ProviderDbType>17</ProviderDbType>
+<ColumnSize>10</ColumnSize>
+<CreateFormat>smallmoney</CreateFormat>
+<DataType>System.Decimal</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>bit</TypeName>
+<ProviderDbType>2</ProviderDbType>
+<ColumnSize>1</ColumnSize>
+<CreateFormat>bit</CreateFormat>
+<DataType>System.Boolean</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+</DataTypes>
+<DataTypes>
+<TypeName>tinyint</TypeName>
+<ProviderDbType>20</ProviderDbType>
+<ColumnSize>3</ColumnSize>
+<CreateFormat>tinyint</CreateFormat>
+<DataType>System.Byte</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>true</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>bigint</TypeName>
+<ProviderDbType>0</ProviderDbType>
+<ColumnSize>19</ColumnSize>
+<CreateFormat>bigint</CreateFormat>
+<DataType>System.Int64</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+</DataTypes>
+<DataTypes>
+<TypeName>varbinary</TypeName>
+<ProviderDbType>21</ProviderDbType>
+<ColumnSize>8000</ColumnSize>
+<CreateFormat>varbinary({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.Byte[]</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<MaximumVersion>08.99.999.9</MaximumVersion>
+<LiteralPrefix>0x</LiteralPrefix>
+</DataTypes>
+<DataTypes>
+<TypeName>timestamp</TypeName>
+<ProviderDbType>19</ProviderDbType>
+<ColumnSize>8</ColumnSize>
+<CreateFormat>timestamp</CreateFormat>
+<DataType>System.Byte[]</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>true</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>false</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<LiteralPrefix>0x</LiteralPrefix>
+</DataTypes>
+<DataTypes>
+<TypeName>binary</TypeName>
+<ProviderDbType>1</ProviderDbType>
+<ColumnSize>8000</ColumnSize>
+<CreateFormat>binary({0})</CreateFormat>
+<CreateParameters>length</CreateParameters>
+<DataType>System.Byte[]</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<LiteralPrefix>0x</LiteralPrefix>
+</DataTypes>
+<DataTypes>
+<TypeName>image</TypeName>
+<ProviderDbType>7</ProviderDbType>
+<ColumnSize>2147483647</ColumnSize>
+<CreateFormat>image</CreateFormat>
+<DataType>System.Byte[]</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>true</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>false</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<LiteralPrefix>0x</LiteralPrefix>
+</DataTypes>
+<DataTypes>
+<TypeName>char</TypeName>
+<ProviderDbType>3</ProviderDbType>
+<ColumnSize>8000</ColumnSize>
+<CreateFormat>char</CreateFormat>
+<CreateParameters>length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumVersion>08.99.999.9</MaximumVersion>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>text</TypeName>
+<ProviderDbType>18</ProviderDbType>
+<ColumnSize>2147483647</ColumnSize>
+<CreateFormat>text</CreateFormat>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>true</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>false</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>varchar</TypeName>
+<ProviderDbType>22</ProviderDbType>
+<ColumnSize>8000</ColumnSize>
+<CreateFormat>varchar({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumVersion>08.99.999.9</MaximumVersion>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>nchar</TypeName>
+<ProviderDbType>10</ProviderDbType>
+<ColumnSize>4000</ColumnSize>
+<CreateFormat>nchar({0})</CreateFormat>
+<CreateParameters>length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumVersion>08.99.999.9</MaximumVersion>
+<LiteralPrefix>N'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>ntext</TypeName>
+<ProviderDbType>11</ProviderDbType>
+<ColumnSize>1073741823</ColumnSize>
+<CreateFormat>ntext</CreateFormat>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>true</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>false</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<LiteralPrefix>N'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>nvarchar</TypeName>
+<ProviderDbType>12</ProviderDbType>
+<ColumnSize>4000</ColumnSize>
+<CreateFormat>nvarchar({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumVersion>08.99.999.9</MaximumVersion>
+<LiteralPrefix>N'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>decimal</TypeName>
+<ProviderDbType>5</ProviderDbType>
+<ColumnSize>38</ColumnSize>
+<CreateFormat>decimal({0}, {1})</CreateFormat>
+<CreateParameters>precision,scale</CreateParameters>
+<DataType>System.Decimal</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+<MaximumScale>38</MaximumScale>
+<MinimumScale>0</MinimumScale>
+</DataTypes>
+<DataTypes>
+<TypeName>numeric</TypeName>
+<ProviderDbType>5</ProviderDbType>
+<ColumnSize>38</ColumnSize>
+<CreateFormat>numeric({0}, {1})</CreateFormat>
+<CreateParameters>precision,scale</CreateParameters>
+<DataType>System.Decimal</DataType>
+<IsAutoIncrementable>true</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsUnsigned>false</IsUnsigned>
+<MaximumScale>38</MaximumScale>
+<MinimumScale>0</MinimumScale>
+</DataTypes>
+<DataTypes>
+<TypeName>datetime</TypeName>
+<ProviderDbType>4</ProviderDbType>
+<ColumnSize>23</ColumnSize>
+<CreateFormat>datetime</CreateFormat>
+<DataType>System.DateTime</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>smalldatetime</TypeName>
+<ProviderDbType>15</ProviderDbType>
+<ColumnSize>16</ColumnSize>
+<CreateFormat>smalldatetime</CreateFormat>
+<DataType>System.DateTime</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>sql_variant</TypeName>
+<ProviderDbType>23</ProviderDbType>
+<CreateFormat>sql_variant</CreateFormat>
+<DataType>System.Object</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<IsLiteralSupported>false</IsLiteralSupported>
+</DataTypes>
+<DataTypes>
+<TypeName>xml</TypeName>
+<ProviderDbType>25</ProviderDbType>
+<ColumnSize>2147483647</ColumnSize>
+<CreateFormat>xml</CreateFormat>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>true</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>false</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<IsLiteralSupported>false</IsLiteralSupported>
+</DataTypes>
+<DataTypes>
+<TypeName>varchar</TypeName>
+<ProviderDbType>22</ProviderDbType>
+<ColumnSize>2147483647</ColumnSize>
+<CreateFormat>varchar({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>char</TypeName>
+<ProviderDbType>3</ProviderDbType>
+<ColumnSize>2147483647</ColumnSize>
+<CreateFormat>char({0})</CreateFormat>
+<CreateParameters>length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>nchar</TypeName>
+<ProviderDbType>10</ProviderDbType>
+<ColumnSize>1073741823</ColumnSize>
+<CreateFormat>nchar({0})</CreateFormat>
+<CreateParameters>length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<LiteralPrefix>N'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>nvarchar</TypeName>
+<ProviderDbType>12</ProviderDbType>
+<ColumnSize>1073741823</ColumnSize>
+<CreateFormat>nvarchar({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.String</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<LiteralPrefix>N'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>varbinary</TypeName>
+<ProviderDbType>21</ProviderDbType>
+<ColumnSize>1073741823</ColumnSize>
+<CreateFormat>varbinary({0})</CreateFormat>
+<CreateParameters>max length</CreateParameters>
+<DataType>System.Byte[]</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<MinimumVersion>09.00.000.0</MinimumVersion>
+<LiteralPrefix>0x</LiteralPrefix>
+</DataTypes>
+<DataTypes>
+<TypeName>uniqueidentifier</TypeName>
+<ProviderDbType>14</ProviderDbType>
+<ColumnSize>16</ColumnSize>
+<CreateFormat>uniqueidentifier</CreateFormat>
+<DataType>System.Guid</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>false</IsSearchableWithLike>
+<LiteralPrefix>'</LiteralPrefix>
+<LiteralSuffix>'</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>date</TypeName>
+<ProviderDbType>31</ProviderDbType>
+<ColumnSize>3</ColumnSize>
+<CreateFormat>date</CreateFormat>
+<DataType>System.DateTime</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>true</IsFixedLength>
+<IsFixedPrecisionScale>true</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MinimumVersion>10.00.000.0</MinimumVersion>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>time</TypeName>
+<ProviderDbType>32</ProviderDbType>
+<ColumnSize>5</ColumnSize>
+<CreateFormat>time({0})</CreateFormat>
+<CreateParameters>scale</CreateParameters>
+<DataType>System.TimeSpan</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>false</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumScale>7</MaximumScale>
+<MinimumScale>0</MinimumScale>
+<MinimumVersion>10.00.000.0</MinimumVersion>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>datetime2</TypeName>
+<ProviderDbType>33</ProviderDbType>
+<ColumnSize>8</ColumnSize>
+<CreateFormat>datetime2({0})</CreateFormat>
+<CreateParameters>scale</CreateParameters>
+<DataType>System.DateTime</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumScale>7</MaximumScale>
+<MinimumScale>0</MinimumScale>
+<MinimumVersion>10.00.000.0</MinimumVersion>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+<DataTypes>
+<TypeName>datetimeoffset</TypeName>
+<ProviderDbType>34</ProviderDbType>
+<ColumnSize>10</ColumnSize>
+<CreateFormat>datetimeoffset({0})</CreateFormat>
+<CreateParameters>scale</CreateParameters>
+<DataType>System.DateTimeOffset</DataType>
+<IsAutoIncrementable>false</IsAutoIncrementable>
+<IsBestMatch>true</IsBestMatch>
+<IsCaseSensitive>false</IsCaseSensitive>
+<IsConcurrencyType>false</IsConcurrencyType>
+<IsFixedLength>false</IsFixedLength>
+<IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+<IsLong>false</IsLong>
+<IsNullable>true</IsNullable>
+<IsSearchable>true</IsSearchable>
+<IsSearchableWithLike>true</IsSearchableWithLike>
+<MaximumScale>7</MaximumScale>
+<MinimumScale>0</MinimumScale>
+<MinimumVersion>10.00.000.0</MinimumVersion>
+<LiteralPrefix>{ts '</LiteralPrefix>
+<LiteralSuffix>'}</LiteralSuffix>
+</DataTypes>
+ <ReservedWords>
+  <ReservedWord>ADD</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXCEPT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PERCENT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ALL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXEC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PLAN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ALTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXECUTE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRECISION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AND</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXISTS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRIMARY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ANY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXIT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FETCH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PROC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ASC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FILE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PROCEDURE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AUTHORIZATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FILLFACTOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PUBLIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BACKUP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RAISERROR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BEGIN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FOREIGN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>READ</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BETWEEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FREETEXT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>READTEXT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BREAK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FREETEXTTABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RECONFIGURE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BROWSE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FROM</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REFERENCES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BULK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FULL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REPLICATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FUNCTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RESTORE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CASCADE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GOTO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RESTRICT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CASE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GRANT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RETURN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHECK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GROUP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REVOKE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHECKPOINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>HAVING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RIGHT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CLOSE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>HOLDLOCK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROLLBACK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CLUSTERED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IDENTITY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROWCOUNT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COALESCE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IDENTITY_INSERT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROWGUIDCOL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COLLATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IDENTITYCOL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RULE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COLUMN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SAVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COMMIT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SCHEMA</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COMPUTE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INDEX</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SELECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONSTRAINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INNER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SESSION_USER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONTAINS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INSERT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SET</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONTAINSTABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INTERSECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SETUSER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONTINUE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INTO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SHUTDOWN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONVERT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SOME</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CREATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>JOIN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>STATISTICS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CROSS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>KEY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SYSTEM_USER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>KILL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_DATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LEFT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TEXTSIZE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_TIME</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LIKE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>THEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_TIMESTAMP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LINENO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_USER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOAD</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TOP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURSOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NATIONAL </ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRAN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DATABASE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NOCHECK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRANSACTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DBCC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NONCLUSTERED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRIGGER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEALLOCATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NOT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRUNCATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DECLARE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NULL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TSEQUAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEFAULT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NULLIF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UNION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DELETE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UNIQUE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DENY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OFF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UPDATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DESC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OFFSETS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UPDATETEXT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DISK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ON</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>USE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DISTINCT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>USER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DISTRIBUTED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPENDATASOURCE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VALUES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DOUBLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPENQUERY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VARYING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DROP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPENROWSET</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VIEW</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DUMMY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPENXML</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WAITFOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DUMP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WHEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ELSE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WHERE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>END</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ORDER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WHILE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ERRLVL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OUTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WITH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ESCAPE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OVER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WRITETEXT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ABSOLUTE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FOUND</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRESERVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ACTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FREE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRIOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ADMIN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GENERAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PRIVILEGES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AFTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GET</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>READS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AGGREGATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GLOBAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ALIAS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RECURSIVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ALLOCATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>GROUPING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ARE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>HOST</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>REFERENCING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ARRAY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>HOUR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RELATIVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ASSERTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IGNORE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RESULT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>IMMEDIATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>RETURNS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BEFORE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INDICATOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BINARY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INITIALIZE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROLLUP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BIT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INITIALLY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROUTINE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BLOB</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INOUT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROW</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BOOLEAN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INPUT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ROWS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BOTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SAVEPOINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BREADTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INTEGER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SCROLL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CALL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INTERVAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SCOPE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CASCADED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ISOLATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SEARCH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CAST</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ITERATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SECOND</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CATALOG</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LANGUAGE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SECTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LARGE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SEQUENCE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHARACTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LAST</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SESSION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CLASS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LATERAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SETS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CLOB</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LEADING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SIZE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COLLATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LESS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SMALLINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COMPLETION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LEVEL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SPACE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONNECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LIMIT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SPECIFIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONNECTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOCAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SPECIFICTYPE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONSTRAINTS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOCALTIME</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CONSTRUCTOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOCALTIMESTAMP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLEXCEPTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CORRESPONDING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOCATOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLSTATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CUBE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MAP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLWARNING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_PATH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MATCH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>START</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CURRENT_ROLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MINUTE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>STATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CYCLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MODIFIES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>STATEMENT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DATA</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MODIFY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>STATIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MODULE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>STRUCTURE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DAY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MONTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TEMPORARY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NAMES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TERMINATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DECIMAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NATURAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>THAN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEFERRABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NCHAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TIME</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEFERRED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NCLOB</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TIMESTAMP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEPTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NEW</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TIMEZONE_HOUR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DEREF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NEXT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TIMEZONE_MINUTE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DESCRIBE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRAILING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DESCRIPTOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NONE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRANSLATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DESTROY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>NUMERIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TREAT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DESTRUCTOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OBJECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRUE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DETERMINISTIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OLD</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UNDER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DICTIONARY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ONLY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UNKNOWN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DIAGNOSTICS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OPERATION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UNNEST</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DISCONNECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ORDINALITY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>USAGE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DOMAIN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OUT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>USING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>DYNAMIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OUTPUT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VALUE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EACH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PAD</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VARCHAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>END-EXEC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PARAMETER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>VARIABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EQUALS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PARAMETERS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WHENEVER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EVERY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PARTIAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WITHOUT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXCEPTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PATH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WORK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXTERNAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>POSTFIX</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>WRITE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FALSE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PREFIX</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>YEAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FIRST</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PREORDER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ZONE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FLOAT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PREPARE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>ADA</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>AVG</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>BIT_LENGTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHAR_LENGTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>CHARACTER_LENGTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>COUNT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>EXTRACT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>FORTRAN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INCLUDE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>INSENSITIVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>LOWER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MAX</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>MIN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OCTET_LENGTH</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>OVERLAPS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>PASCAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>POSITION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLCA</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLCODE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SQLERROR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SUBSTRING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>SUM</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRANSLATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>TRIM</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+  <ReservedWord>UPPER</ReservedWord>
+  </ReservedWords>
+</NewDataSet>
+     •Ôï:&îL.Eù
+öø≥Ÿ˙92›øÙ¸TêbØ†≈G8Æ˛Z“ÆsıÃù`&Mvq’üæõ–qÃ˙¥¥Ë”K¿»¥Â'ÎeßbVªÑˆúÇ2¶íœ¸TY´K
+ä†iŸ/‰6ñµµUBe->…J+ê1¯^æÇÉ-Y;åU∆v    ≤…Àÿ MP   ò   !                '   §! §                            RSDS0˝>©Óô1D™j5•éÕHé   D:\a\_work\1\s\artifacts\Project\obj\Release.AnyCPU\Microsoft.Data.SqlClient\netcore\netcoreapp3.1\Microsoft.Data.SqlClient.pdb SHA256 0˝>©Óô1TÍj5•éÕHé≤…ÀXS5qTÚ.êÄzcA!Û!         "                         ˇ!           _CorDllMain mscoree.dll      ˇ%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ä                  0  Ä                   H   X@           4   V S _ V E R S I O N _ I N F O     ΩÔ˛                ?                         D    V a r F i l e I n f o     $    T r a n s l a t i o n       ∞x   S t r i n g F i l e I n f o   T   0 0 0 0 0 4 b 0   J   C o m m e n t s   M i c r o s o f t . D a t a . S q l C l i e n t     L   C o m p a n y N a m e     M i c r o s o f t   C o r p o r a t i o n   Z   F i l e D e s c r i p t i o n     M i c r o s o f t . D a t a . S q l C l i e n t     0   F i l e V e r s i o n     5 . 0 . 0 . 0   Z   I n t e r n a l N a m e   M i c r o s o f t . D a t a . S q l C l i e n t . d l l     Ä .  L e g a l C o p y r i g h t   ©   M i c r o s o f t   C o r p o r a t i o n .   A l l   r i g h t s   r e s e r v e d .   b   O r i g i n a l F i l e n a m e   M i c r o s o f t . D a t a . S q l C l i e n t . d l l     n '  P r o d u c t N a m e     C o r e   M i c r o s o f t   S q l C l i e n t   D a t a   P r o v i d e r     0   P r o d u c t V e r s i o n   5 . 0 . 1   8   A s s e m b l y   V e r s i o n   5 . 0 . 0 . 0                                                                                                                                                                                                                                                                                                                                                                                                                          2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      '    0Ç'‡	*ÜHÜ˜†Ç'—0Ç'Õ10	`ÜHe 0\
++Ç7†N0L0
++Ç70	 †¢Ä 010	`ÜHe  Ó≥"
+ã;º%l6π@Ãû(j¬l£"—tß˘D†ÇÅ0Çˇ0ÇÁ†3  Ãéµñ¶Ω—…N    Ã0	*ÜHÜ˜ 0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20110220512204601Z230511204601Z0t10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation10UMicrosoft Corporation0Ç"0	*ÜHÜ˜ Ç 0Ç
+Ç ¢M±ÏÎ∆¿ÛnwﬁÕÕ«O”8tô¯VêÔÎ¬®n4…µ@πX" ◊˝hm≥B’ä6éæŸ}à«ÆJ¿WπúÑãJP úáπ;öøcB#—l»≈öUßvMÓ+‘Hú‹uáQ¯¢61t1 ÉzöÏ0≤R¨,G⁄πI•ÓV¿œ¶Á”eﬁ2ßbrã-¸·ó]"e}_Ô†ëäË(s“:Ñqv0$–af–·ı‡Ã®`Œ>3y¶÷Å˚ædê¢π(Ç˜4EVÙ«pÌÀó˝ﬁ„ë.˙…ˇ«°¡≤YV˚Pa…ù]ràm¯ôÕôl ƒøÄs3ƒG(cT5&€-âç˛ª{•À· £Ç~0Çz0U%0
++Ç7L+0Uà∏Gç2ñÃäï"ü¨3jŒ}u≠Ù0PUI0G§E0C1)0'U Microsoft Operations Puerto Rico10U230012+4705290U#0ÄHndÂP”Ç™77"µm® uï0TUM0K0I†G†EÜChttp://www.microsoft.com/pkiops/crl/MicCodSigPCA2011_2011-07-08.crl0a+U0S0Q+0ÜEhttp://www.microsoft.com/pkiops/certs/MicCodSigPCA2011_2011-07-08.crt0Uˇ0 0	*ÜHÜ˜ Ç x∞‡KùÃLÅÿª∆€^≥∫…Q¢_»≈û]¢Ó‹◊<<9≈sWübØ≈‹¡±˝®∞5∑,'cÏçY3˘%Aaç!‰wô'™s¨øUÍ\˚ŸxÑÉUb⁄‹xã]#(Ëwødë&ºØv0ÔıΩSÖ§‰Ø—È»˘ä®®∑±ï]f•ÁÚÔoE)•ìÌÁAwr8˙]1è,uœçdm'8Ãçvl„Sî;Gq√⁄Œ8¬Ï©›ŒˆG«˝Xø'–‘ˇ„N/~Ÿ◊*'ÃfD∏ßkﬁÇæÍ@ú≥%¨Å/˜yÅ∞‘W∏0È‚üTaÇµµ¨sŒî∆C¶[å›ä*Ω≥ΩÓÏ06^ˆ◊Úñâœ¬=ÔZ◊Ú°∞Ëπ+[˜‘Ç^%'øiF∆u@œë∫¿µo<I`¢>^?tD´cu˘√ªNui!üH√RÆAÈ˝ÿ˜FBr‰tK	T≈Ö%Ÿ;¯√:QÕ≤lo§UÛØı™ı°ï›≠DiÃöy‹Àh?ßú'@ØÉ´ñ≥yZ§Â†sæ≈˝‰›"—”•S-Tı∏´çWˆ≈ôCıü™Ê∑Mv¥ÃèÒ◊15(),kU∆çÍøÌwp+§hÄ/∑íÔí»Yê6H?ˇÙzª6uûaÛ‚Åb√”vüv€ı∂êZÂè≥¥ØXOŸ¯+8®Ç0Çz0Çb†
+aê“     0	*ÜHÜ˜ 0Åà10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1200U)Microsoft Root Certificate Authority 20110110708205909Z260708210909Z0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20110Ç"0	*ÜHÜ˜ Ç 0Ç
+Ç ´˙r.≠ÿn™ÇM4∫Ú∂X!üB*kÈZP™∏8I∫√›7k∆ÿ8¬ô∞»9’1B”âydá~î`$lØûIúÈh^“ﬂõS≤
+,√ØŸ©+Æz	Ø◊ñY `ÈfvË2R&/Á´Pœ≥D∑]ÿƒ.u´hÛÀmÛ:\°ÙF∫‡8d¨nd5x¶†c-”@ì¯„ﬁ’\y•I)Áæ†wæî=Ô˚„+ZMV(¢zr‡:∑I^ÿÌÌCëÉŸ{≤{ÜŸ>±å]ËâOÑÚ°/Y‰ê;-Æ3X≈∑>˛2”≥=±≤Øí8~“ùÄ,ıNVë!5%√9ndS∫ú≠#ÑÀÙ∫Üç˜_–Røåîáº¿!t%_(∂Ã'(8%ò9J6œ|±íÆ#ß©fÏaj·(Iù_à‚%]”!K>RƒµW?$—z[/’#„p]QFw≥¯ ·º¨Ç_€¿≥Ω‘UKÁ9°È#Iº∏D|E‰¡√rz‡rÁ$ﬂøFô≈Ô¬W€ÉçÏMI0ß´éﬂÏ[üØ¸›∞f‚¡óÅ{Ì÷ÌKÁI)ß(¶ß}gÄÊäbx_≤/Ñ◊Wú\øw((ÒÌm√(è,è@7O¡·ÖDâƒ	L≈‘•C/tï˜n¯x X,]`ïö>O3Ñ⁄∞àﬁûNÙñ∞ºF†lò“‡÷àå £ÇÌ0ÇÈ0	+Ç7 0UHndÂP”Ç™77"µm® uï0	+Ç7
+ S u b C A0UÜ0Uˇ0ˇ0U#0Är-:1êCπN·Íß«1—#â40ZUS0Q0O†M†KÜIhttp://crl.microsoft.com/pki/crl/products/MicRooCerAut2011_2011_03_22.crl0^+R0P0N+0ÜBhttp://www.microsoft.com/pki/certs/MicRooCerAut2011_2011_03_22.crt0ÅüU Åó0Åî0Åë	+Ç7.0ÅÉ0?+3http://www.microsoft.com/pkiops/docs/primarycps.htm0@+042  L e g a l _ p o l i c y _ s t a t e m e n t . 0	*ÜHÜ˜ Ç gÚÜ•ò‡Ty.”ÿtg"õñ·cíôBñ}“yê¡e_.,>¯√r—mÉ˛æ?Ë
+ ;øG©£Ûi€cø"5•ó]eÑê}ãFPUÿí|“KÛ<BãR–∞˝k„>.)õÊ=•‘µwî9‚Èd…D=xz#Û}¶êtÉçÙÀ&F*¬äª§©õÌh˙h.ï†*?*kXIc	inZòñ‰ÉÙ¿èÛF+ﬁ¸;–Ω5Ôn%ÆÂØ'Ì–›ÛØô(óòM=Úâ÷√2‚≈-Œ[û¥I9
+∆
+¬∆≠ÆÂ≤Ÿ€àQEX82q'±Ù'¯ﬁ,: iò≤Yâhnoß∑t√@¶*(>Ç?Mf¿≥Mı·èo}EßvÂ@*e£√]RbÜ√c6óÜﬂ⁄Û¯Ú°ö'·Õ•ó–Ó]cA„[úá>w—±uæaaµ‹∆æﬂA«(Óﬁe/Ïóˆ°\ñÿ ÷°FΩYÛó•	KHôÄ– )≈±õ•?Ew5∆“¢¢üzz"˙Hï´˚G#Äıû¯øk∑Kó‚ÎuxÏÍ7ôyKˇ÷≥#huÊØ˙¸ãÎÄÍi;Ø¸0ÌLéﬂﬂumcë=—ùVNOøÄW"°x2!zÔA
+±?˚®Ã§]¡°àõWqVNHE¿B…õv[
+ÄHk˝yü¡Ωmmj…RszPÕ1Ç“0ÇŒ0Åï0~10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1(0&UMicrosoft Code Signing PCA 20113  Ãéµñ¶Ω—…N    Ã0	`ÜHe †Ç	0	*ÜHÜ˜	1
++Ç70
++Ç710
++Ç70/	*ÜHÜ˜	1" GÄ ∏†8˛Sª«|3ú(ﬂÖ_ÿsW?Ö.ﬂ≈õõ0Åú
++Ç71Åç0Åä†lÄj M i c r o s o f t   D a t a   S q l C l i e n t   D a t a   P r o v i d e r   f o r   S Q L   S e r v e r°Ähttp://www.microsoft.com0	*ÜHÜ˜ Ç x˝w	gä&™~Òbæhpô÷´gÜHLå(†∂ë∫v¢,‚¢C±Í.-)∏PÊ,Ék«ÌÙîÿjÙ`LQΩËpÈ≈ﬁeMXWÍ’˚∏_VñbçJÂFúÀíH≥ñye§{ÃÄ1—ZATªRK√é±»È-aj,‹›ËéO–d5|•]5˚ùËr.WrìÎ√¥=xì”Ê∞>¿-ßÁ#g!£â]Ô“òÁú5 Õ˜∆ûËb#¢5Q£^ÓıˇúAÀ{hQp*~	Îó~§õ`>°Ω£ãv—^[á¸õ©‘ﬂàm“Jz(ï≤Ù«…äw¸‰<a»!=◊4Vµ√Yµì·”Ö˜áìD
+°Ç 0Ç¸
++Ç71ÇÏ0ÇË	*ÜHÜ˜†ÇŸ0Ç’10	`ÜHe 0ÇQ*ÜHÜ˜	†Ç@Ç<0Ç8
++ÑY
+010	`ÜHe   k‹ _*Fø¬¬4´/áËã2MÛ1†<"@º`%éc#6µ#j20221007233523.659Z0ÄÙ†Å–§ÅÕ0Å 10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:12BC-E3AE-74EB1%0#UMicrosoft Time-Stamp Service†ÇW0Ç0ÇÙ†3  °ÖUôπT]ä   °0	*ÜHÜ˜ 0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100211202190524Z230228190524Z0Å 10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:12BC-E3AE-74EB1%0#UMicrosoft Time-Stamp Service0Ç"0	*ÜHÜ˜ Ç 0Ç
+Ç ⁄…<^Âk§í∂1≈[á-ÖΩEÇŸ$éy«∞‚∞◊H=∂e-è•ÊãÀ◊˛C(P#p◊˜Yu» Ó?’˚¥„¬„∆Qp?mˇjóAJÁç¸Äâ{q^vÒwÑ8\¸îlÖ[oz:h<g≠±i˜é±∏S˙kà
+≈˝ÍıPG6‚S*£ó("H¸
+ÿŸ≈òµ$?îy˛\„π!Óïµ*>—ù»iÊ=1ÈAöÌ¡QÖ8≤†¢%WC&óü.Û”ÙGmÜT1Ôô]«‡0e˝öı>ÓAÅáÀiƒ˜H9
+âc0å§Îç=r?é'j>Á<>ı˛≤¨j…ë⁄Aéi:‚y∫@
+◊¬πú√,ÔR1<iÌe‰¬ñJ2÷˚O∑˛z°ÍJ€Æ˘p§}◊ï˝˙_Æ¿t¸‰ _‹BÀØyÛïÑ%œ6∂◊0®≥Jµë[ˇ‹sˇf¬i¡¨˘3-ëo'7[Oæûô2}>E7€ˇ)üQ2ŒáÊ7ãŒ÷ãÎ«@˜@}^
+6VeÈ÷c≤∆ì‘⁄`Ã®ñÚl{RsD ËÌÇ(ìÚw	∆Ê∆¡no9äàñ—Gy¡≈\+∞1ÅsX»\m™–4†cg∂ó◊¿ë}Ãåé‘íY(œæ??¢à©ÓcqﬂE<&€I∂Ù‚ÏµÁò9 £Ç60Ç20Uø 2€cé˘Uäâî∞„πt˝Ã©0U#0Äüß] ^b]ÉÙÂ“eßS5Èr0_UX0V0T†R†PÜNhttp://www.microsoft.com/pkiops/crl/Microsoft%20Time-Stamp%20PCA%202010(1).crl0l+`0^0\+0ÜPhttp://www.microsoft.com/pkiops/certs/Microsoft%20Time-Stamp%20PCA%202010(1).crt0Uˇ0 0U%0
++0	*ÜHÜ˜ Ç  √#%}yFÂÇú*≤œI/ü‹ïô¶º
+ æ+⁄0Qï{@≥‰‰i◊,Ëæ˜oò^m	L”á4ú";múg∞øíÈ{":ÕŸ’^_‚0°u	„2Ô≥O¶Oã„;X|§?n…â)™ˆsﬂf˝ÒÔ’i∂	72i„ÔãŒâáu2.7Q µõ∑;8†âÖ3
+o1›>äq¨`ã‡µaõ!¢≈ãñÚª‘óÍçÉYπÿ¬f]e†é√Ùrhi›˙∑˝€∆<Æıö°¸nt£‡ÙPùEk˜	%°ﬂ{+WËjÌ]Å£òÕ˛É‡!i[∫íó6”Öªõg,´¿ìàå@ÿWV
+öUÓË[a´, ≈2c``'ìwk¿‹fó^™Q≥3h‘^ÜªíB•Wl‚LıGπ>RJ∂b&Ç≥©ú|øØò IÉ©‚Y÷Ö=B3utO÷ùyÓéQpd÷±8uó?R√ÂèJ®äXÀ˙Suò$öl˚ìõH9µF∑Iw?	–\DNjbÌ@vˆÆU∂p	◊+˚/åD–’2'osú1‚^^o.ÑSé1i≤ãoàcÈç©≤Êèn#Â‰˛n0ÂqÊ6“œ§∑äô‘∫S¶&j#fiÕ£Ep¿i·˛Í2›ù∑…?≥>0;˜œ3MLÉ^∏—-X&˜<ÄÖ^pŸπ[b0Çq0ÇY†3   ≈ÁkûõIô     0	*ÜHÜ˜ 0Åà10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1200U)Microsoft Root Certificate Authority 20100210930182225Z300930183225Z0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100Ç"0	*ÜHÜ˜ Ç 0Ç
+Ç ‰·¶LÁ¥r!y¢À◊$yΩ’Ç”˝Óú“©lNu» 5WˆlJ‡‚Ωπ>`3ˇ\O«f˜ïSqZ‚~JZ˛∏6gÖF#µçœw2¿Ë`}jRÉD∑¶éFkÛ≈vıÜP‹¡D»q\Q17†
+8nçÌ◊ÿ&S|9azƒ™˝riØ´¨ˆ6æ5&d⁄ò;∫{3≠Ä[~åùR˛∂Ëb%‹jœ]Ù˛éSœ÷ÏÖVMÔ›ºç§„ëè≤9,QúÈpi 6-pé1»5(Ω„¥á$√‡…è~µTè‹˙Uòmh;öFΩÌ§Æz)7¨ÀÎÉEÁFn 2’¿Ü0\O,‚b≤Õπ‚çà‰ñ¨Jªæq©[g`ﬁ¯íë=˝ œs}AöFuÕƒ_4›â÷˝• }~¸ŸûEﬂ∂r/€}_Ä∫€™~6Ï6Lˆ+n®QËø£—s¶M7tî4ÇÚ∑GÌßËô|?L€Ø^¬Û’ÿs=CN¡39LéºBh.ÍÑQF‚—ΩjZas g¢^◊(v‚3r◊ß ¬˙
+◊co…6dã[†¶É!]_0tëîîÿπP˘âaÛ65ÑG€‹—˝≤‘≈kˆ\RQ]€%∫ØPzl≈rÔç˘RƒÖì¿<€7«?x´E∂ıá^⁄èûri∆Æ{∑∑>j‚.≠ £Ç›0ÇŸ0	+Ç7 0#	+Ç7*ßR˛dƒöæÇë<F5)œˇ/Ó0Uüß] ^b]ÉÙÂ“eßS5Èr0\U U0S0Q+Ç7LÉ}0A0?+3http://www.microsoft.com/pkiops/Docs/Repository.htm0U%0
++0	+Ç7
+ S u b C A0UÜ0Uˇ0ˇ0U#0Ä’ˆVÀèË¢\bh—=îê[◊Œöƒ0VUO0M0K†I†GÜEhttp://crl.microsoft.com/pki/crl/products/MicRooCerAut_2010-06-23.crl0Z+N0L0J+0Ü>http://www.microsoft.com/pki/certs/MicRooCerAut_2010-06-23.crt0	*ÜHÜ˜ Ç ùU}¸*≠·,g1$[·ûrK¸©oÍ\∂>NGdx±ìó=13µ9◊¬q6?⁄dl|–u9mª1‰¬è˚l—°î"ÓÈfg:SM›ò∫∂xÿ6.ú©ÇV ∞æâËi‡∫	Ó{ﬂjoæ)Ànÿ?HuŸﬁmÇım#T‰xSu$Wπ›üÛé=∆Ûhﬂeˆ§V™˜ï∂(U'–$Ω@†ø∂]='‡@ñ8¨˜˘)â√º∞TÖB≥¸ûãâÁjÅ¬ÅBRuä6¬√as.,k{n?,	xÈë≤©[ﬂI£tºÏëÄ“=ÊJ>f;OªÜ˙2ŸñÙèˆëˆŒ∆t˝ˆLro´u0≈4∞zÿP˛
+X›@<«TmùctH,±NG-¡qød˘$æsm é	Ω≥WITdŸs◊[DéZëkü§(‹g($∫8Kön˚!TkjEG©Ò∑Æ»Ëâ^Où“–LvµWT	±iD~|°als˛
+ªÏAf=i˝À¡AI~~ìæÀ¯;‰∑ø¥Œ>•1QÑºø¡Ç¢{âçp˛Áµ–(âè6⁄∫L˘õˇ
+È4¯$5g+‡∏Êåô÷·"Í'B=%îÊtt[j—û>Ì~†13}ºÀÈ{ø8pD—êÒ»´:ä:bŸpcSMçÓÇm•¡qj¥U3X≥°pfÚ°ÇŒ0Ç70Å¯°Å–§ÅÕ0Å 10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1%0#UMicrosoft America Operations1&0$UThales TSS ESN:12BC-E3AE-74EB1%0#UMicrosoft Time-Stamp Service¢#
+0+ qvåÓ≈K¬Ü]÷7ÅAÄ‡†ÅÉ0ÅÄ§~0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20100	*ÜHÜ˜  ÊÍµJ0"20221007222514Z20221008222514Z0w0=
++ÑY
+1/0-0
+ ÊÍµJ 0
+ aˇ0 ≤0
+ ÊÏ  06
++ÑY
+1(0&0
++ÑY
+†
+0 ° °
+0 Ü†0	*ÜHÜ˜ ÅÅ ~+Qÿèˇœib™	√Ω5îV«$]ÃÎ]|ëÅ6®ÀWë$ÂP—ímV-œò¡CÍF◊ΩüP$≥P¶–ß™#&£ä8–∆Z5Wj,Õ8È⁄I∂Mhœ®eÓ+˝Î•MÌ˛¡zY–®-ÁÛß“Ã0ıàñ
+¢]˘KƒËŸ¶µ8èÕÎ‰Xçà1Ç0Ç	0Åì0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20103  °ÖUôπT]ä   °0	`ÜHe †ÇJ0	*ÜHÜ˜	1*ÜHÜ˜	0/	*ÜHÜ˜	1" {s≈5˘¡·}&ﬂÊUh”m»∏1 dÛÈ~tÄTá ô0Å˙*ÜHÜ˜	/1ÅÍ0ÅÁ0Å‰0ÅΩ ÎTÒ:ÅÇh ÇéÑrÌII
+Ã%‡ÇO!+Œ(âﬂé–Ñ0Åò0ÅÄ§~0|10	UUS10U
+Washington10URedmond10U
+Microsoft Corporation1&0$UMicrosoft Time-Stamp PCA 20103  °ÖUôπT]ä   °0" ˚è}§ïª	P(yl&DtT·ƒT»Éﬂ©.‚ÕTâ¸0	*ÜHÜ˜ Ç ä5Ω◊p»›—õe·Ï¡OZK@‡∫tyÂ2ﬂÒ%7¢8hˆæä6>>¸•k⁄=ÌÎáÊ[ﬂˆ[àJ∫œ€`Ñò[˚ÒEh?då†ÿ[òíÕÖ:u˝ªª¬©»Gh˜˘-¨',:ﬁÑ•t˚WÕ$Ê2ÍÊ˜»ú‹Ä˜rLPç¢z‡M‘ÿÚ%û†`LÂ™(¢æe˙≈º¬é˚†®∫Ød¬¯\˛`ñÃ·Ù∏ﬁùÜ∏A‰f	£Jü£’“e∞0Ò°…pzZ4ùïÀ•ñqr›6CÙq"ºO˘ LU≥∂ûù∞`qï|älå,'˘[ø58P∏m˙@àcÚïπ√6Ä©é«0¥±7ôlƒ≈¥ÜÒ”ÕüºxêmÑª'≥ÌwBœD‘|…4=ßùIáè_†Ú∆∏[†â9¢¬w O£€ê
+W‹7Bí˜Ë≥,∂“È°g◊ﬂúäﬂYÅÄBcﬁ<:∏ÿwÇ¸ok–#M˚aé& ü–·ªı∂3'o◊¬íDÑiïXÇ∆“ßâ◊eëm¡&ª€Ù‰âª«ìÔù∏ìtH~5éÖÎmpv”›‹C„ÚKvÜ‡˜3]…ƒåéﬂl®œGÌû≥‘P˘
+ó˜^≥ıÔ"Ì√°%”¢B¯#°˝:"êIX<π_ï€√HW¿À¿œNıKB–5ñ4TÍ¨ÍyIˇ"Z~IßÌÙ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    %   Debug|Any CPU| BuildCacheContainsPartialData False ProjectFingerprint @785da350a467fd2bbaddd19799d6c194a9312f0b6d0cf6630303cd9fa4751126 CacheSynchronizerCode 3 CollectSuggestedWorkloads CollectFrameworkReferences Microsoft.NETCore.App All #ResolveProjectReferencesDesignTime2 CollectAnalyzersDesignTime ~C:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll true wC:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll wC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll CollectPackageDownloads $ResolvePackageDependenciesDesignTime CompileDesignTime 	/noconfig /unsafe- 	/checked-  /nowarn:1701,1702,1701,1702,2008 
+/fullpaths 
+/nostdlib+ /errorreport:prompt /warn:6 ¸/define:TRACE;DEBUG;NET;NET6_0;NETCOREAPP;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER /errorendlocation /preferreduilang:en-US /highentropyva+ /nullable:enable j/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.CSharp.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.VisualBasic.Core.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.VisualBasic.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.Win32.Primitives.dll" r/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.Win32.Registry.dll" b/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\mscorlib.dll" e/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\netstandard.dll" /reference:"C:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\SahteVeri\SahteVeri\bin\Debug\net6.0\SahteVeri.dll" k/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.AppContext.dll" h/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Buffers.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Concurrent.dll" l/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Immutable.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.NonGeneric.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Specialized.dll" {/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.Annotations.dll" /reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.DataAnnotations.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.dll" /reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.EventBasedAsync.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.Primitives.dll" }/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.TypeConverter.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Configuration.dll" h/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Console.dll" e/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Core.dll" l/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.Common.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.DataSetExtensions.dll" e/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Contracts.dll" r/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Debug.dll" }/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.DiagnosticSource.dll" |/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.FileVersionInfo.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Process.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.StackTrace.dll" Ñ/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.TextWriterTraceListener.dll" r/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Tools.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.TraceSource.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Tracing.dll" `/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.dll" h/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Drawing.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Drawing.Primitives.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Dynamic.Runtime.dll" m/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Formats.Asn1.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.Calendars.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.Extensions.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.Brotli.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.FileSystem.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.ZipFile.dll" c/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.dll" |/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.AccessControl.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.DriveInfo.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.Primitives.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.Watcher.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.IsolatedStorage.dll" u/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.MemoryMappedFiles.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Pipes.AccessControl.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Pipes.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.UnmanagedMemoryStream.dll" e/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Expressions.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Parallel.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Queryable.dll" g/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Memory.dll" d/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Http.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Http.Json.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.HttpListener.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Mail.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.NameResolution.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.NetworkInformation.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Ping.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Primitives.dll" m/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Requests.dll" m/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Security.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.ServicePoint.dll" l/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Sockets.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebClient.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebHeaderCollection.dll" m/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebProxy.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebSockets.Client.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebSockets.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Numerics.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Numerics.Vectors.dll" l/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ObjectModel.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.DispatchProxy.dll" k/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.dll" }/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.ILGeneration.dll" |/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.Lightweight.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Extensions.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Metadata.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Primitives.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.TypeExtensions.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.Reader.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.ResourceManager.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.Writer.dll" Ä/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.CompilerServices.Unsafe.dll" Å/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.CompilerServices.VisualC.dll" h/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Extensions.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Handles.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.InteropServices.dll" ã/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.InteropServices.RuntimeInformation.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Intrinsics.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Loader.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Numerics.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.dll" Å/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Formatters.dll" {/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Json.dll" Å/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Primitives.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Xml.dll" w/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.AccessControl.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Claims.dll" Å/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Algorithms.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Cng.dll" z/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Csp.dll" /reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Encoding.dll" ~/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.OpenSsl.dll" Å/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Primitives.dll" á/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.X509Certificates.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Principal.dll" {/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Principal.Windows.dll" v/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.SecureString.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ServiceModel.Web.dll" o/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ServiceProcess.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.CodePages.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.Extensions.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encodings.Web.dll" j/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Json.dll" x/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.RegularExpressions.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Channels.dll" j/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.dll" u/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Overlapped.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Dataflow.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.dll" {/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Extensions.dll" y/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Parallel.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Thread.dll" u/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.ThreadPool.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Timer.dll" m/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Transactions.dll" s/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Transactions.Local.dll" k/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ValueTuple.dll" d/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Web.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Web.HttpUtility.dll" h/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Windows.dll" d/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.dll" i/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.Linq.dll" q/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.ReaderWriter.dll" r/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.Serialization.dll" n/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XDocument.dll" p/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XmlDocument.dll" r/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XmlSerializer.dll" j/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XPath.dll" t/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XPath.XDocument.dll" e/reference:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\WindowsBase.dll" /debug+ /debug:portable /filealign:512 
+/optimize- '/out:"obj\Debug\net6.0\Deneme√∂dev.dll" 1/refout:"obj\Debug\net6.0\refint\Deneme√∂dev.dll" /target:exe /warnaserror- /utf8output /deterministic+ /langversion:10.0 X/analyzerconfig:"obj\Debug\net6.0\Deneme√∂dev.GeneratedMSBuildEditorConfig.editorconfig" à/analyzerconfig:"C:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\analyzers\build\config\analysislevel_6_default.editorconfig" ä/analyzer:"C:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll" É/analyzer:"C:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll" É/analyzer:"C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll" 
+Ogrenci.cs 
+Program.cs .obj\Debug\net6.0\Deneme√∂dev.GlobalUsings.g.cs ?obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs ,obj\Debug\net6.0\Deneme√∂dev.AssemblyInfo.cs /warnaserror+:NU1605 $CollectUpToDateCheckOutputDesignTime CollectCentralPackageVersions #CollectUpToDateCheckBuiltDesignTime xC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\bin\Debug\net6.0\Deneme√∂dev.dll  obj\Debug\net6.0\Deneme√∂dev.dll  obj\Debug\net6.0\Deneme√∂dev.pdb  bin\Debug\net6.0\Deneme√∂dev.pdb .CollectResolvedCompilationReferencesDesignTime ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.CSharp.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.VisualBasic.Core.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.VisualBasic.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.Win32.Primitives.dll eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\Microsoft.Win32.Registry.dll UC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\mscorlib.dll XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\netstandard.dll rC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\SahteVeri\SahteVeri\bin\Debug\net6.0\SahteVeri.dll ^C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.AppContext.dll [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Buffers.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Concurrent.dll _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Immutable.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.NonGeneric.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Collections.Specialized.dll nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.Annotations.dll rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.DataAnnotations.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.dll rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.EventBasedAsync.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.Primitives.dll pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ComponentModel.TypeConverter.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Configuration.dll [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Console.dll XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Core.dll _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.Common.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.DataSetExtensions.dll XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Data.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Contracts.dll eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Debug.dll pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.DiagnosticSource.dll oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.FileVersionInfo.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Process.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.StackTrace.dll wC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.TextWriterTraceListener.dll eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Tools.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.TraceSource.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Diagnostics.Tracing.dll SC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.dll [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Drawing.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Drawing.Primitives.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Dynamic.Runtime.dll `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Formats.Asn1.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.Calendars.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Globalization.Extensions.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.Brotli.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.FileSystem.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Compression.ZipFile.dll VC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.dll oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.AccessControl.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.DriveInfo.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.Primitives.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.FileSystem.Watcher.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.IsolatedStorage.dll hC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.MemoryMappedFiles.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Pipes.AccessControl.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.Pipes.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.IO.UnmanagedMemoryStream.dll XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Expressions.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Parallel.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Linq.Queryable.dll ZC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Memory.dll WC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Http.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Http.Json.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.HttpListener.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Mail.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.NameResolution.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.NetworkInformation.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Ping.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Primitives.dll `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Requests.dll `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Security.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.ServicePoint.dll _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.Sockets.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebClient.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebHeaderCollection.dll `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebProxy.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebSockets.Client.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Net.WebSockets.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Numerics.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Numerics.Vectors.dll _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ObjectModel.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.DispatchProxy.dll ^C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.dll pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.ILGeneration.dll oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Emit.Lightweight.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Extensions.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Metadata.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.Primitives.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Reflection.TypeExtensions.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.Reader.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.ResourceManager.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Resources.Writer.dll sC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.CompilerServices.Unsafe.dll tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.CompilerServices.VisualC.dll [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Extensions.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Handles.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.InteropServices.dll ~C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.InteropServices.RuntimeInformation.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Intrinsics.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Loader.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Numerics.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.dll tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Formatters.dll nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Json.dll tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Primitives.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Runtime.Serialization.Xml.dll jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.AccessControl.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Claims.dll tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Algorithms.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Cng.dll mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Csp.dll rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Encoding.dll qC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.OpenSsl.dll tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.Primitives.dll zC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Cryptography.X509Certificates.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Principal.dll nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.Principal.Windows.dll iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Security.SecureString.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ServiceModel.Web.dll bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ServiceProcess.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.CodePages.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encoding.Extensions.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Encodings.Web.dll ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.Json.dll kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Text.RegularExpressions.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Channels.dll ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.dll hC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Overlapped.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Dataflow.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.dll nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Extensions.dll lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Tasks.Parallel.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Thread.dll hC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.ThreadPool.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Threading.Timer.dll `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Transactions.dll fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Transactions.Local.dll ^C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.ValueTuple.dll WC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Web.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Web.HttpUtility.dll [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Windows.dll WC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.dll \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.Linq.dll dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.ReaderWriter.dll eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.Serialization.dll aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XDocument.dll cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XmlDocument.dll eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XmlSerializer.dll ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XPath.dll gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\System.Xml.XPath.XDocument.dll XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref\net6.0\WindowsBase.dll &CollectResolvedSDKReferencesDesignTime CollectPackageReferences BuiltProjectOutputGroup áC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\bin\Debug\net6.0\Deneme√∂dev.runtimeconfig.json Deneme√∂dev.runtimeconfig.json C:\ Deneme√∂dev.runtimeconfig .json iC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\bin\Debug\net6.0\ fUsers\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\bin\Debug\net6.0\ \C:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.targets CC:\Program Files\dotnet\sdk\6.0.400\Sdks\Microsoft.NET.Sdk\targets\ Microsoft.NET.Sdk .targets xC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\obj\Debug\net6.0\Deneme√∂dev.dll Deneme√∂dev.dll Deneme√∂dev .dll iC:\Users\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\obj\Debug\net6.0\ fUsers\SEM\Desktop\ERP301AK≈ûAM\ERP301AK≈ûAM\10- Dll Uygulama\Deneme√∂dev\Deneme√∂dev\obj\Debug\net6.0\ yC:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets RC:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\ Microsoft.Common.CurrentVersion ResolveComReferencesDesignTime #CollectUpToDateCheckInputDesignTime $ResolveFrameworkReferencesDesignTime =C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8 6.0.8 #ResolveAssemblyReferencesDesignTime false SMicrosoft.CSharp, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/Microsoft.CSharp.dll {RawFileName} ^Microsoft.VisualBasic.Core, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/Microsoft.VisualBasic.Core.dll YMicrosoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/Microsoft.VisualBasic.dll ]Microsoft.Win32.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/Microsoft.Win32.Primitives.dll [Microsoft.Win32.Registry, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/Microsoft.Win32.Registry.dll Kmscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 UC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/mscorlib.dll Nnetstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/netstandard.dll @SahteVeri, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 	SahteVeri {HintPathFromItem} 8..\..\SahteVeri\SahteVeri\bin\Debug\net6.0\SahteVeri.dll TSystem.AppContext, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a ^C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.AppContext.dll QSystem.Buffers, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Buffers.dll `System.Collections.Concurrent, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Collections.Concurrent.dll USystem.Collections, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Collections.dll _System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Collections.Immutable.dll `System.Collections.NonGeneric, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Collections.NonGeneric.dll aSystem.Collections.Specialized, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Collections.Specialized.dll dSystem.ComponentModel.Annotations, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.Annotations.dll hSystem.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.DataAnnotations.dll XSystem.ComponentModel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.dll hSystem.ComponentModel.EventBasedAsync, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.EventBasedAsync.dll cSystem.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.Primitives.dll fSystem.ComponentModel.TypeConverter, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ComponentModel.TypeConverter.dll WSystem.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Configuration.dll QSystem.Console, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Console.dll NSystem.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Core.dll USystem.Data.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Data.Common.dll `System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Data.DataSetExtensions.dll NSystem.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Data.dll _System.Diagnostics.Contracts, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.Contracts.dll [System.Diagnostics.Debug, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.Debug.dll fSystem.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.DiagnosticSource.dll eSystem.Diagnostics.FileVersionInfo, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.FileVersionInfo.dll ]System.Diagnostics.Process, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.Process.dll `System.Diagnostics.StackTrace, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.StackTrace.dll mSystem.Diagnostics.TextWriterTraceListener, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a wC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.TextWriterTraceListener.dll [System.Diagnostics.Tools, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a eC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.Tools.dll aSystem.Diagnostics.TraceSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.TraceSource.dll ]System.Diagnostics.Tracing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Diagnostics.Tracing.dll ISystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 SC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.dll QSystem.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Drawing.dll \System.Drawing.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Drawing.Primitives.dll YSystem.Dynamic.Runtime, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Dynamic.Runtime.dll VSystem.Formats.Asn1, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Formats.Asn1.dll aSystem.Globalization.Calendars, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Globalization.Calendars.dll WSystem.Globalization, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Globalization.dll bSystem.Globalization.Extensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Globalization.Extensions.dll _System.IO.Compression.Brotli, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Compression.Brotli.dll XSystem.IO.Compression, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Compression.dll cSystem.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Compression.FileSystem.dll `System.IO.Compression.ZipFile, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Compression.ZipFile.dll LSystem.IO, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a VC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.dll eSystem.IO.FileSystem.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.FileSystem.AccessControl.dll WSystem.IO.FileSystem, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.FileSystem.dll aSystem.IO.FileSystem.DriveInfo, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.FileSystem.DriveInfo.dll bSystem.IO.FileSystem.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.FileSystem.Primitives.dll _System.IO.FileSystem.Watcher, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.FileSystem.Watcher.dll \System.IO.IsolatedStorage, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.IsolatedStorage.dll ^System.IO.MemoryMappedFiles, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a hC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.MemoryMappedFiles.dll `System.IO.Pipes.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Pipes.AccessControl.dll RSystem.IO.Pipes, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.Pipes.dll bSystem.IO.UnmanagedMemoryStream, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.IO.UnmanagedMemoryStream.dll NSystem.Linq, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a XC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Linq.dll ZSystem.Linq.Expressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Linq.Expressions.dll WSystem.Linq.Parallel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Linq.Parallel.dll XSystem.Linq.Queryable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Linq.Queryable.dll PSystem.Memory, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 ZC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Memory.dll MSystem.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a WC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.dll RSystem.Net.Http, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Http.dll WSystem.Net.Http.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Http.Json.dll ZSystem.Net.HttpListener, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.HttpListener.dll RSystem.Net.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Mail.dll \System.Net.NameResolution, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.NameResolution.dll `System.Net.NetworkInformation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.NetworkInformation.dll RSystem.Net.Ping, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Ping.dll XSystem.Net.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Primitives.dll VSystem.Net.Requests, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Requests.dll VSystem.Net.Security, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Security.dll ZSystem.Net.ServicePoint, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.ServicePoint.dll USystem.Net.Sockets, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.Sockets.dll WSystem.Net.WebClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.WebClient.dll aSystem.Net.WebHeaderCollection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.WebHeaderCollection.dll VSystem.Net.WebProxy, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 `C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.WebProxy.dll _System.Net.WebSockets.Client, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.WebSockets.Client.dll XSystem.Net.WebSockets, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Net.WebSockets.dll RSystem.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Numerics.dll ZSystem.Numerics.Vectors, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Numerics.Vectors.dll USystem.ObjectModel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a _C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ObjectModel.dll bSystem.Reflection.DispatchProxy, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.DispatchProxy.dll TSystem.Reflection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a ^C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.dll YSystem.Reflection.Emit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Emit.dll fSystem.Reflection.Emit.ILGeneration, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a pC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Emit.ILGeneration.dll eSystem.Reflection.Emit.Lightweight, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a oC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Emit.Lightweight.dll _System.Reflection.Extensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Extensions.dll ]System.Reflection.Metadata, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a gC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Metadata.dll _System.Reflection.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.Primitives.dll cSystem.Reflection.TypeExtensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Reflection.TypeExtensions.dll ZSystem.Resources.Reader, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Resources.Reader.dll cSystem.Resources.ResourceManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Resources.ResourceManager.dll ZSystem.Resources.Writer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Resources.Writer.dll iSystem.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a sC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.CompilerServices.Unsafe.dll jSystem.Runtime.CompilerServices.VisualC, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.CompilerServices.VisualC.dll QSystem.Runtime, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a [C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.dll \System.Runtime.Extensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Extensions.dll YSystem.Runtime.Handles, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Handles.dll aSystem.Runtime.InteropServices, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.InteropServices.dll tSystem.Runtime.InteropServices.RuntimeInformation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a ~C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.InteropServices.RuntimeInformation.dll \System.Runtime.Intrinsics, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Intrinsics.dll XSystem.Runtime.Loader, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Loader.dll ZSystem.Runtime.Numerics, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Numerics.dll _System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Serialization.dll jSystem.Runtime.Serialization.Formatters, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Serialization.Formatters.dll dSystem.Runtime.Serialization.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Serialization.Json.dll jSystem.Runtime.Serialization.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Serialization.Primitives.dll cSystem.Runtime.Serialization.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Runtime.Serialization.Xml.dll `System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a jC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.AccessControl.dll YSystem.Security.Claims, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a cC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Claims.dll jSystem.Security.Cryptography.Algorithms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.Algorithms.dll cSystem.Security.Cryptography.Cng, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.Cng.dll cSystem.Security.Cryptography.Csp, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.Csp.dll hSystem.Security.Cryptography.Encoding, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a rC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.Encoding.dll gSystem.Security.Cryptography.OpenSsl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a qC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.OpenSsl.dll jSystem.Security.Cryptography.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a tC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.Primitives.dll pSystem.Security.Cryptography.X509Certificates, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a zC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Cryptography.X509Certificates.dll RSystem.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a \C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.dll \System.Security.Principal, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Principal.dll dSystem.Security.Principal.Windows, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a nC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.Principal.Windows.dll _System.Security.SecureString, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a iC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Security.SecureString.dll ZSystem.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 dC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ServiceModel.Web.dll XSystem.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a bC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.ServiceProcess.dll aSystem.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.Encoding.CodePages.dll WSystem.Text.Encoding, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a aC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.Encoding.dll bSystem.Text.Encoding.Extensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a lC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.Encoding.Extensions.dll \System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 fC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.Encodings.Web.dll SSystem.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 ]C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.Json.dll aSystem.Text.RegularExpressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a kC:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.8\ref/net6.0/System.Text.RegularExpressions.

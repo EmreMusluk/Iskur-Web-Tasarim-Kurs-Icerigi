@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!--BURAYA-->
+    <a href="/Home/Index">Ana Sayfa</a>
+    <br />
+    <a href="/Home/Contact">İletişim</a>
+    <br />
+    <a href="/Home/About">Hakkımızda</a>
+    <br />
+    <!--BURAYA ÜSTTEKİ SABİT PENCERE MENÜŞLERİNİ YAZIYORUZ.ALTTAKİ DİV BLOĞUNA DEĞİŞECEK SAYFALARI YAZIYORUZ-->
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

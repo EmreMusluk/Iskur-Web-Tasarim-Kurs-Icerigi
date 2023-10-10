@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\bin\Debug\net6.0\BasitKalıtım.exe
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\bin\Debug\net6.0\BasitKalıtım.deps.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\bin\Debug\net6.0\BasitKalıtım.runtimeconfig.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\bin\Debug\net6.0\BasitKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\bin\Debug\net6.0\BasitKalıtım.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.AssemblyInfo.cs
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\refint\BasitKalıtım.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\BasitKalıtım.genruntimeconfig.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\BasitKalıtım\BasitKalıtım\obj\Debug\net6.0\ref\BasitKalıtım.dll

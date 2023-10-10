@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\bin\Debug\net6.0\ExtensionMetod.exe
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\bin\Debug\net6.0\ExtensionMetod.deps.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\bin\Debug\net6.0\ExtensionMetod.runtimeconfig.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\bin\Debug\net6.0\ExtensionMetod.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\bin\Debug\net6.0\ExtensionMetod.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.AssemblyInfo.cs
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\refint\ExtensionMetod.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ExtensionMetod.genruntimeconfig.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\ExtensionMetod\obj\Debug\net6.0\ref\ExtensionMetod.dll

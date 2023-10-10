@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\bin\Debug\net6.0\Kapsulleme.exe
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\bin\Debug\net6.0\Kapsulleme.deps.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\bin\Debug\net6.0\Kapsulleme.runtimeconfig.json
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\bin\Debug\net6.0\Kapsulleme.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\bin\Debug\net6.0\Kapsulleme.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.AssemblyInfo.cs
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\refint\Kapsulleme.dll
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.pdb
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\Kapsulleme.genruntimeconfig.cache
+C:\ERP301AKŞAM\6-OOP\Kalıtım\Kapsulleme\Kapsulleme\obj\Debug\net6.0\ref\Kapsulleme.dll

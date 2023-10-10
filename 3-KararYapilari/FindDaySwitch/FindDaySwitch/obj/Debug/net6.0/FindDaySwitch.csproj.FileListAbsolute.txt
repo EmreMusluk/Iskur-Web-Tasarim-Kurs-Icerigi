@@ -1,0 +1,15 @@
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\bin\Debug\net6.0\FindDaySwitch.exe
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\bin\Debug\net6.0\FindDaySwitch.deps.json
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\bin\Debug\net6.0\FindDaySwitch.runtimeconfig.json
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\bin\Debug\net6.0\FindDaySwitch.dll
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\bin\Debug\net6.0\FindDaySwitch.pdb
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.AssemblyInfoInputs.cache
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.AssemblyInfo.cs
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.dll
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\refint\FindDaySwitch.dll
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.pdb
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\FindDaySwitch.genruntimeconfig.cache
+C:\ERP301AKŞAM\3-KararYapilari\FindDaySwitch\FindDaySwitch\obj\Debug\net6.0\ref\FindDaySwitch.dll

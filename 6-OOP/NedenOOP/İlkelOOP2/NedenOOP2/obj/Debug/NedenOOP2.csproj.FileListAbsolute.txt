@@ -1,0 +1,8 @@
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\bin\Debug\NedenOOP2.exe.config
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\bin\Debug\NedenOOP2.exe
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\bin\Debug\NedenOOP2.pdb
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\obj\Debug\NedenOOP2.csproj.AssemblyReference.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\obj\Debug\NedenOOP2.csproj.SuggestedBindingRedirects.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\obj\Debug\NedenOOP2.csproj.CoreCompileInputs.cache
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\obj\Debug\NedenOOP2.exe
+C:\ERP301AKŞAM\6-OOP\Diziler\NedenOOP2\NedenOOP2\obj\Debug\NedenOOP2.pdb

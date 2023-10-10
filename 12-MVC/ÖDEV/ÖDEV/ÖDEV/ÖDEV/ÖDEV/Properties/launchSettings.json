@@ -1,0 +1,20 @@
+t")
+                        .WithMany("Products")
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categories");
+
+                    b.Navigation("Unit");
+                });
+
+            modelBuilder.Entity("ETrade.Entity.Concrete.Users", b =>
+                {
+                    b.HasOne("ETrade.Entity.Concrete.County", "County")
+                        .WithMany("Users")
+                        .HasForeignKey("CountyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navig

@@ -1,0 +1,36 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\emrem\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\emrem\\Desktop\\ERP301AKŞAM\\ERP301AKŞAM\\3- Karar Yapıları\\Kahve\\Kahve\\Kahve.csproj",
+      "projectName": "Kahve",
+      "projectPath": "C:\\Users\\emrem\\Desktop\\ERP301AKŞAM\\ERP301AKŞAM\\3- Karar Yapıları\\Kahve\\Kahve\\Kahve.csproj",
+      "packagesPath": "C:\\Users\\emrem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emrem\\Desktop\\ERP301AKŞAM\\ERP301AKŞAM\\3- Karar Yapıları\\Kahve\\Kahve\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\emrem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+         

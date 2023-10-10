@@ -1,0 +1,10 @@
+Ýki seviyede Access Modifier olur.
+1)Class Seviyesi
+	a)Internal veya boþ olursa kendi kapsamýnda alanýnda kullanýlýr.Baþka katmanda kullanýlamaz.
+	//Classlarýn default eriþim belirleyicisi Internaldýr.Internal olduðunda kendi proje içerisinde farklý classlardan eriþilebilir.
+	b)Public olursa her yerde kullanýlabilir.
+	//Public olursa farklý prýjelerde de referans alýnarak kullanýlabilir.
+
+2)Member Seviyesi
+	a)
+	b)
